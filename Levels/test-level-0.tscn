@@ -35,11 +35,7 @@ shape = SubResource("RectangleShape2D_u72tn")
 position = Vector2(424.438, 55)
 shape = SubResource("RectangleShape2D_3x5e2")
 
-[node name="Bullet" type="Node2D" parent="."]
-position = Vector2(157, 181)
-
-[node name="Bullet" parent="Bullet" instance=ExtResource("1_f36l1")]
-position = Vector2(0, 0)
+[node name="Bullet2" parent="." instance=ExtResource("1_f36l1")]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 820.0
