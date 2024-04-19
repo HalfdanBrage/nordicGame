@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi4dpqmr6fykn"]
+[gd_scene load_steps=7 format=3 uid="uid://bi4dpqmr6fykn"]
 
 [ext_resource type="PackedScene" uid="uid://dan4nbcvh67tm" path="res://Entities/Bullet/Bullet.tscn" id="1_f36l1"]
+[ext_resource type="PackedScene" uid="uid://cdqpvbpn81brl" path="res://Entities/player.tscn" id="2_wk6ud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
@@ -34,8 +35,16 @@ shape = SubResource("RectangleShape2D_u72tn")
 position = Vector2(424.438, 55)
 shape = SubResource("RectangleShape2D_3x5e2")
 
-[node name="AnimatableBody2D" parent="." instance=ExtResource("1_f36l1")]
+[node name="Bullet" type="Node2D" parent="."]
+position = Vector2(157, 181)
+
+[node name="Bullet" parent="Bullet" instance=ExtResource("1_f36l1")]
+position = Vector2(0, 0)
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 820.0
 offset_bottom = 91.0
+
+[node name="Player" parent="." instance=ExtResource("2_wk6ud")]
+position = Vector2(330, 397)
+scale = Vector2(3, 3)
