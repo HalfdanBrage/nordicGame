@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi4dpqmr6fykn"]
 
 [ext_resource type="PackedScene" uid="uid://dan4nbcvh67tm" path="res://Entities/Bullet/Bullet.tscn" id="1_f36l1"]
-[ext_resource type="PackedScene" uid="uid://cdqpvbpn81brl" path="res://Entities/player.tscn" id="2_wk6ud"]
+[ext_resource type="PackedScene" uid="uid://caoypaifro37e" path="res://Entities/Player/Player.tscn" id="2_7c5oo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
@@ -45,6 +45,5 @@ position = Vector2(0, 0)
 offset_right = 820.0
 offset_bottom = 91.0
 
-[node name="Player" parent="." instance=ExtResource("2_wk6ud")]
-position = Vector2(330, 397)
-scale = Vector2(3, 3)
+[node name="Player" parent="." instance=ExtResource("2_7c5oo")]
+position = Vector2(325, 372)
