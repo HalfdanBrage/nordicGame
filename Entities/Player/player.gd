@@ -16,6 +16,7 @@ func _ready():
 	
 func _physics_process(delta):
 	set_ray_cast()
+	set_active_bullet_line()
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
@@ -48,7 +49,7 @@ func swap():
 		bulletPos = bullet.global_position 
 		swap_positions(self, bullet)
 		bullet.set_just_swapped()
-		#disable_bullet()
+		disable_bullet()
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
 	print("start")
@@ -92,6 +93,15 @@ func set_ray_cast():
 	line.set_point_position(1, target_position)
 	#print("Player:", position, " player global: ", global_position)
 	#print("line start:" , line.get_point_position(0), " line end: ", line.get_point_position(1))
-	
+
+func set_active_bullet_line():
+	var line = get_node("ActiveBulletLine")
+	if bullet != null:
+		line.show()
+		line.set_point_position(1, bullet.position - global_position)
+		print("Bullet pos : ", bullet.position)
+	else:
+		line.hide()
+
 func _on_shoot_cooldown_timeout():
 	can_swap = true

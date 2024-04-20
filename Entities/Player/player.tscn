@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=7 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_6n4pr"]
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
+[ext_resource type="Texture2D" uid="uid://dlol5p1l0bgbv" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
 [ext_resource type="Texture2D" uid="uid://ds864k1kbls3h" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
@@ -20,6 +21,14 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_iue56")
+
+[node name="ActiveBulletLine" type="Line2D" parent="."]
+visible = false
+texture_repeat = 2
+points = PackedVector2Array(0, 0, 92, -13)
+width = 3.0
+texture = ExtResource("2_ggsop")
+texture_mode = 1
 
 [node name="AimLine" type="Line2D" parent="."]
 texture_repeat = 2
