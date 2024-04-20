@@ -4,10 +4,12 @@ class_name Player
 
 const BULLET_RES = preload("res://Entities/Bullet/bullet.tscn")
 
-var bullet = null
+var bullet: Bullet = null
 
 var is_controller = false
 var bulletPos = null;
+
+var can_swap = true
 
 func _ready():
 	Levelmanager.set_player(self)
@@ -37,17 +39,28 @@ func get_aim_angle():
 		return global_position.direction_to(get_global_mouse_position())
 
 func swap():
+	if not can_swap:
+		return
+	#can_swap = false
+	#$"Swap cooldown".start()
+	
 	if bullet != null:
 		bulletPos = bullet.global_position 
 		swap_positions(self, bullet)
-		disable_bullet()
+		bullet.set_just_swapped()
+		#disable_bullet()
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
+	print("start")
 	var tmp = Vector2(node_1.global_position)
 	node_1.global_position = node_2.global_position
 	node_2.global_position = tmp
+	print("stop")
 
 func shoot():
+	can_swap = false
+	$"Swap cooldown".start()
+	
 	var aim_dir = get_aim_angle()
 	if aim_dir:
 		disable_bullet()
@@ -64,6 +77,7 @@ func disable_bullet():
 		bullet = null
 
 func damage():
+	Levelmanager.respawn()
 	print("OWWW")
 	
 func set_ray_cast():
@@ -78,5 +92,6 @@ func set_ray_cast():
 	line.set_point_position(1, target_position)
 	#print("Player:", position, " player global: ", global_position)
 	#print("line start:" , line.get_point_position(0), " line end: ", line.get_point_position(1))
-	print("RayNode start:" , target_position)
 	
+func _on_shoot_cooldown_timeout():
+	can_swap = true

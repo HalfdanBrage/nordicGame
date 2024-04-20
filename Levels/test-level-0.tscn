@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bi4dpqmr6fykn"]
 
 [ext_resource type="Script" path="res://Entities/CameraController.gd" id="1_k0x3w"]
-[ext_resource type="PackedScene" uid="uid://dbpvb8lcwdvof" path="res://Entities/Player/player.tscn" id="2_k5le6"]
+[ext_resource type="PackedScene" uid="uid://mgb64uhgo0cu" path="res://Entities/Player/player.tscn" id="2_k5le6"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="2_witry"]
-[ext_resource type="Texture2D" uid="uid://d6fs4wjy5hlx" path="res://Assets/Backgrounds/earth.png" id="3_gca5b"]
-[ext_resource type="Texture2D" uid="uid://bamt1manq7p3s" path="res://Assets/Backgrounds/square.png" id="3_yxyaq"]
+[ext_resource type="Texture2D" uid="uid://cft8ddx647vq0" path="res://Assets/Backgrounds/earth.png" id="3_gca5b"]
+[ext_resource type="Texture2D" uid="uid://bvvpx72odpw3d" path="res://Assets/Backgrounds/square.png" id="3_yxyaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
