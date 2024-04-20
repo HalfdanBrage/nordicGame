@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 class_name Player
 
+@export var is_level_1 = false
+
 const BULLET_RES = preload("res://Entities/Bullet/bullet.tscn")
 
-var bullet: Bullet = null
+@export var bullet: Bullet = null
 
 var is_controller = false
 var bulletPos = null;
@@ -48,7 +50,8 @@ func swap():
 		bulletPos = bullet.global_position 
 		swap_positions(self, bullet)
 		bullet.set_just_swapped()
-		#disable_bullet()
+		if not is_level_1:
+			disable_bullet()
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
 	print("start")
@@ -58,6 +61,9 @@ func swap_positions(node_1: Node2D, node_2: Node2D):
 	print("stop")
 
 func shoot():
+	if is_level_1:
+		return
+	
 	can_swap = false
 	$"Swap cooldown".start()
 	
