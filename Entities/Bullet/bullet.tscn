@@ -1,16 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://chg348md75ben"]
+[gd_scene load_steps=7 format=3 uid="uid://chg348md75ben"]
 
-[ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_kil4k"]
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
+[ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
+[ext_resource type="Texture2D" uid="uid://etuynmey2wwf" path="res://active.png" id="3_vguso"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_kil4k")
+"texture": ExtResource("2_j785w")
 }],
 "loop": true,
-"name": &"default",
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vguso")
+}],
+"loop": true,
+"name": &"inactive",
 "speed": 5.0
 }]
 
@@ -26,10 +35,11 @@ collision_layer = 2
 script = ExtResource("1_sgqyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(-1, 0)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ajlkv")
+animation = &"inactive"
+autoplay = "inactive"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.6, 0.6)
