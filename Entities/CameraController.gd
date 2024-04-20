@@ -22,6 +22,8 @@ func _process(delta):
 	var target_position = player.position
 	var zoom_target = Vector2.ONE
 	
+	var mouse_offset = get_mouse_offset(player.position)
+	
 	var bullet = player.bullet
 	if bullet != null:
 		var player_to_bullet = bullet.position - player.position
@@ -29,19 +31,10 @@ func _process(delta):
 		
 		zoom_target = get_zoom_target(player_to_bullet)
 	
-	var final_target_position = target_position + breating_offset
+	var final_target_position = target_position + breating_offset + mouse_offset
 	position = position.lerp(final_target_position, delta * lerp_speed)
 	
 	zoom = zoom.lerp(zoom_target, delta * zoom_lerp_speed)
-	
-	"""
-	if player != null:
-		var target = Levelmanager.get_player()
-		var mouse_offset = get_mouse_offset(target.position)
-		
-		var final_target_position = target.position + breating_offset + mouse_offset
-		position = position.lerp(final_target_position, delta * lerp_speed)
-	"""
 
 func get_zoom_target(player_to_bullet: Vector2) -> Vector2:
 	player_to_bullet = Vector2(abs(player_to_bullet.x), abs(player_to_bullet.y))
