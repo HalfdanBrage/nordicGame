@@ -41,10 +41,16 @@ func _on_timer_timeout():
 
 
 func _on_collisionsparkarea_body_entered(body):
-	$GPUParticles2D2.restart()
-	$Bounce.play()
+	play_hit_effects(body)
 
 
 func _on_collisionsparkarea_area_entered(area):
+	play_hit_effects(area)
+
+func play_hit_effects(target : Node2D):
 	$GPUParticles2D2.restart()
 	$Bounce.play()
+	
+	if target.is_in_group("metal"):
+		$Metal.play()
+	
