@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://njnq4dq63gh6"]
+[gd_scene load_steps=5 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_kil4k"]
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(128.333, 130)
 
 [node name="Bullet" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_sgqyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

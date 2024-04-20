@@ -9,7 +9,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
 	var collision = move_and_collide(directionSpeed)
 
 	if collision != null:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi4dpqmr6fykn"]
 
 [ext_resource type="PackedScene" path="res://Entities/Player/player.tscn" id="2_k5le6"]
-[ext_resource type="PackedScene" path="res://Entities/Bullet/bullet.tscn" id="2_witry"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="2_witry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
@@ -41,7 +41,6 @@ offset_bottom = 91.0
 
 [node name="Bullet" parent="." instance=ExtResource("2_witry")]
 position = Vector2(243, 244)
-scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("2_k5le6")]
 position = Vector2(420, 386)
