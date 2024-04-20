@@ -91,8 +91,10 @@ func disable_bullet():
 		bullet = null
 
 func damage():
+	$AnimationPlayer.play("die")
+
+func respawn():
 	Levelmanager.respawn()
-	print("OWWW")
 	
 func set_ray_cast():
 	var rayNode: RayCast2D = get_node("RayCast2D")
