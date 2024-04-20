@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca5t82w3slikp"]
+
+[ext_resource type="PackedScene" uid="uid://roboues66463" path="res://Levels/base_level.tscn" id="1_d8im6"]
+[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="2_wm38g"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_5el4r"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_8mvcu"]
+
+[node name="Level-1" instance=ExtResource("1_d8im6")]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+
+[node name="Square" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(-1187, -646)
+texture = ExtResource("2_wm38g")
+centered = false
+
+[node name="Player" parent="." index="2" node_paths=PackedStringArray("bullet")]
+is_level_1 = true
+bullet = NodePath("../Bullet")
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_5el4r")]
+position = Vector2(131, -69)
+rotation = 1.5708
+
+[node name="Container2" parent="." index="4" instance=ExtResource("3_5el4r")]
+position = Vector2(306, -37)
+
+[node name="Container3" parent="." index="5" instance=ExtResource("3_5el4r")]
+position = Vector2(327, -236)
+rotation = 1.5708
+
+[node name="Container4" parent="." index="6" instance=ExtResource("3_5el4r")]
+position = Vector2(-131, -41)
+rotation = 0.785398
+
+[node name="Container5" parent="." index="7" instance=ExtResource("3_5el4r")]
+position = Vector2(-235, -104)
+rotation = -0.785398
+
+[node name="Bullet" parent="." index="8" instance=ExtResource("4_8mvcu")]
+position = Vector2(221, -1)
