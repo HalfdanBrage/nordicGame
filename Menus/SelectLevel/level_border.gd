@@ -17,3 +17,14 @@ func set_level(label: int, num: int):
 
 func _on_pressed():
 	Levelmanager.select_level(level_number)
+
+
+func _on_focus_entered():
+	for child in get_children():
+		scale.x = 1.2
+		scale.y = 1.2
+
+func _on_focus_exited():
+	for child in get_children():
+		scale.x = 1.0
+		scale.y = 1.0
