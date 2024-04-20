@@ -16,13 +16,22 @@ func _process(delta):
 	var player = Levelmanager.get_player()
 	if player != null:
 		var target = Levelmanager.get_player()
-		var target_to_mouse = get_global_mouse_position() - target.position
-		var mouse_offset = target_to_mouse
-		if max_mouse_offset_magnitude < mouse_offset.length():
-			mouse_offset = target_to_mouse.normalized() * max_mouse_offset_magnitude
+		var mouse_offset = get_mouse_offset(target.position)
 		
-		var target_position = target.position + breating_offset + mouse_offset
-		position = position.lerp(target_position, delta * lerp_speed)
+		var final_target_position = target.position + breating_offset + mouse_offset
+		position = position.lerp(final_target_position, delta * lerp_speed)
+
+func get_mouse_offset(target_position: Vector2):
+	var target_to_mouse = get_global_mouse_position() - target_position
+	var mouse_offset = target_to_mouse
+	if target_to_mouse.length() < max_mouse_offset_magnitude:
+		return target_to_mouse
+	return target_to_mouse.normalized() * max_mouse_offset_magnitude
+		
+		
+	if max_mouse_offset_magnitude < mouse_offset.length():
+		mouse_offset = target_to_mouse.normalized() * max_mouse_offset_magnitude
+	return mouse_offset
 
 func set_breathing(delta):
 	if breathing_down:
