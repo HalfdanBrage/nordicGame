@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx7fasimd8hna"]
+
+[ext_resource type="AudioStream" uid="uid://7aw1cdgxam2b" path="res://music/chill.wav" id="1_3dq57"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_3dq57")

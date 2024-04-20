@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypa1jq2s0djc"]
+
+[ext_resource type="AudioStream" uid="uid://4g48g1d71pyi" path="res://music/splash.wav" id="1_3bs4l"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_3bs4l")
