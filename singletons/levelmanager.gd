@@ -2,6 +2,7 @@ extends Node
 
 const WIN_SCREEN_RES = preload("res://Menus/win_screen.tscn")
 
+var level_finished = false
 var show_level_title = false
 var _player: Player = null
 var currentLevelIndex = 0
@@ -26,6 +27,7 @@ func select_level(index: int):
 		return;
 	
 	show_level_title = true
+	level_finished = false
 	get_tree().change_scene_to_file(levels[index])
 
 func has_next_level() -> bool:

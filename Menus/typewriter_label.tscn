@@ -22,7 +22,8 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "TEXT HERE IS VERY AWESOME"
 label_settings = SubResource("LabelSettings_pnk1x")
-visible_ratio = -0.04
+visible_characters = 0
+visible_ratio = 0.0
 script = ExtResource("1_dmp8b")
 
 [node name="Timer" type="Timer" parent="."]

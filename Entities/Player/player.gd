@@ -55,7 +55,8 @@ func make_involnurable():
 	involnurable = true
 
 func make_volnurable():
-	involnurable = false
+	if not Levelmanager.level_finished:
+		involnurable = false
 
 func swap():
 	if not can_swap:
