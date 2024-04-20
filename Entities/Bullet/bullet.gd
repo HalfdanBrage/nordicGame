@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+class_name Bullet
+
 var directionSpeed: Vector2 = Vector2(-5, 5)
 
 func _ready():
-	Levelmanager._bullet = self
+	Levelmanager.add_bullet(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
