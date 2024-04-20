@@ -37,3 +37,6 @@ func play_prev_level():
 	if has_prev_level():
 		select_level(currentLevelIndex - 1)
 		currentLevelIndex -= 1
+
+func respawn():
+	get_tree().reload_current_scene()
