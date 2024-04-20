@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu36wcnfb58pr"]
+[gd_scene load_steps=8 format=3 uid="uid://dgr45ki7aukfd"]
 
-[ext_resource type="PackedScene" path="res://Entities/Player/player.tscn" id="1_wbot4"]
-[ext_resource type="PackedScene" uid="uid://dnp17dosmjr5m" path="res://Entities/Camera.tscn" id="2_70fdi"]
-[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="3_syf8e"]
-[ext_resource type="Texture2D" uid="uid://c8lqrif543f32" path="res://Assets/Terrain/container_yel.png" id="4_g7afr"]
-[ext_resource type="Texture2D" uid="uid://ber30lpp65w3n" path="res://Assets/Terrain/container_gre.png" id="5_5vvla"]
-[ext_resource type="Texture2D" uid="uid://bbmgjkkhl14ay" path="res://Assets/Terrain/container_pur.png" id="6_isl2p"]
+[ext_resource type="PackedScene" uid="uid://dbpvb8lcwdvof" path="res://Entities/Player/player.tscn" id="1_wbot4"]
+[ext_resource type="PackedScene" path="res://Entities/Camera.tscn" id="2_70fdi"]
+[ext_resource type="Texture2D" uid="uid://doow6e3fhxs7o" path="res://Assets/Backgrounds/desert_simple.png" id="3_syf8e"]
+[ext_resource type="Texture2D" uid="uid://c2bwpeu33107t" path="res://Assets/Terrain/container_yel.png" id="4_g7afr"]
+[ext_resource type="Texture2D" uid="uid://bp1rvqko277sw" path="res://Assets/Terrain/container_gre.png" id="5_5vvla"]
+[ext_resource type="Texture2D" uid="uid://d3dwyy8e3k6bv" path="res://Assets/Terrain/container_pur.png" id="6_isl2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
 size = Vector2(178, 70)
@@ -25,7 +25,6 @@ texture = ExtResource("3_syf8e")
 
 [node name="Container6" type="StaticBody2D" parent="."]
 position = Vector2(179, -180)
-scale = Vector2(1, 1)
 
 [node name="ContainerYel" type="Sprite2D" parent="Container6"]
 texture_filter = 1
@@ -37,7 +36,6 @@ shape = SubResource("RectangleShape2D_3u15y")
 [node name="Container5" type="StaticBody2D" parent="."]
 position = Vector2(123, 46)
 rotation = 1.38196
-scale = Vector2(1, 1)
 
 [node name="ContainerYel" type="Sprite2D" parent="Container5"]
 texture_filter = 1
@@ -49,7 +47,6 @@ shape = SubResource("RectangleShape2D_3u15y")
 [node name="Container4" type="StaticBody2D" parent="."]
 position = Vector2(-196, -129)
 rotation = -2.79716
-scale = Vector2(1, 1)
 
 [node name="ContainerYel" type="Sprite2D" parent="Container4"]
 texture_filter = 1
