@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cu36wcnfb58pr"]
+[gd_scene load_steps=9 format=3 uid="uid://ckeq4p1y4c2ak"]
 
 [ext_resource type="PackedScene" path="res://Entities/Player/player.tscn" id="1_wbot4"]
-[ext_resource type="PackedScene" uid="uid://dnp17dosmjr5m" path="res://Entities/Camera.tscn" id="2_70fdi"]
+[ext_resource type="PackedScene" uid="uid://cg5jkbbj5pddo" path="res://Entities/Camera.tscn" id="2_70fdi"]
 [ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="3_syf8e"]
 [ext_resource type="Texture2D" uid="uid://c8lqrif543f32" path="res://Assets/Terrain/container_yel.png" id="4_g7afr"]
-[ext_resource type="Texture2D" uid="uid://ber30lpp65w3n" path="res://Assets/Terrain/container_gre.png" id="5_5vvla"]
+[ext_resource type="Texture2D" uid="uid://demfvb8ycgbfi" path="res://Assets/Terrain/tree1_yel.png" id="6_7g1op"]
 [ext_resource type="Texture2D" uid="uid://bbmgjkkhl14ay" path="res://Assets/Terrain/container_pur.png" id="6_isl2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
 size = Vector2(178, 70)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hfkna"]
+radius = 24.0
 
 [node name="Test-level-1" type="Node2D"]
 
@@ -16,88 +19,112 @@ size = Vector2(178, 70)
 
 [node name="DesertSimple" type="Sprite2D" parent="Background"]
 texture_filter = 1
-position = Vector2(548, -210)
+position = Vector2(-392, -626)
 texture = ExtResource("3_syf8e")
+centered = false
 
 [node name="Camera2D" parent="." instance=ExtResource("2_70fdi")]
 
 [node name="Player" parent="." instance=ExtResource("1_wbot4")]
 
-[node name="Container6" type="StaticBody2D" parent="."]
-position = Vector2(179, -180)
-scale = Vector2(1, 1)
-
-[node name="ContainerYel" type="Sprite2D" parent="Container6"]
-texture_filter = 1
-texture = ExtResource("6_isl2p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Container6"]
-shape = SubResource("RectangleShape2D_3u15y")
-
-[node name="Container5" type="StaticBody2D" parent="."]
-position = Vector2(123, 46)
-rotation = 1.38196
-scale = Vector2(1, 1)
-
-[node name="ContainerYel" type="Sprite2D" parent="Container5"]
-texture_filter = 1
-texture = ExtResource("6_isl2p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Container5"]
-shape = SubResource("RectangleShape2D_3u15y")
-
-[node name="Container4" type="StaticBody2D" parent="."]
-position = Vector2(-196, -129)
-rotation = -2.79716
-scale = Vector2(1, 1)
-
-[node name="ContainerYel" type="Sprite2D" parent="Container4"]
-texture_filter = 1
-texture = ExtResource("4_g7afr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Container4"]
-shape = SubResource("RectangleShape2D_3u15y")
-
-[node name="Container3" type="StaticBody2D" parent="."]
-position = Vector2(-171, 24)
-rotation = 1.36232
-
-[node name="ContainerYel" type="Sprite2D" parent="Container3"]
-texture_filter = 1
-texture = ExtResource("4_g7afr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Container3"]
-shape = SubResource("RectangleShape2D_3u15y")
-
 [node name="Container2" type="StaticBody2D" parent="."]
-position = Vector2(-7, -155)
-rotation = -0.083679
+position = Vector2(-269, -202)
+rotation = 0.368512
 
 [node name="ContainerYel" type="Sprite2D" parent="Container2"]
 texture_filter = 1
 texture = ExtResource("4_g7afr")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Container2"]
+position = Vector2(93, 40)
 shape = SubResource("RectangleShape2D_3u15y")
 
 [node name="Container" type="StaticBody2D" parent="."]
-position = Vector2(-15, 106)
+position = Vector2(-105, 77)
 
 [node name="ContainerYel" type="Sprite2D" parent="Container"]
 texture_filter = 1
 texture = ExtResource("4_g7afr")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Container"]
+position = Vector2(93, 40)
 shape = SubResource("RectangleShape2D_3u15y")
 
-[node name="ContainerGre" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-159, 14)
-rotation = 1.0779
-texture = ExtResource("5_5vvla")
+[node name="Container4" type="StaticBody2D" parent="."]
+position = Vector2(85, -223)
 
-[node name="ContainerPur" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(131, 68)
-rotation = 1.5708
+[node name="ContainerYel" type="Sprite2D" parent="Container4"]
+texture_filter = 1
 texture = ExtResource("6_isl2p")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Container4"]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="Container3" type="StaticBody2D" parent="."]
+position = Vector2(-103, -188)
+rotation = -0.0805307
+
+[node name="ContainerYel" type="Sprite2D" parent="Container3"]
+texture_filter = 1
+texture = ExtResource("4_g7afr")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Container3"]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="Container7" type="StaticBody2D" parent="."]
+position = Vector2(-153, -74)
+rotation = 1.34453
+
+[node name="ContainerYel" type="Sprite2D" parent="Container7"]
+texture_filter = 1
+texture = ExtResource("4_g7afr")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Container7"]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="Container8" type="StaticBody2D" parent="."]
+position = Vector2(144, -51)
+rotation = 1.38067
+
+[node name="ContainerYel" type="Sprite2D" parent="Container8"]
+texture_filter = 1
+texture = ExtResource("6_isl2p")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Container8"]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="Container9" type="StaticBody2D" parent="."]
+position = Vector2(219, 137)
+rotation = -0.0727584
+
+[node name="ContainerYel" type="Sprite2D" parent="Container9"]
+texture_filter = 1
+texture = ExtResource("6_isl2p")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Container9"]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="Tree" type="StaticBody2D" parent="."]
+position = Vector2(231, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tree"]
+position = Vector2(101, 99)
+shape = SubResource("CircleShape2D_hfkna")
+
+[node name="Tree1Yel" type="Sprite2D" parent="Tree"]
+z_index = 10
+texture_filter = 1
+texture = ExtResource("6_7g1op")
+centered = false
