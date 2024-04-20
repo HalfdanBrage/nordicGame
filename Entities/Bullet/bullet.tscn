@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://chg348md75ben"]
+
+[ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_kil4k"]
+[ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kil4k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7gs"]
+size = Vector2(128.333, 130)
+
+[node name="Bullet" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_sgqyk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_ajlkv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 5.96046e-07)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_0h7gs")
