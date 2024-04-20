@@ -1,21 +1,21 @@
 [gd_scene load_steps=33 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
-[ext_resource type="Texture2D" uid="uid://0t6l8awovx7v" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
-[ext_resource type="Texture2D" uid="uid://u2kdrdsd6vdv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
-[ext_resource type="AudioStream" uid="uid://6nxjwrryipk8" path="res://SFX/Ricochet-1-raw.wav" id="6_5aaie"]
-[ext_resource type="AudioStream" uid="uid://cicgfk0yr2rcq" path="res://SFX/Ricochet-2-raw.wav" id="7_fsp2h"]
-[ext_resource type="AudioStream" uid="uid://b1mmd7kk7l3bo" path="res://SFX/Ricochet-3-raw.wav" id="8_rfxnh"]
-[ext_resource type="AudioStream" uid="uid://ei7gfqxfaehp" path="res://SFX/Ricochet-4-raw.wav" id="9_f5o2b"]
-[ext_resource type="AudioStream" uid="uid://bkdvl783jg756" path="res://SFX/Clang.wav" id="10_700ic"]
-[ext_resource type="Texture2D" uid="uid://c0nywdpyytfm2" path="res://Assets/Player/teleport_7.png" id="11_byv7b"]
-[ext_resource type="Texture2D" uid="uid://bwqdsdc2jvssv" path="res://Assets/Player/teleport_6.png" id="12_p18y8"]
-[ext_resource type="Texture2D" uid="uid://b2uag8iup05sc" path="res://Assets/Player/teleport_5.png" id="13_r8elt"]
-[ext_resource type="Texture2D" uid="uid://b58hebb6un47m" path="res://Assets/Player/teleport_4.png" id="14_igrmn"]
-[ext_resource type="Texture2D" uid="uid://cvols2rhipout" path="res://Assets/Player/teleport_3.png" id="15_1m787"]
-[ext_resource type="Texture2D" uid="uid://eshtuy37dot5" path="res://Assets/Player/teleport_2.png" id="16_s3jve"]
-[ext_resource type="Texture2D" uid="uid://4ix38bartxpq" path="res://Assets/Player/teleport_1.png" id="17_lqanl"]
-[ext_resource type="Texture2D" uid="uid://dtyxw4i6jsw27" path="res://Assets/Player/teleport_0.png" id="18_hhftr"]
+[ext_resource type="Texture2D" uid="uid://b5odplffu4or" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
+[ext_resource type="Texture2D" uid="uid://8e4hkbt34ahv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
+[ext_resource type="AudioStream" uid="uid://di0qrelin14cm" path="res://SFX/Ricochet-1-raw.wav" id="6_5aaie"]
+[ext_resource type="AudioStream" uid="uid://d0ttyc6tpgwxq" path="res://SFX/Ricochet-2-raw.wav" id="7_fsp2h"]
+[ext_resource type="AudioStream" uid="uid://mb2l2ixjbdq" path="res://SFX/Ricochet-3-raw.wav" id="8_rfxnh"]
+[ext_resource type="AudioStream" uid="uid://7yhrpwc4ll53" path="res://SFX/Ricochet-4-raw.wav" id="9_f5o2b"]
+[ext_resource type="AudioStream" uid="uid://oq0pyanf14do" path="res://SFX/Clang.wav" id="10_700ic"]
+[ext_resource type="Texture2D" uid="uid://ykp0p3m2qiyd" path="res://Assets/Player/teleport_7.png" id="11_byv7b"]
+[ext_resource type="Texture2D" uid="uid://b1l44a266g4ck" path="res://Assets/Player/teleport_6.png" id="12_p18y8"]
+[ext_resource type="Texture2D" uid="uid://qokto4vm331k" path="res://Assets/Player/teleport_5.png" id="13_r8elt"]
+[ext_resource type="Texture2D" uid="uid://6bldpy5t3fe2" path="res://Assets/Player/teleport_4.png" id="14_igrmn"]
+[ext_resource type="Texture2D" uid="uid://cwdw6a6slbox6" path="res://Assets/Player/teleport_3.png" id="15_1m787"]
+[ext_resource type="Texture2D" uid="uid://bafr4vvbytds6" path="res://Assets/Player/teleport_2.png" id="16_s3jve"]
+[ext_resource type="Texture2D" uid="uid://dxfw6i3nrwnen" path="res://Assets/Player/teleport_1.png" id="17_lqanl"]
+[ext_resource type="Texture2D" uid="uid://bdkwba6rpty3b" path="res://Assets/Player/teleport_0.png" id="18_hhftr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_atinb"]
 radius = 7.45356
@@ -291,7 +291,6 @@ scale_max = 6.0
 color = Color(0, 0, 0, 1)
 
 [node name="Bullet" type="CharacterBody2D"]
-texture_filter = 1
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 script = ExtResource("1_sgqyk")
@@ -316,7 +315,6 @@ shape = SubResource("CircleShape2D_t6gkc")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(0.992157, 0.819608, 0.368627, 1)
-emitting = false
 amount = 40
 process_material = SubResource("ParticleProcessMaterial_prq7q")
 texture = ExtResource("4_o5sfj")

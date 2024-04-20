@@ -6,8 +6,8 @@ var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
 	"res://Levels/Main_levels/level_1.tscn",
-	"res://Levels/test-level-1.tscn",
-	"res://Levels/01_intro/level.tscn",
+	"res://Levels/Main_levels/level_2.tscn",
+	"res://Levels/Main_levels/after_level_1.tscn",
 ]
 
 func set_player(player: Player):
