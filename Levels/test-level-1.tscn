@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckeq4p1y4c2ak"]
+[gd_scene load_steps=10 format=3 uid="uid://ckeq4p1y4c2ak"]
 
 [ext_resource type="PackedScene" uid="uid://mgb64uhgo0cu" path="res://Entities/Player/player.tscn" id="1_wbot4"]
 [ext_resource type="PackedScene" uid="uid://cg5jkbbj5pddo" path="res://Entities/Camera.tscn" id="2_70fdi"]
-[ext_resource type="Texture2D" uid="uid://nblbpnlbsft4" path="res://Assets/Backgrounds/desert_simple.png" id="3_syf8e"]
-[ext_resource type="Texture2D" uid="uid://bwxl3ebf3f73k" path="res://Assets/Terrain/container_yel.png" id="4_g7afr"]
-[ext_resource type="Texture2D" uid="uid://bl12ksuaklevg" path="res://Assets/Terrain/tree1_yel.png" id="6_7g1op"]
-[ext_resource type="Texture2D" uid="uid://ckc1hsx1mqkbl" path="res://Assets/Terrain/container_pur.png" id="6_isl2p"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="3_syf8e"]
+[ext_resource type="Texture2D" uid="uid://c8lqrif543f32" path="res://Assets/Terrain/container_yel.png" id="4_g7afr"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="5_xxi2r"]
+[ext_resource type="Texture2D" uid="uid://demfvb8ycgbfi" path="res://Assets/Terrain/tree1_yel.png" id="6_7g1op"]
+[ext_resource type="Texture2D" uid="uid://bbmgjkkhl14ay" path="res://Assets/Terrain/container_pur.png" id="6_isl2p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
 size = Vector2(178, 70)
@@ -40,17 +41,7 @@ centered = false
 position = Vector2(93, 40)
 shape = SubResource("RectangleShape2D_3u15y")
 
-[node name="Container" type="StaticBody2D" parent="." groups=["metal"]]
-position = Vector2(-105, 77)
-
-[node name="ContainerYel" type="Sprite2D" parent="Container"]
-texture_filter = 1
-texture = ExtResource("4_g7afr")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Container"]
-position = Vector2(93, 40)
-shape = SubResource("RectangleShape2D_3u15y")
+[node name="Container" parent="." instance=ExtResource("5_xxi2r")]
 
 [node name="Container4" type="StaticBody2D" parent="." groups=["metal"]]
 position = Vector2(85, -223)

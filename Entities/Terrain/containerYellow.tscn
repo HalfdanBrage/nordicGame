@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://btjcq63akrg2d"]
+
+[ext_resource type="Texture2D" uid="uid://c8lqrif543f32" path="res://Assets/Terrain/container_yel.png" id="1_trry6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
+size = Vector2(178, 70)
+
+[node name="Container" type="StaticBody2D" groups=["metal"]]
+position = Vector2(-105, 77)
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_trry6")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(93, 40)
+shape = SubResource("RectangleShape2D_3u15y")
