@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnp17dosmjr5m"]
+
+[ext_resource type="Script" path="res://Entities/CameraController.gd" id="1_pt642"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(0, -445)
+script = ExtResource("1_pt642")
+max_breathing_y_offset = 7.0
+breathing_speed = 4.75
