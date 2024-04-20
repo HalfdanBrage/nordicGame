@@ -5,6 +5,7 @@ class_name Player
 @export var is_level_1 = false
 
 const BULLET_RES = preload("res://Entities/Bullet/bullet.tscn")
+const BULLET_SPAWN_OFFSET = Vector2(50, 0)
 
 @export var bullet: Bullet = null
 
@@ -13,17 +14,24 @@ var bulletPos = null;
 
 var can_swap = true
 
+var angle
+
 func _ready():
 	Levelmanager.set_player(self)
 	
 func _physics_process(delta):
 	set_ray_cast()
+	angle = get_aim_angle().angle()
+	$AnimatedSprite2D.rotation = angle - PI * 0.5
+	$AimLine.set_point_position(0, BULLET_SPAWN_OFFSET.rotated(angle))
+	set_active_bullet_line()
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
 		swap()
 		
 	if Input.is_action_just_pressed("shoot"):
+		$Shoot.play()
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:
@@ -72,7 +80,7 @@ func shoot():
 		disable_bullet()
 		var new_bullet = BULLET_RES.instantiate()
 		new_bullet.dir = aim_dir
-		new_bullet.position = position
+		new_bullet.position = position + BULLET_SPAWN_OFFSET.rotated(angle)
 		bullet = new_bullet
 		get_parent().add_child(new_bullet)
 		new_bullet.activate()
@@ -98,6 +106,15 @@ func set_ray_cast():
 	line.set_point_position(1, target_position)
 	#print("Player:", position, " player global: ", global_position)
 	#print("line start:" , line.get_point_position(0), " line end: ", line.get_point_position(1))
-	
+
+func set_active_bullet_line():
+	var line = get_node("ActiveBulletLine")
+	if bullet != null:
+		line.show()
+		line.set_point_position(1, bullet.position - global_position)
+		print("Bullet pos : ", bullet.position)
+	else:
+		line.hide()
+
 func _on_shoot_cooldown_timeout():
 	can_swap = true

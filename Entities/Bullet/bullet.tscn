@@ -1,15 +1,15 @@
 [gd_scene load_steps=23 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
-[ext_resource type="Texture2D" uid="uid://cdi8qa8y0pt0o" path="res://inactive.png" id="2_j785w"]
-[ext_resource type="Texture2D" uid="uid://tdi8xel3ylns" path="res://active.png" id="3_vguso"]
-[ext_resource type="Texture2D" uid="uid://c7htgf058rm2f" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
-[ext_resource type="Texture2D" uid="uid://bl18tcpjhqtoo" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
-[ext_resource type="AudioStream" uid="uid://bcfpsundxaofe" path="res://SFX/Ricochet-1-raw.wav" id="6_5aaie"]
-[ext_resource type="AudioStream" uid="uid://mqt4aaanya2g" path="res://SFX/Ricochet-2-raw.wav" id="7_fsp2h"]
-[ext_resource type="AudioStream" uid="uid://d35pds4nqd285" path="res://SFX/Ricochet-3-raw.wav" id="8_rfxnh"]
-[ext_resource type="AudioStream" uid="uid://b580w78gfd3km" path="res://SFX/Ricochet-4-raw.wav" id="9_f5o2b"]
-[ext_resource type="AudioStream" uid="uid://csmhh8vu63djo" path="res://SFX/Clang.wav" id="10_700ic"]
+[ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
+[ext_resource type="Texture2D" uid="uid://etuynmey2wwf" path="res://active.png" id="3_vguso"]
+[ext_resource type="Texture2D" uid="uid://0t6l8awovx7v" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
+[ext_resource type="Texture2D" uid="uid://u2kdrdsd6vdv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
+[ext_resource type="AudioStream" uid="uid://6nxjwrryipk8" path="res://SFX/Ricochet-1-raw.wav" id="6_5aaie"]
+[ext_resource type="AudioStream" uid="uid://cicgfk0yr2rcq" path="res://SFX/Ricochet-2-raw.wav" id="7_fsp2h"]
+[ext_resource type="AudioStream" uid="uid://b1mmd7kk7l3bo" path="res://SFX/Ricochet-3-raw.wav" id="8_rfxnh"]
+[ext_resource type="AudioStream" uid="uid://ei7gfqxfaehp" path="res://SFX/Ricochet-4-raw.wav" id="9_f5o2b"]
+[ext_resource type="AudioStream" uid="uid://bkdvl783jg756" path="res://SFX/Clang.wav" id="10_700ic"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
@@ -117,7 +117,6 @@ shape = SubResource("CircleShape2D_atinb")
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
-monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_5oakf")
@@ -128,11 +127,6 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/collisionsparkarea"]
 shape = SubResource("CircleShape2D_t6gkc")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-autostart = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(0.992157, 0.819608, 0.368627, 1)
@@ -169,4 +163,3 @@ max_distance = 600.0
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="area_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_area_entered"]
 [connection signal="body_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

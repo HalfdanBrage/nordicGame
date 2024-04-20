@@ -4,3 +4,5 @@
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_3dq57")
+
+[connection signal="finished" from="." to="." method="play"]

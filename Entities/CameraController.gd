@@ -19,9 +19,7 @@ func _process(delta):
 		var target_to_mouse = get_global_mouse_position() - target.position
 		var mouse_offset = target_to_mouse
 		if max_mouse_offset_magnitude < mouse_offset.length():
-			print("out")
 			mouse_offset = target_to_mouse.normalized() * max_mouse_offset_magnitude
-		print(target_to_mouse, mouse_offset)
 		
 		var target_position = target.position + breating_offset + mouse_offset
 		position = position.lerp(target_position, delta * lerp_speed)
