@@ -68,6 +68,7 @@ func shoot():
 	if is_level_1:
 		return
 	
+	$AnimatedSprite2D.animation = "shoot"
 	$Shoot.play()
 	can_swap = false
 	$"Swap cooldown".start()
@@ -116,3 +117,5 @@ func set_active_bullet_line():
 
 func _on_shoot_cooldown_timeout():
 	can_swap = true
+	if $AnimatedSprite2D.animation == "shoot":
+		$AnimatedSprite2D.animation = "default"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=26 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
 [ext_resource type="Texture2D" uid="uid://n1ewako8a01q" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bm88b8iry4itf" path="res://Assets/Player/player_aim.png" id="3_fulid"]
 [ext_resource type="Texture2D" uid="uid://b0uvkljk34g1" path="res://Assets/Player/player_dead.png" id="4_vt0m5"]
 [ext_resource type="AudioStream" uid="uid://huf35tkqq2ft" path="res://SFX/pew.wav" id="5_5sbuj"]
+[ext_resource type="Texture2D" uid="uid://l7pij85pnqqn" path="res://Assets/Player/player_shoot.png" id="6_8k3wx"]
 [ext_resource type="Texture2D" uid="uid://c0nywdpyytfm2" path="res://Assets/Player/teleport_7.png" id="6_lgmjw"]
 [ext_resource type="Texture2D" uid="uid://bwqdsdc2jvssv" path="res://Assets/Player/teleport_6.png" id="7_5m1v0"]
 [ext_resource type="Texture2D" uid="uid://b2uag8iup05sc" path="res://Assets/Player/teleport_5.png" id="8_r0b37"]
@@ -37,6 +38,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8k3wx")
+}],
+"loop": true,
+"name": &"shoot",
 "speed": 5.0
 }]
 
@@ -309,6 +318,7 @@ z_index = 2
 texture_filter = 1
 collision_layer = 4
 script = ExtResource("1_iue56")
+is_level_1 = null
 
 [node name="ActiveBulletLine" type="Line2D" parent="."]
 visible = false
@@ -328,10 +338,9 @@ texture = ExtResource("2_j3pj5")
 texture_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(-2.38419e-07, 4.76837e-07)
 sprite_frames = SubResource("SpriteFrames_pe4d0")
-animation = &"dead"
+animation = &"shoot"
 autoplay = "default"
 offset = Vector2(2, 2)
 
@@ -353,6 +362,7 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+visible = false
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wnsxl")
 animation = &"disappear"
