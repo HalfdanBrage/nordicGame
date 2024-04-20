@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7jjxgbt4wd6n"]
 
-[ext_resource type="Texture2D" uid="uid://coa0j7di6iryb" path="res://Assets/UI/splash_background.png" id="1_cdr4s"]
+[ext_resource type="Texture2D" uid="uid://cssqehac4sydm" path="res://Assets/UI/splash_background.png" id="1_cdr4s"]
 [ext_resource type="Script" path="res://Menus/SelectLevel/select_level.gd" id="1_cxafi"]
-[ext_resource type="Texture2D" uid="uid://bqp2wmjvjqpp2" path="res://Assets/UI/selectlevel_hover.png" id="2_s1ykv"]
+[ext_resource type="Texture2D" uid="uid://l852hluj3dxf" path="res://Assets/UI/selectlevel_hover.png" id="2_s1ykv"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
