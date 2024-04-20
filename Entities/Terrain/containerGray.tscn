@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://btjcq63akrg2d"]
+[gd_scene load_steps=3 format=3 uid="uid://dydlti8j2iqb"]
 
-[ext_resource type="Texture2D" uid="uid://c8lqrif543f32" path="res://Assets/Terrain/container_yel.png" id="1_trry6"]
+[ext_resource type="Texture2D" uid="uid://ber30lpp65w3n" path="res://Assets/Terrain/container_gre.png" id="1_lgkw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
 size = Vector2(178, 70)
@@ -9,7 +9,7 @@ size = Vector2(178, 70)
 
 [node name="ContainerYel" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_trry6")
+texture = ExtResource("1_lgkw4")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
