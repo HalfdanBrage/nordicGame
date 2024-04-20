@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_heao5"]
 [ext_resource type="Texture2D" uid="uid://dtj7dhfdtm4j1" path="res://Assets/Backgrounds/square_simple.png" id="2_a0gn0"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/containerPurple.tscn" id="3_tpcy8"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="3_tpcy8"]
 [ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="4_kltsc"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/containerWhite.tscn" id="5_pxrnd"]
+[ext_resource type="PackedScene" uid="uid://bmynwre70yqxv" path="res://Entities/Terrain/containerWhite.tscn" id="5_pxrnd"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="6_e1hbr"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="7_w03kc"]
 
