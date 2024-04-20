@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://e22molqk5xrk"]
 
 [ext_resource type="Script" path="res://Menus/MainScreen/main.gd" id="1_63d7i"]
-[ext_resource type="Texture2D" uid="uid://kghaegbwnomn" path="res://Assets/spash_art_start.png" id="2_a6nbs"]
-[ext_resource type="Texture2D" uid="uid://betk37ceradml" path="res://Assets/UI/start_default.png" id="3_luwif"]
-[ext_resource type="Texture2D" uid="uid://dna85gpugd4ju" path="res://Assets/UI/start_press.png" id="4_5664y"]
-[ext_resource type="Texture2D" uid="uid://wx7x1rpnw43k" path="res://Assets/UI/start_hover.png" id="5_3djwx"]
+[ext_resource type="Texture2D" uid="uid://dhjkob4e3o21y" path="res://Assets/spash_art_start.png" id="2_a6nbs"]
+[ext_resource type="Texture2D" uid="uid://dy08i6ahn5np0" path="res://Assets/UI/start_default.png" id="3_luwif"]
+[ext_resource type="Texture2D" uid="uid://dmuqsxvw7v6um" path="res://Assets/UI/start_press.png" id="4_5664y"]
+[ext_resource type="Texture2D" uid="uid://cm063n8vdn8dd" path="res://Assets/UI/start_hover.png" id="5_3djwx"]
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_right = 642.0
