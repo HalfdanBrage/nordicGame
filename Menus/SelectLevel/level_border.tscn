@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://m2b7tfrnxngi"]
 
-[ext_resource type="Texture2D" uid="uid://guv3m6hcbfir" path="res://Assets/UI/border.png" id="1_gbtvh"]
+[ext_resource type="Texture2D" uid="uid://b75r74xkw1b4p" path="res://Assets/UI/border.png" id="1_gbtvh"]
 [ext_resource type="Script" path="res://Menus/SelectLevel/level_border.gd" id="1_nvtgq"]
-[ext_resource type="Texture2D" uid="uid://cimbl5yt3l6uk" path="res://Assets/UI/4.png" id="2_e5s5a"]
-[ext_resource type="Texture2D" uid="uid://s7pek3ygkhx3" path="res://Assets/UI/5.png" id="3_mfxci"]
-[ext_resource type="Texture2D" uid="uid://bc00n2g435ibc" path="res://Assets/UI/8.png" id="4_akt2s"]
+[ext_resource type="Texture2D" uid="uid://b58hcy0siplng" path="res://Assets/UI/4.png" id="2_e5s5a"]
+[ext_resource type="Texture2D" uid="uid://btblgwchpjyv6" path="res://Assets/UI/5.png" id="3_mfxci"]
+[ext_resource type="Texture2D" uid="uid://csnsd4yngck1g" path="res://Assets/UI/8.png" id="4_akt2s"]
 
 [node name="TextureButton" type="TextureButton"]
 anchors_preset = -1
