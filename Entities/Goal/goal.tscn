@@ -1,29 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://1piu0qomd32m"]
+[gd_scene load_steps=5 format=3 uid="uid://1piu0qomd32m"]
 
 [ext_resource type="Script" path="res://Entities/Goal/goal.gd" id="1_pllt4"]
-[ext_resource type="Texture2D" uid="uid://cgiua7kl6iq02" path="res://Assets/Flags/black.png" id="2_ye44p"]
-[ext_resource type="Texture2D" uid="uid://d3c4hpqp0yi2x" path="res://Assets/Flags/blue.png" id="3_2qkqh"]
-[ext_resource type="Texture2D" uid="uid://bmatgxxgor3ul" path="res://Assets/Flags/green.png" id="4_wfqso"]
-[ext_resource type="Texture2D" uid="uid://hhcqk3r1laug" path="res://Assets/Flags/purple.png" id="5_wmtri"]
-[ext_resource type="Texture2D" uid="uid://dygxgrlqhv6rc" path="res://Assets/Flags/red.png" id="6_7b5cs"]
+[ext_resource type="Texture2D" uid="uid://cncntbiwgimui" path="res://Assets/Terrain/horse_hay.png" id="2_k8j5q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21iib"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ye44p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_2qkqh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_wfqso")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_wmtri")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_7b5cs")
+"texture": ExtResource("2_k8j5q")
 }],
 "loop": true,
 "name": &"default",
@@ -31,17 +15,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1lyfu"]
-size = Vector2(78, 103.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5xl"]
-size = Vector2(128, 16)
+size = Vector2(110, 64)
 
 [node name="Goal" type="Node2D"]
 script = ExtResource("1_pllt4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_21iib")
-frame = 4
 frame_progress = 1.0
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
@@ -49,13 +29,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollisionArea"]
-position = Vector2(-1, -14.25)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_1lyfu")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 45)
-shape = SubResource("RectangleShape2D_3y5xl")
 
 [connection signal="body_entered" from="PlayerCollisionArea" to="." method="_on_player_collision_area_body_entered"]
