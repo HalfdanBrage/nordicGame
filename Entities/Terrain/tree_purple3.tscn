@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b18eq31h0hs45"]
+
+[ext_resource type="Texture2D" uid="uid://rmndny6cd0w" path="res://Assets/Terrain/tree3_pur.png" id="1_e8mna"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vb6br"]
+radius = 28.1603
+
+[node name="Container" type="StaticBody2D" groups=["metal"]]
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+texture = ExtResource("1_e8mna")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(105, 113)
+shape = SubResource("CircleShape2D_vb6br")

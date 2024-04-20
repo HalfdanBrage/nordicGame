@@ -7,6 +7,7 @@ var currentLevelIndex = 0
 var levels: Array = [
 	"res://Levels/Main_levels/level_1.tscn",
 	"res://Levels/Main_levels/level_2.tscn",
+	"res://Levels/Main_levels/level_3.tscn",
 	"res://Levels/Main_levels/after_level_1.tscn",
 ]
 

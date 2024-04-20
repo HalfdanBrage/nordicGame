@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c1lj8u7bt7var"]
+
+[node name="LevelName" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "LEVEL NAME HERE"
+horizontal_alignment = 1

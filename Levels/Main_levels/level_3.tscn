@@ -1,0 +1,259 @@
+[gd_scene load_steps=9 format=3 uid="uid://cr488l14pa043"]
+
+[ext_resource type="PackedScene" path="res://Levels/base_level.tscn" id="1_kcbgq"]
+[ext_resource type="Texture2D" uid="uid://16ymudhbxqrc" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
+[ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
+[ext_resource type="PackedScene" uid="uid://ba06bk4s4jtfq" path="res://Entities/Terrain/containerWhite.tscn" id="4_u0vl4"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="5_3kctu"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="6_l5yv1"]
+[ext_resource type="Texture2D" uid="uid://bmnaqpu8gy3h6" path="res://Assets/Terrain/chinalite.png" id="7_4tenv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mr5bc"]
+radius = 219.45
+
+[node name="BaseLevel" instance=ExtResource("1_kcbgq")]
+
+[node name="Player" parent="." index="1"]
+position = Vector2(277, 543)
+
+[node name="Gravel" type="Sprite2D" parent="." index="2"]
+position = Vector2(229, 51)
+texture = ExtResource("2_lo7mk")
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_jmhc2")]
+position = Vector2(-51, 506)
+
+[node name="OneWing" type="Node2D" parent="." index="4"]
+position = Vector2(-199, 326)
+rotation = -2.25365
+
+[node name="Container15" parent="OneWing" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(-67.2077, -356.268)
+rotation = -2.27609
+
+[node name="Container16" parent="OneWing" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(0.178528, -214.61)
+rotation = -2.03549
+
+[node name="Container17" parent="OneWing" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(81.6005, -61.6937)
+rotation = -2.06905
+
+[node name="Container12" parent="OneWing" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(-270.534, -342.509)
+rotation = -1.34662
+
+[node name="Container13" parent="OneWing" index="4" instance=ExtResource("4_u0vl4")]
+position = Vector2(-261.655, -166.423)
+rotation = -1.65284
+
+[node name="Container14" parent="OneWing" index="5" instance=ExtResource("4_u0vl4")]
+position = Vector2(-243.218, 5.83538)
+rotation = -1.6864
+
+[node name="OneWing2" type="Node2D" parent="." index="5"]
+position = Vector2(-277, 55)
+rotation = -1.42051
+
+[node name="Container15" parent="OneWing2" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(-67.2077, -356.268)
+rotation = -2.27609
+
+[node name="Container16" parent="OneWing2" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(0.178528, -214.61)
+rotation = -2.03549
+
+[node name="Container17" parent="OneWing2" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(81.6005, -61.6937)
+rotation = -2.06905
+
+[node name="Container12" parent="OneWing2" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(-270.534, -342.509)
+rotation = -1.34662
+
+[node name="Container13" parent="OneWing2" index="4" instance=ExtResource("4_u0vl4")]
+position = Vector2(-261.655, -166.423)
+rotation = -1.65284
+
+[node name="Container14" parent="OneWing2" index="5" instance=ExtResource("4_u0vl4")]
+position = Vector2(-243.218, 5.83538)
+rotation = -1.6864
+
+[node name="GoalNode" type="Node2D" parent="." index="6"]
+
+[node name="Container2" parent="GoalNode" index="0" instance=ExtResource("5_3kctu")]
+position = Vector2(-426, -560)
+rotation = -1.9465
+
+[node name="Container3" parent="GoalNode" index="1" instance=ExtResource("5_3kctu")]
+position = Vector2(-458, -815)
+rotation = -0.135208
+
+[node name="Container4" parent="GoalNode" index="2" instance=ExtResource("5_3kctu")]
+position = Vector2(-275, -594)
+rotation = -1.58924
+
+[node name="Goal" parent="GoalNode" index="3" instance=ExtResource("6_l5yv1")]
+position = Vector2(-348, -715)
+rotation = 3.00825
+
+[node name="OneWing3" type="Node2D" parent="." index="7"]
+position = Vector2(-228, -288)
+rotation = -7.24191
+
+[node name="Container15" parent="OneWing3" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(-67.2077, -356.268)
+rotation = -2.27609
+
+[node name="Container16" parent="OneWing3" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(0.178528, -214.61)
+rotation = -2.03549
+
+[node name="Container17" parent="OneWing3" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(81.6005, -61.6937)
+rotation = -2.06905
+
+[node name="Container12" parent="OneWing3" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(-270.534, -342.509)
+rotation = -1.34662
+
+[node name="Container13" parent="OneWing3" index="4" instance=ExtResource("4_u0vl4")]
+position = Vector2(-261.655, -166.423)
+rotation = -1.65284
+
+[node name="Container14" parent="OneWing3" index="5" instance=ExtResource("4_u0vl4")]
+position = Vector2(-243.218, 5.83538)
+rotation = -1.6864
+
+[node name="OneWing4" type="Node2D" parent="." index="8"]
+position = Vector2(93, -240)
+rotation = 0.680557
+
+[node name="Container15" parent="OneWing4" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(-67.2077, -356.268)
+rotation = -2.27609
+
+[node name="Container16" parent="OneWing4" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(0.178528, -214.61)
+rotation = -2.03549
+
+[node name="Container17" parent="OneWing4" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(81.6005, -61.6937)
+rotation = -2.06905
+
+[node name="Container12" parent="OneWing4" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(-270.534, -342.509)
+rotation = -1.34662
+
+[node name="Container13" parent="OneWing4" index="4" instance=ExtResource("4_u0vl4")]
+position = Vector2(-261.655, -166.423)
+rotation = -1.65284
+
+[node name="Container14" parent="OneWing4" index="5" instance=ExtResource("4_u0vl4")]
+position = Vector2(-243.218, 5.83538)
+rotation = -1.6864
+
+[node name="OneWing5" type="Node2D" parent="." index="9"]
+position = Vector2(353, 160)
+rotation = 1.93832
+
+[node name="Container15" parent="OneWing5" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(-67.2077, -356.268)
+rotation = -2.27609
+
+[node name="Container16" parent="OneWing5" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(0.178528, -214.61)
+rotation = -2.03549
+
+[node name="Container17" parent="OneWing5" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(81.6005, -61.6937)
+rotation = -2.06905
+
+[node name="Container12" parent="OneWing5" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(-270.534, -342.509)
+rotation = -1.34662
+
+[node name="Container13" parent="OneWing5" index="4" instance=ExtResource("4_u0vl4")]
+position = Vector2(-261.655, -166.423)
+rotation = -1.65284
+
+[node name="Container14" parent="OneWing5" index="5" instance=ExtResource("4_u0vl4")]
+position = Vector2(-243.218, 5.83538)
+rotation = -1.6864
+
+[node name="Wing" type="Node2D" parent="." index="10"]
+position = Vector2(195, 208)
+rotation = -0.51353
+
+[node name="Container2" parent="Wing" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(500, -184)
+rotation = -0.233275
+
+[node name="Container3" parent="Wing" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(670, -232)
+rotation = -0.223244
+
+[node name="Container4" parent="Wing" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(824, -257)
+rotation = -0.611151
+
+[node name="Container5" parent="Wing" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(344, -140)
+rotation = -0.233275
+
+[node name="Node2D" type="Node2D" parent="." index="11"]
+
+[node name="Container2" parent="Node2D" index="0" instance=ExtResource("4_u0vl4")]
+position = Vector2(246, -255)
+rotation = -0.678794
+
+[node name="Container3" parent="Node2D" index="1" instance=ExtResource("4_u0vl4")]
+position = Vector2(381, -365)
+rotation = -0.678794
+
+[node name="Container4" parent="Node2D" index="2" instance=ExtResource("4_u0vl4")]
+position = Vector2(533, -463)
+rotation = -0.678794
+
+[node name="Container5" parent="Node2D" index="3" instance=ExtResource("4_u0vl4")]
+position = Vector2(673, -570)
+rotation = -0.380359
+
+[node name="Container2" parent="." index="12" instance=ExtResource("4_u0vl4")]
+position = Vector2(-239, -434)
+rotation = -2.59044
+
+[node name="Container3" parent="." index="13" instance=ExtResource("4_u0vl4")]
+position = Vector2(-219, -489)
+rotation = -0.791349
+
+[node name="Container4" parent="." index="14" instance=ExtResource("4_u0vl4")]
+position = Vector2(-100, -737)
+rotation = 0.225919
+
+[node name="Container5" parent="." index="15" instance=ExtResource("4_u0vl4")]
+position = Vector2(-246, -654)
+rotation = -0.707659
+
+[node name="Container6" parent="." index="16" instance=ExtResource("3_jmhc2")]
+position = Vector2(121, 539)
+rotation = 0.378836
+
+[node name="Container7" parent="." index="17" instance=ExtResource("3_jmhc2")]
+position = Vector2(263, 613)
+rotation = -0.770504
+
+[node name="Container8" parent="." index="18" instance=ExtResource("3_jmhc2")]
+position = Vector2(404, 507)
+rotation = -1.68235
+
+[node name="China" type="StaticBody2D" parent="." index="19"]
+position = Vector2(77, 9)
+
+[node name="Chinalite" type="Sprite2D" parent="China" index="0"]
+position = Vector2(-22, 44)
+texture = ExtResource("7_4tenv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="China" index="1"]
+position = Vector2(-56, 22)
+shape = SubResource("CircleShape2D_mr5bc")

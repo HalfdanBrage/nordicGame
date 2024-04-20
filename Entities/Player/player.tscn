@@ -146,10 +146,10 @@ tracks/6/path = NodePath(".:collision_layer")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0]
+"values": [0, 4]
 }
 
 [sub_resource type="Animation" id="Animation_h4t1q"]
@@ -192,9 +192,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"make_involnurable"
+}, {
 "args": [],
 "method": &"swap"
 }]
@@ -329,6 +332,7 @@ texture = ExtResource("2_ggsop")
 texture_mode = 1
 
 [node name="AimLine" type="Line2D" parent="."]
+visible = false
 texture_repeat = 2
 points = PackedVector2Array(32, -36, 50, -74)
 width = 3.0
@@ -337,9 +341,10 @@ texture = ExtResource("2_j3pj5")
 texture_mode = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-2.38419e-07, 4.76837e-07)
 sprite_frames = SubResource("SpriteFrames_pe4d0")
-animation = &"shoot"
+animation = &"dead"
 autoplay = "default"
 offset = Vector2(2, 2)
 
@@ -361,7 +366,6 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-visible = false
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wnsxl")
 animation = &"disappear"

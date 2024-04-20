@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://fw5h8le457pv"]
+
+[ext_resource type="Script" path="res://Menus/typewriter_label.gd" id="1_dmp8b"]
+[ext_resource type="AudioStream" uid="uid://cgniy00lruwy5" path="res://SFX/typewriter.wav" id="2_x3pil"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c5vv0"]
+random_pitch = 1.4
+streams_count = 1
+stream_0/stream = ExtResource("2_x3pil")
+stream_0/weight = 1.0
+
+[node name="TypewriterLabel" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "TEXT HERE IS VERY AWESOME"
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("1_dmp8b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_c5vv0")
+volume_db = -13.812
+pitch_scale = 1.4
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

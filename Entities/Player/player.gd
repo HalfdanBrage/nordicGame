@@ -17,9 +17,13 @@ var can_shoot = true
 
 var angle
 
+@export var involnurable = false
+
 func _ready():
 	$AnimatedSprite2D.visible = true
 	$AnimatedSprite2D2.visible = false
+	$AimLine.visible = true
+	make_volnurable()
 	Levelmanager.set_player(self)
 	
 func _physics_process(delta):
@@ -46,6 +50,12 @@ func get_aim_angle():
 		).normalized()
 	else:
 		return global_position.direction_to(get_global_mouse_position())
+
+func make_involnurable():
+	involnurable = true
+
+func make_volnurable():
+	involnurable = false
 
 func swap():
 	if not can_swap:
@@ -91,7 +101,8 @@ func disable_bullet():
 		bullet = null
 
 func damage():
-	$AnimationPlayer.play("die")
+	if not involnurable:
+		$AnimationPlayer.play("die")
 
 func respawn():
 	Levelmanager.respawn()
