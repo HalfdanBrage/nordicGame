@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgp8ox4hnu5fq"]
+[gd_scene load_steps=14 format=3 uid="uid://cgp8ox4hnu5fq"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_buonb"]
 [ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_r1pje"]
 [ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_66r63"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_sgvlu"]
-[ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="5_itfk7"]
-[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="6_mw5g2"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/bus.tscn" id="8_rk7p7"]
+[ext_resource type="PackedScene" uid="uid://cn53gxylqeo52" path="res://Entities/Terrain/wall_0.tscn" id="9_ptuou"]
+[ext_resource type="PackedScene" uid="uid://cki642f0x5nx" path="res://Entities/Terrain/wall_2.tscn" id="10_iym8l"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="11_sglko"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_pur.tscn" id="12_po5k8"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi1.tscn" id="13_oh2kv"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_double.tscn" id="14_l8a5p"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi2.tscn" id="15_5v1so"]
 
 [node name="Test-level-1" instance=ExtResource("1_buonb")]
 
@@ -29,14 +35,107 @@ centered = false
 position = Vector2(1, 1)
 
 [node name="Container" parent="." index="3" instance=ExtResource("3_66r63")]
-position = Vector2(-84, 125)
+position = Vector2(584, 279)
+rotation = -0.0647058
 
 [node name="Bullet" parent="." index="4" instance=ExtResource("4_sgvlu")]
 position = Vector2(0, -400)
 
-[node name="Container2" parent="." index="5" instance=ExtResource("5_itfk7")]
-position = Vector2(-96, -222)
+[node name="bus" parent="." index="5" instance=ExtResource("8_rk7p7")]
+position = Vector2(-67, -204)
 
-[node name="Container3" parent="." index="6" instance=ExtResource("6_mw5g2")]
-position = Vector2(-156, -108)
+[node name="wall" parent="." index="6" instance=ExtResource("9_ptuou")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(991, 23)
+rotation = 1.5708
+
+[node name="wall2" parent="." index="7" instance=ExtResource("9_ptuou")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(987, -287)
+rotation = 1.5708
+
+[node name="wall3" parent="." index="8" instance=ExtResource("9_ptuou")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(1196, 47)
+rotation = 1.5708
+
+[node name="wall4" parent="." index="9" instance=ExtResource("9_ptuou")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(1190, -305)
+rotation = 1.5708
+
+[node name="small wall3" parent="." index="10" instance=ExtResource("10_iym8l")]
+position = Vector2(1733.91, 420.318)
+rotation = -0.0704489
+scale = Vector2(1, 1)
+
+[node name="small wall" parent="." index="11" instance=ExtResource("10_iym8l")]
+position = Vector2(682, 280)
+rotation = -0.0704489
+
+[node name="small wall4" parent="." index="12" instance=ExtResource("10_iym8l")]
+position = Vector2(1038, 232)
+rotation = -0.0704489
+
+[node name="small wall2" parent="." index="13" instance=ExtResource("10_iym8l")]
+position = Vector2(66, -183)
+
+[node name="Goal" parent="." index="14" instance=ExtResource("11_sglko")]
+position = Vector2(731, 398)
+
+[node name="car" parent="." index="15" instance=ExtResource("12_po5k8")]
+position = Vector2(840, 150)
+rotation = 0.465298
+
+[node name="truck" parent="." index="16" instance=ExtResource("13_oh2kv")]
+position = Vector2(815, 204)
+rotation = 0.815051
+
+[node name="truck2" parent="." index="17" instance=ExtResource("13_oh2kv")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(533, 362)
+rotation = -0.18249
+
+[node name="car2" parent="." index="18" instance=ExtResource("12_po5k8")]
+position = Vector2(713, 459)
+rotation = -0.52313
+scale = Vector2(1, 1)
+
+[node name="bus2" parent="." index="19" instance=ExtResource("8_rk7p7")]
+position = Vector2(1031, 582)
+rotation = 3.1765
+
+[node name="concreate" parent="." index="20" instance=ExtResource("14_l8a5p")]
+position = Vector2(932, 419)
+
+[node name="concreate2" parent="." index="21" instance=ExtResource("14_l8a5p")]
+position = Vector2(859, 341)
+rotation = 1.77282
+
+[node name="wall5" parent="." index="22" instance=ExtResource("9_ptuou")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(1182, 324)
+rotation = 2.03756
+
+[node name="car3" parent="." index="23" instance=ExtResource("12_po5k8")]
+position = Vector2(-36, -160)
+rotation = 1.88562
+
+[node name="car4" parent="." index="24" instance=ExtResource("12_po5k8")]
+position = Vector2(48, 190)
+rotation = -1.5708
+
+[node name="Container4" parent="." index="25" instance=ExtResource("13_oh2kv")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-68, 190)
+rotation = -1.5708
+
+[node name="Container5" parent="." index="26" instance=ExtResource("15_5v1so")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-187, 123)
+rotation = -1.5708
+
+[node name="Container6" parent="." index="27" instance=ExtResource("15_5v1so")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-168, -229)
 rotation = 1.5708
