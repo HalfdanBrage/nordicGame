@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://fw5h8le457pv"]
+[gd_scene load_steps=6 format=3 uid="uid://fw5h8le457pv"]
 
 [ext_resource type="Script" path="res://Menus/typewriter_label.gd" id="1_dmp8b"]
+[ext_resource type="FontFile" uid="uid://cxvua7pkoje" path="res://Assets/typefont/Moms.ttf" id="1_urr42"]
 [ext_resource type="AudioStream" uid="uid://cgniy00lruwy5" path="res://SFX/typewriter.wav" id="2_x3pil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pnk1x"]
+font = ExtResource("1_urr42")
+font_size = 24
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_c5vv0"]
 random_pitch = 1.4
@@ -10,11 +17,12 @@ stream_0/stream = ExtResource("2_x3pil")
 stream_0/weight = 1.0
 
 [node name="TypewriterLabel" type="Label"]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
 text = "TEXT HERE IS VERY AWESOME"
-visible_characters = 0
-visible_ratio = 0.0
+label_settings = SubResource("LabelSettings_pnk1x")
+visible_ratio = -0.04
 script = ExtResource("1_dmp8b")
 
 [node name="Timer" type="Timer" parent="."]

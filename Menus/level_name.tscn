@@ -1,6 +1,45 @@
-[gd_scene format=3 uid="uid://c1lj8u7bt7var"]
+[gd_scene load_steps=5 format=3 uid="uid://c1lj8u7bt7var"]
+
+[ext_resource type="PackedScene" uid="uid://fw5h8le457pv" path="res://Menus/typewriter_label.tscn" id="1_alqqy"]
+[ext_resource type="Script" path="res://Menus/level_name.gd" id="1_iv2ga"]
+
+[sub_resource type="Animation" id="Animation_duj1b"]
+resource_name = "display"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/TypewriterLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(7.2, 9.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(10.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7woy"]
+_data = {
+"display": SubResource("Animation_duj1b")
+}
 
 [node name="LevelName" type="CanvasLayer"]
+script = ExtResource("1_iv2ga")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -9,7 +48,13 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="TypewriterLabel" parent="MarginContainer" instance=ExtResource("1_alqqy")]
 layout_mode = 2
-text = "LEVEL NAME HERE"
 horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m7woy")
+}

@@ -2,6 +2,7 @@ extends Node
 
 const WIN_SCREEN_RES = preload("res://Menus/win_screen.tscn")
 
+var show_level_title = false
 var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
@@ -24,6 +25,7 @@ func select_level(index: int):
 		print("Out of bounds level")
 		return;
 	
+	show_level_title = true
 	get_tree().change_scene_to_file(levels[index])
 
 func has_next_level() -> bool:

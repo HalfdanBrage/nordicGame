@@ -192,14 +192,17 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [],
 "method": &"make_involnurable"
 }, {
 "args": [],
 "method": &"swap"
+}, {
+"args": [],
+"method": &"make_volnurable"
 }]
 }
 tracks/3/type = "value"
