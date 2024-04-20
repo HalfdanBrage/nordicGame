@@ -6,8 +6,14 @@ const SPEED = 5
 
 var dir: Vector2 = Vector2.RIGHT
 
+var frames_since_swap = 0
+func set_just_swapped():
+	frames_since_swap = 0
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	frames_since_swap += 1
+	
 	velocity = SPEED * dir
 	
 	var collision = move_and_collide(velocity)
@@ -25,7 +31,7 @@ func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 	return vector - 2 * vector.dot(normal) * normal
 
 func _on_area_2d_body_entered(body):
-	if body.has_method("damage"):
+	if body.has_method("damage") and frames_since_swap > 1:
 		body.damage()
 	Area2D
 
