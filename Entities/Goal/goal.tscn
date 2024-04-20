@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://1piu0qomd32m"]
 
 [ext_resource type="Script" path="res://Entities/Goal/goal.gd" id="1_pllt4"]
-[ext_resource type="Texture2D" uid="uid://cncntbiwgimui" path="res://Assets/Terrain/horse_hay.png" id="2_k8j5q"]
+[ext_resource type="Texture2D" uid="uid://d01aaapowlu64" path="res://Assets/Terrain/horse_hay.png" id="2_k8j5q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21iib"]
 animations = [{
@@ -21,8 +21,10 @@ size = Vector2(110, 64)
 script = ExtResource("1_pllt4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_21iib")
 frame_progress = 1.0
+offset = Vector2(0.5, 0.5)
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
 collision_layer = 0
