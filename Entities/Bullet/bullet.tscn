@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://chg348md75ben"]
+[gd_scene load_steps=16 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
-[ext_resource type="Texture2D" uid="uid://cxlb0f0h51cgm" path="res://inactive.png" id="2_j785w"]
-[ext_resource type="Texture2D" uid="uid://yv0llgj5bmo4" path="res://active.png" id="3_vguso"]
+[ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
+[ext_resource type="Texture2D" uid="uid://etuynmey2wwf" path="res://active.png" id="3_vguso"]
+[ext_resource type="Texture2D" uid="uid://0t6l8awovx7v" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
+[ext_resource type="Texture2D" uid="uid://u2kdrdsd6vdv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
@@ -24,10 +26,52 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_atinb"]
-radius = 59.5411
+radius = 7.45356
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5oakf"]
-radius = 36.0
+radius = 4.47214
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6gkc"]
+
+[sub_resource type="Gradient" id="Gradient_ei35a"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bpfvr"]
+gradient = SubResource("Gradient_ei35a")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_prq7q"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 40.0
+initial_velocity_max = 60.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.8
+color = Color(0.992157, 0.819608, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_bpfvr")
+turbulence_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_1b0ki"]
+offsets = PackedFloat32Array(0, 0.75, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_22k0g"]
+gradient = SubResource("Gradient_1b0ki")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_adkdc"]
+lifetime_randomness = 0.55
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 0, 0)
+damping_min = 200.0
+damping_max = 200.0
+scale_min = 2.0
+scale_max = 4.0
+color = Color(0.992157, 0.819608, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_22k0g")
+collision_use_scale = true
 
 [node name="Bullet" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
@@ -35,6 +79,7 @@ collision_layer = 2
 script = ExtResource("1_sgqyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-1, 0)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ajlkv")
@@ -46,18 +91,47 @@ scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_atinb")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 0
 collision_mask = 4
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_5oakf")
 
+[node name="collisionsparkarea" type="Area2D" parent="Area2D"]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/collisionsparkarea"]
+shape = SubResource("CircleShape2D_t6gkc")
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 autostart = true
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0.992157, 0.819608, 0.368627, 1)
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_prq7q")
+texture = ExtResource("4_o5sfj")
+lifetime = 0.4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("4_jjgt6")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_adkdc")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_area_entered"]
+[connection signal="body_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
