@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgp8ox4hnu5fq"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_buonb"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_r1pje"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_66r63"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_sgvlu"]
+[ext_resource type="PackedScene" uid="uid://dydlti8j2iqb" path="res://Entities/Terrain/containerGray.tscn" id="5_itfk7"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="6_mw5g2"]
+
+[node name="Test-level-1" instance=ExtResource("1_buonb")]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+texture_filter = 1
+
+[node name="DesertSimple" type="Sprite2D" parent="Background" index="0"]
+visible = false
+position = Vector2(-352, -608)
+texture = ExtResource("2_r1pje")
+centered = false
+
+[node name="EarthSimple" type="Sprite2D" parent="Background" index="1"]
+position = Vector2(-391, -598)
+texture = ExtResource("3_5okor")
+centered = false
+
+[node name="Player" parent="." index="2"]
+position = Vector2(1, 1)
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_66r63")]
+position = Vector2(-84, 125)
+
+[node name="Bullet" parent="." index="4" instance=ExtResource("4_sgvlu")]
+position = Vector2(0, -400)
+
+[node name="Container2" parent="." index="5" instance=ExtResource("5_itfk7")]
+position = Vector2(-96, -222)
+
+[node name="Container3" parent="." index="6" instance=ExtResource("6_mw5g2")]
+position = Vector2(-156, -108)
+rotation = 1.5708
