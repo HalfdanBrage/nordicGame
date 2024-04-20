@@ -3,6 +3,7 @@ extends Node
 var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
+	"res://Levels/Main_levels/level_1.tscn",
 	"res://Levels/test-level-1.tscn",
 	"res://Levels/01_intro/level.tscn",
 ]

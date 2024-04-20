@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://m2b7tfrnxngi"]
+
+[ext_resource type="Texture2D" uid="uid://b75r74xkw1b4p" path="res://Assets/UI/border.png" id="1_gbtvh"]
+[ext_resource type="Script" path="res://Menus/SelectLevel/level_border.gd" id="1_nvtgq"]
+[ext_resource type="Texture2D" uid="uid://b58hcy0siplng" path="res://Assets/UI/4.png" id="2_e5s5a"]
+[ext_resource type="Texture2D" uid="uid://btblgwchpjyv6" path="res://Assets/UI/5.png" id="3_mfxci"]
+[ext_resource type="Texture2D" uid="uid://csnsd4yngck1g" path="res://Assets/UI/8.png" id="4_akt2s"]
+
+[node name="TextureButton" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.322
+anchor_bottom = 0.487
+offset_right = -0.0800171
+offset_bottom = 0.159988
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_gbtvh")
+script = ExtResource("1_nvtgq")
+
+[node name="Texture_2_1" type="TextureRect" parent="."]
+offset_left = 32.0
+offset_top = 36.0
+offset_right = 122.0
+offset_bottom = 116.0
+texture = ExtResource("2_e5s5a")
+
+[node name="Texture_2_2" type="TextureRect" parent="."]
+offset_left = 70.0
+offset_top = 34.0
+offset_right = 160.0
+offset_bottom = 114.0
+texture = ExtResource("3_mfxci")
+
+[node name="Texture_1" type="TextureRect" parent="."]
+visible = false
+offset_left = 60.0
+offset_top = 40.0
+offset_right = 135.0
+offset_bottom = 110.0
+texture = ExtResource("4_akt2s")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
