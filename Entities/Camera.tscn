@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnp17dosmjr5m"]
+[gd_scene load_steps=2 format=3 uid="uid://cg5jkbbj5pddo"]
 
 [ext_resource type="Script" path="res://Entities/CameraController.gd" id="1_pt642"]
 

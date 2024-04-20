@@ -32,3 +32,11 @@ func _on_area_2d_body_entered(body):
 
 func _on_timer_timeout():
 	$Area2D.monitoring = true
+
+
+func _on_collisionsparkarea_body_entered(body):
+	$GPUParticles2D2.restart()
+
+
+func _on_collisionsparkarea_area_entered(area):
+	$GPUParticles2D2.restart()
