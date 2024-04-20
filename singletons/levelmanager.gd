@@ -4,8 +4,6 @@ extends Node
 var _bullet: Bullet = null
 var _player: Player = null
 
-# Keep track of if the body just swapped
-var just_swapped = false
 
 func set_player(player: Player):
 	_player = player
