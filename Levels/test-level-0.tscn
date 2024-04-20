@@ -23,8 +23,6 @@ size = Vector2(671.125, 70.5)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(410, 273)
 script = ExtResource("1_k0x3w")
-fast_lerp_speed = 1.5
-slow_lerp_speed = 0.4
 
 [node name="Background" type="Node2D" parent="."]
 

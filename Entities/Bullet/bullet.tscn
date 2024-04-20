@@ -1,63 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://chg348md75ben"]
+[gd_scene load_steps=5 format=3 uid="uid://chg348md75ben"]
 
+[ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_kil4k"]
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
-[ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
-[ext_resource type="Texture2D" uid="uid://etuynmey2wwf" path="res://active.png" id="3_vguso"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_j785w")
+"texture": ExtResource("1_kil4k")
 }],
 "loop": true,
-"name": &"active",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_vguso")
-}],
-"loop": true,
-"name": &"inactive",
+"name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_atinb"]
-radius = 59.5411
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5oakf"]
-radius = 36.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h7gs"]
+size = Vector2(128.333, 130)
 
 [node name="Bullet" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
-collision_layer = 2
 script = ExtResource("1_sgqyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ajlkv")
-animation = &"inactive"
-autoplay = "inactive"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 5.96046e-07)
 scale = Vector2(0.6, 0.6)
-shape = SubResource("CircleShape2D_atinb")
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 4
-monitoring = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_5oakf")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-autostart = true
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+shape = SubResource("RectangleShape2D_0h7gs")
