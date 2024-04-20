@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://bi4dpqmr6fykn"]
 
-[ext_resource type="PackedScene" uid="uid://cg5jkbbj5pddo" path="res://Entities/Camera.tscn" id="1_u7hp1"]
-[ext_resource type="PackedScene" path="res://Entities/Player/player.tscn" id="2_k5le6"]
+[ext_resource type="Script" path="res://Entities/CameraController.gd" id="1_k0x3w"]
+[ext_resource type="PackedScene" uid="uid://dbpvb8lcwdvof" path="res://Entities/Player/player.tscn" id="2_k5le6"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="2_witry"]
-[ext_resource type="Texture2D" uid="uid://dk8dy2sidimv8" path="res://Assets/Backgrounds/earth.png" id="3_gca5b"]
-[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="3_yxyaq"]
+[ext_resource type="Texture2D" uid="uid://d6fs4wjy5hlx" path="res://Assets/Backgrounds/earth.png" id="3_gca5b"]
+[ext_resource type="Texture2D" uid="uid://bamt1manq7p3s" path="res://Assets/Backgrounds/square.png" id="3_yxyaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
@@ -20,7 +20,9 @@ size = Vector2(671.125, 70.5)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" parent="." instance=ExtResource("1_u7hp1")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(410, 273)
+script = ExtResource("1_k0x3w")
 
 [node name="Background" type="Node2D" parent="."]
 
