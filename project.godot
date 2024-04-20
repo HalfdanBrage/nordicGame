@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Nordic Game"
-run/main_scene="res://Levels/test-level-0.tscn"
+run/main_scene="res://Levels/test-level-1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -24,7 +24,7 @@ Levelmanager="*res://singletons/levelmanager.gd"
 window/size/viewport_width=640
 window/size/viewport_height=320
 window/size/mode=2
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [input]
 
