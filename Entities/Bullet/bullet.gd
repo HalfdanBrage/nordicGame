@@ -36,7 +36,9 @@ func _on_timer_timeout():
 
 func _on_collisionsparkarea_body_entered(body):
 	$GPUParticles2D2.restart()
+	$Bounce.play()
 
 
 func _on_collisionsparkarea_area_entered(area):
 	$GPUParticles2D2.restart()
+	$Bounce.play()
