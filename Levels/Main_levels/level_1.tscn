@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca5t82w3slikp"]
+[gd_scene load_steps=6 format=3 uid="uid://ca5t82w3slikp"]
 
-[ext_resource type="PackedScene" uid="uid://roboues66463" path="res://Levels/base_level.tscn" id="1_d8im6"]
-[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="2_wm38g"]
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_d8im6"]
+[ext_resource type="Texture2D" uid="uid://bvvpx72odpw3d" path="res://Assets/Backgrounds/square.png" id="2_wm38g"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_5el4r"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_8mvcu"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="5_ik5cs"]
 
 [node name="Level-1" instance=ExtResource("1_d8im6")]
 
@@ -40,3 +41,6 @@ rotation = -0.785398
 
 [node name="Bullet" parent="." index="8" instance=ExtResource("4_8mvcu")]
 position = Vector2(221, -1)
+
+[node name="Goal" parent="." index="9" instance=ExtResource("5_ik5cs")]
+position = Vector2(94, -107)
