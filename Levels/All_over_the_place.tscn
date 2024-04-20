@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://buuisvp7ydxqa"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_heao5"]
+[ext_resource type="Texture2D" uid="uid://dtj7dhfdtm4j1" path="res://Assets/Backgrounds/square_simple.png" id="2_a0gn0"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/containerPurple.tscn" id="3_tpcy8"]
+[ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="4_kltsc"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/containerWhite.tscn" id="5_pxrnd"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="6_e1hbr"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="7_w03kc"]
+
+[node name="BaseLevel" instance=ExtResource("1_heao5")]
+
+[node name="SquareSimple" type="Sprite2D" parent="." index="2"]
+position = Vector2(-172, -216)
+texture = ExtResource("2_a0gn0")
+centered = false
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_tpcy8")]
+position = Vector2(-59, -137)
+
+[node name="Container2" parent="." index="4" instance=ExtResource("4_kltsc")]
+position = Vector2(-23, -62)
+rotation = 1.5708
+
+[node name="Container3" parent="." index="5" instance=ExtResource("5_pxrnd")]
+position = Vector2(-29, 125)
+rotation = -0.0831441
+
+[node name="Container4" parent="." index="6" instance=ExtResource("6_e1hbr")]
+position = Vector2(147, -135)
+rotation = 0.319167
+
+[node name="Container5" parent="." index="7" instance=ExtResource("3_tpcy8")]
+position = Vector2(155, 173)
+rotation = 0.772331
+
+[node name="Container6" parent="." index="8" instance=ExtResource("5_pxrnd")]
+position = Vector2(241, 9)
+rotation = -0.322236
+
+[node name="Container7" parent="." index="9" instance=ExtResource("6_e1hbr")]
+position = Vector2(350, 116)
+rotation = 0.889592
+
+[node name="Container8" parent="." index="10" instance=ExtResource("3_tpcy8")]
+position = Vector2(245, 415)
+rotation = -0.325758
+
+[node name="Container9" parent="." index="11" instance=ExtResource("4_kltsc")]
+position = Vector2(39, 243)
+rotation = 1.49347
+
+[node name="Container10" parent="." index="12" instance=ExtResource("5_pxrnd")]
+position = Vector2(476, -43)
+rotation = 0.502322
+
+[node name="Goal" parent="." index="13" instance=ExtResource("7_w03kc")]
+position = Vector2(1433, 33)
