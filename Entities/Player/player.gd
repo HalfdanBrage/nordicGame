@@ -28,10 +28,11 @@ func _physics_process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
-		swap()
+		if bullet != null:
+			$AnimationPlayer.play("teleport")
+			bullet.get_node("AnimationPlayer").play("teleport")
 		
 	if Input.is_action_just_pressed("shoot"):
-		$Shoot.play()
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:
@@ -70,6 +71,7 @@ func shoot():
 	if is_level_1:
 		return
 	
+	$Shoot.play()
 	can_swap = false
 	$"Swap cooldown".start()
 	
@@ -89,8 +91,10 @@ func disable_bullet():
 		bullet = null
 
 func damage():
+	$AnimationPlayer.play("die")
+
+func respawn():
 	Levelmanager.respawn()
-	print("OWWW")
 	
 func set_ray_cast():
 	var rayNode: RayCast2D = get_node("RayCast2D")

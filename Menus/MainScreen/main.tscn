@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://e22molqk5xrk"]
+[gd_scene load_steps=13 format=3 uid="uid://e22molqk5xrk"]
 
 [ext_resource type="Script" path="res://Menus/MainScreen/main.gd" id="1_63d7i"]
-[ext_resource type="Texture2D" uid="uid://dhjkob4e3o21y" path="res://Assets/spash_art_start.png" id="2_a6nbs"]
-[ext_resource type="Texture2D" uid="uid://dy08i6ahn5np0" path="res://Assets/UI/start_default.png" id="3_luwif"]
-[ext_resource type="Texture2D" uid="uid://dmuqsxvw7v6um" path="res://Assets/UI/start_press.png" id="4_5664y"]
-[ext_resource type="Texture2D" uid="uid://cm063n8vdn8dd" path="res://Assets/UI/start_hover.png" id="5_3djwx"]
+[ext_resource type="Texture2D" uid="uid://kghaegbwnomn" path="res://Assets/spash_art_start.png" id="2_a6nbs"]
+[ext_resource type="Texture2D" uid="uid://cssqehac4sydm" path="res://Assets/UI/splash_background.png" id="3_6i8my"]
+[ext_resource type="Texture2D" uid="uid://betk37ceradml" path="res://Assets/UI/start_default.png" id="3_luwif"]
+[ext_resource type="Texture2D" uid="uid://dna85gpugd4ju" path="res://Assets/UI/start_press.png" id="4_5664y"]
+[ext_resource type="Texture2D" uid="uid://wx7x1rpnw43k" path="res://Assets/UI/start_hover.png" id="5_3djwx"]
+[ext_resource type="Texture2D" uid="uid://b5qw28s8tdh1y" path="res://Assets/UI/selectlevel_default.png" id="7_thoid"]
+[ext_resource type="Texture2D" uid="uid://b4nufig8ho2k3" path="res://Assets/UI/selectlevel_press.png" id="8_0qpem"]
+[ext_resource type="Texture2D" uid="uid://l852hluj3dxf" path="res://Assets/UI/selectlevel_hover.png" id="9_245g6"]
+[ext_resource type="Texture2D" uid="uid://cev76bdxnwvdi" path="res://Assets/UI/quit_default.png" id="10_xtsv1"]
+[ext_resource type="Texture2D" uid="uid://3nnv0kimwf5e" path="res://Assets/UI/quit_press.png" id="11_mptdb"]
+[ext_resource type="Texture2D" uid="uid://bv5amdacgl67m" path="res://Assets/UI/quit_hover.png" id="12_gn527"]
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_right = 642.0
@@ -17,18 +24,49 @@ position = Vector2(316.381, 160.688)
 scale = Vector2(0.676363, 0.676363)
 texture = ExtResource("2_a6nbs")
 
-[node name="Play" type="TextureButton" parent="SpashArtStart"]
-anchors_preset = -1
-anchor_left = 0.585
-anchor_top = 0.353
-anchor_right = 0.831
-anchor_bottom = 0.5
-offset_left = -424.556
-offset_top = -300.984
-offset_right = -397.214
-offset_bottom = -298.103
+[node name="SplashBackground" type="Sprite2D" parent="."]
+position = Vector2(316.515, 160)
+scale = Vector2(0.676471, 0.676471)
+texture = ExtResource("3_6i8my")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 2
+offset_left = 399.0
+offset_top = 126.0
+offset_right = 811.0
+offset_bottom = 448.0
+scale = Vector2(0.6, 0.6)
+alignment = 1
+
+[node name="Play" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../LevelSelect")
 texture_normal = ExtResource("3_luwif")
 texture_pressed = ExtResource("4_5664y")
 texture_hover = ExtResource("5_3djwx")
+texture_focused = ExtResource("5_3djwx")
 
-[connection signal="pressed" from="SpashArtStart/Play" to="." method="_on_play_pressed"]
+[node name="LevelSelect" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
+texture_normal = ExtResource("7_thoid")
+texture_pressed = ExtResource("8_0qpem")
+texture_hover = ExtResource("9_245g6")
+texture_focused = ExtResource("9_245g6")
+
+[node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../LevelSelect")
+focus_neighbor_bottom = NodePath("../Play")
+texture_normal = ExtResource("10_xtsv1")
+texture_pressed = ExtResource("11_mptdb")
+texture_hover = ExtResource("12_gn527")
+texture_focused = ExtResource("12_gn527")
+
+[connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
