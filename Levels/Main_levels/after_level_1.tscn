@@ -17,7 +17,6 @@ centered = false
 
 [node name="Player" parent="." index="2"]
 position = Vector2(1, 1)
-is_level_1 = null
 
 [node name="Container" parent="." index="3" instance=ExtResource("3_qf8hj")]
 position = Vector2(-91, 87)

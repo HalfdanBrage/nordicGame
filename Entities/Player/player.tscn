@@ -318,7 +318,6 @@ z_index = 2
 texture_filter = 1
 collision_layer = 4
 script = ExtResource("1_iue56")
-is_level_1 = null
 
 [node name="ActiveBulletLine" type="Line2D" parent="."]
 visible = false
