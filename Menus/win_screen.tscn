@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://sff7u7unl340"]
+
+[ext_resource type="Script" path="res://Menus/win_screen.gd" id="1_3n6u5"]
+
+[sub_resource type="Gradient" id="Gradient_1fbc4"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.745098)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5sqbm"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5oa2y"]
+color_ramp = SubResource("Gradient_1fbc4")
+noise = SubResource("FastNoiseLite_5sqbm")
+
+[sub_resource type="Animation" id="Animation_q6uc0"]
+resource_name = "appear"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer/FlowContainer/Label:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.1, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(130, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_42x66"]
+_data = {
+"appear": SubResource("Animation_q6uc0")
+}
+
+[node name="Win Screen" type="CanvasLayer"]
+script = ExtResource("1_3n6u5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_5oa2y")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/FlowContainer"]
+layout_mode = 2
+text = "Level Complete!!!"
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_42x66")
+}
+autoplay = "appear"
