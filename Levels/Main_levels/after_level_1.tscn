@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_nwvcb"]
 [ext_resource type="Texture2D" uid="uid://nblbpnlbsft4" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_qf8hj"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_430bl"]
 
 [node name="Test-level-1" instance=ExtResource("1_nwvcb")]
 
@@ -15,6 +16,8 @@ texture = ExtResource("2_tnnrj")
 centered = false
 
 [node name="Camera2D" parent="." index="1"]
+lerp_speed = 2.0
+zoom_lerp_speed = 4.0
 max_mouse_offset_magnitude = 50.0
 
 [node name="Player" parent="." index="2"]
@@ -44,3 +47,6 @@ rotation = 1.22141
 [node name="Container4" parent="." index="9" instance=ExtResource("3_qf8hj")]
 position = Vector2(201, 21)
 rotation = 1.22141
+
+[node name="Bullet" parent="." index="10" instance=ExtResource("4_430bl")]
+position = Vector2(0, -400)
