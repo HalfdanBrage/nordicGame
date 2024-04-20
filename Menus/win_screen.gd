@@ -12,3 +12,7 @@ func _process(delta):
 		var gain = $TextureRect.texture.noise.fractal_gain
 		var new_gain = gain - gain * delta * 0.5
 		$TextureRect.texture.noise.fractal_gain = new_gain 
+
+func start_next_level():
+	if Levelmanager.has_next_level():
+		Levelmanager.play_next_level()
