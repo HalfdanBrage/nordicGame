@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi4dpqmr6fykn"]
+[gd_scene load_steps=10 format=3 uid="uid://bi4dpqmr6fykn"]
 
+[ext_resource type="Script" path="res://Levels/CameraController.gd" id="1_k0x3w"]
 [ext_resource type="PackedScene" path="res://Entities/Player/player.tscn" id="2_k5le6"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="2_witry"]
+[ext_resource type="Texture2D" uid="uid://dk8dy2sidimv8" path="res://Assets/Backgrounds/earth.png" id="3_gca5b"]
+[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="3_yxyaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7y50"]
 size = Vector2(679.5, 58)
@@ -16,6 +19,30 @@ size = Vector2(69.0625, 458.125)
 size = Vector2(671.125, 70.5)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(410, 273)
+script = ExtResource("1_k0x3w")
+fast_lerp_speed = 1.5
+slow_lerp_speed = 0.4
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Earth" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(623, -338)
+texture = ExtResource("3_gca5b")
+
+[node name="Square" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(-581, 381)
+texture = ExtResource("3_yxyaq")
+
+[node name="Square2" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(1333, 318)
+scale = Vector2(-1, -1)
+texture = ExtResource("3_yxyaq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -40,7 +67,7 @@ offset_right = 820.0
 offset_bottom = 91.0
 
 [node name="Bullet" parent="." instance=ExtResource("2_witry")]
-position = Vector2(243, 244)
+position = Vector2(244, 244)
 
 [node name="Player" parent="." instance=ExtResource("2_k5le6")]
 position = Vector2(420, 386)
