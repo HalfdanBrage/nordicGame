@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://chg348md75ben"]
+[gd_scene load_steps=34 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
 [ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
@@ -10,6 +10,14 @@
 [ext_resource type="AudioStream" uid="uid://b1mmd7kk7l3bo" path="res://SFX/Ricochet-3-raw.wav" id="8_rfxnh"]
 [ext_resource type="AudioStream" uid="uid://ei7gfqxfaehp" path="res://SFX/Ricochet-4-raw.wav" id="9_f5o2b"]
 [ext_resource type="AudioStream" uid="uid://bkdvl783jg756" path="res://SFX/Clang.wav" id="10_700ic"]
+[ext_resource type="Texture2D" uid="uid://c0nywdpyytfm2" path="res://Assets/Player/teleport_7.png" id="11_byv7b"]
+[ext_resource type="Texture2D" uid="uid://bwqdsdc2jvssv" path="res://Assets/Player/teleport_6.png" id="12_p18y8"]
+[ext_resource type="Texture2D" uid="uid://b2uag8iup05sc" path="res://Assets/Player/teleport_5.png" id="13_r8elt"]
+[ext_resource type="Texture2D" uid="uid://b58hebb6un47m" path="res://Assets/Player/teleport_4.png" id="14_igrmn"]
+[ext_resource type="Texture2D" uid="uid://cvols2rhipout" path="res://Assets/Player/teleport_3.png" id="15_1m787"]
+[ext_resource type="Texture2D" uid="uid://eshtuy37dot5" path="res://Assets/Player/teleport_2.png" id="16_s3jve"]
+[ext_resource type="Texture2D" uid="uid://4ix38bartxpq" path="res://Assets/Player/teleport_1.png" id="17_lqanl"]
+[ext_resource type="Texture2D" uid="uid://dtyxw4i6jsw27" path="res://Assets/Player/teleport_0.png" id="18_hhftr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
@@ -97,7 +105,146 @@ streams_count = 1
 stream_0/stream = ExtResource("10_700ic")
 stream_0/weight = 1.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_avwry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_byv7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p18y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r8elt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_igrmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1m787")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s3jve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lqanl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hhftr")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"appear",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_hhftr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lqanl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s3jve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1m787")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_igrmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_r8elt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p18y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_byv7b")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"disappear",
+"speed": 30.0
+}]
+
+[sub_resource type="Animation" id="Animation_0atfx"]
+resource_name = "teleport"
+length = 0.4
+step = 0.2
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_physics_process"
+}, {
+"args": [true],
+"method": &"set_physics_process"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"disappear", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"appear", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57bmf"]
+_data = {
+"teleport": SubResource("Animation_0atfx")
+}
+
 [node name="Bullet" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 script = ExtResource("1_sgqyk")
@@ -130,6 +277,7 @@ shape = SubResource("CircleShape2D_t6gkc")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(0.992157, 0.819608, 0.368627, 1)
+emitting = false
 amount = 40
 process_material = SubResource("ParticleProcessMaterial_prq7q")
 texture = ExtResource("4_o5sfj")
@@ -158,6 +306,16 @@ max_distance = 600.0
 stream = SubResource("AudioStreamRandomizer_pehon")
 volume_db = -6.0
 max_distance = 600.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_avwry")
+animation = &"appear"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_57bmf")
+}
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

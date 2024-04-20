@@ -28,10 +28,11 @@ func _physics_process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
-		swap()
+		if bullet != null:
+			$AnimationPlayer.play("teleport")
+			bullet.get_node("AnimationPlayer").play("teleport")
 		
 	if Input.is_action_just_pressed("shoot"):
-		$Shoot.play()
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:
@@ -70,6 +71,7 @@ func shoot():
 	if is_level_1:
 		return
 	
+	$Shoot.play()
 	can_swap = false
 	$"Swap cooldown".start()
 	
