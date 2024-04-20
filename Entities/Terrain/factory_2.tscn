@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct07815tu6lmx"]
+
+[ext_resource type="Texture2D" uid="uid://ftp62tn8nfpu" path="res://Assets/Terrain/factory_1.png" id="1_yxoar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
+size = Vector2(438, 390)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvvrq"]
+size = Vector2(256, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vk8u"]
+size = Vector2(122, 19)
+
+[node name="Container" type="StaticBody2D" groups=["metal"]]
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_yxoar")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(229, 205)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(318, 427)
+shape = SubResource("RectangleShape2D_mvvrq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(92, 408.5)
+shape = SubResource("RectangleShape2D_5vk8u")
