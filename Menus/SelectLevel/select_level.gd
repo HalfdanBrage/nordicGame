@@ -9,5 +9,5 @@ func _ready():
 	print(Levelmanager.levels.size())
 	for n in range(Levelmanager.levels.size()):
 		var k1: TextureButton = LEVEL_BORDER.instantiate()
-		k1.set_level(n+1)
+		k1.set_level(n+1, n)
 		$LevelGrid.add_child(k1)
