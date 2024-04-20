@@ -7,7 +7,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.745098)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_5sqbm"]
 seed = 1
-fractal_gain = 10.0
+fractal_gain = 2.0
 domain_warp_amplitude = 40.0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5oa2y"]
