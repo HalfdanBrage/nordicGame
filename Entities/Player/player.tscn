@@ -320,7 +320,6 @@ texture = ExtResource("2_ggsop")
 texture_mode = 1
 
 [node name="AimLine" type="Line2D" parent="."]
-visible = false
 texture_repeat = 2
 points = PackedVector2Array(32, -36, 50, -74)
 width = 3.0

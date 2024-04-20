@@ -10,7 +10,7 @@ const BULLET_SPAWN_OFFSET = Vector2(50, 0)
 @export var bullet: Bullet = null
 
 var is_controller = false
-var bulletPos = null;
+var bulletPos = null
 
 var can_swap = true
 
