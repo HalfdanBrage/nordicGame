@@ -1,7 +1,6 @@
-extends AnimatableBody2D
+extends CharacterBody2D
 
-
-var velocity: Vector2 = Vector2(-5, 5)
+var directionSpeed: Vector2 = Vector2(-5, 5)
 
 func _ready():
 	Levelmanager._bullet = self
@@ -9,10 +8,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	
-	var collision = move_and_collide(velocity)
+	var collision = move_and_collide(directionSpeed)
 
 	if collision != null:
-		velocity = get_vector_reflection(velocity, collision.get_normal())
+		directionSpeed = get_vector_reflection(directionSpeed, collision.get_normal())
 
 func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 	return vector - 2 * vector.dot(normal) * normal

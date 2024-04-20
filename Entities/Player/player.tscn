@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbpvb8lcwdvof"]
+
+[ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_6n4pr"]
+[ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6n4pr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nw248"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf6l3"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_iue56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.38419e-07, 4.76837e-07)
+scale = Vector2(0.15625, 0.15625)
+sprite_frames = SubResource("SpriteFrames_pe4d0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nw248")
+
+[node name="BulletEnter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletEnter"]
+shape = SubResource("RectangleShape2D_rf6l3")
+
+[connection signal="body_entered" from="BulletEnter" to="." method="_on_bullet_enter_body_entered"]
+[connection signal="body_exited" from="BulletEnter" to="." method="_on_bullet_enter_body_exited"]
