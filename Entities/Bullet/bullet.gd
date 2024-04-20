@@ -6,9 +6,6 @@ const SPEED = 5
 
 var dir: Vector2 = Vector2.RIGHT
 
-func _ready():
-	Levelmanager.add_bullet(self)
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity = SPEED * dir
@@ -18,7 +15,11 @@ func _physics_process(delta):
 	if collision != null:
 		dir = get_vector_reflection(velocity, collision.get_normal()).normalized()
 
-
+func deactivate():
+	$AnimatedSprite2D.play("inactive")
+	
+func activate():
+	$AnimatedSprite2D.play("active")
 
 func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 	return vector - 2 * vector.dot(normal) * normal
