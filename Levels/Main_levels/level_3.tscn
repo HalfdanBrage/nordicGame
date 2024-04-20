@@ -30,7 +30,6 @@ rotation = -2.25365
 [node name="Container15" parent="OneWing" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(-67.2077, -356.268)
 rotation = -2.27609
-scale = Vector2(1, 1)
 
 [node name="Container16" parent="OneWing" index="1" instance=ExtResource("4_u0vl4")]
 position = Vector2(0.178528, -214.61)
@@ -43,7 +42,6 @@ rotation = -2.06905
 [node name="Container12" parent="OneWing" index="3" instance=ExtResource("4_u0vl4")]
 position = Vector2(-270.534, -342.509)
 rotation = -1.34662
-scale = Vector2(1, 1)
 
 [node name="Container13" parent="OneWing" index="4" instance=ExtResource("4_u0vl4")]
 position = Vector2(-261.655, -166.423)
@@ -52,7 +50,6 @@ rotation = -1.65284
 [node name="Container14" parent="OneWing" index="5" instance=ExtResource("4_u0vl4")]
 position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
-scale = Vector2(1, 1)
 
 [node name="OneWing2" type="Node2D" parent="." index="5"]
 position = Vector2(-277, 55)
@@ -61,7 +58,6 @@ rotation = -1.42051
 [node name="Container15" parent="OneWing2" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(-67.2077, -356.268)
 rotation = -2.27609
-scale = Vector2(1, 1)
 
 [node name="Container16" parent="OneWing2" index="1" instance=ExtResource("4_u0vl4")]
 position = Vector2(0.178528, -214.61)
@@ -74,7 +70,6 @@ rotation = -2.06905
 [node name="Container12" parent="OneWing2" index="3" instance=ExtResource("4_u0vl4")]
 position = Vector2(-270.534, -342.509)
 rotation = -1.34662
-scale = Vector2(1, 1)
 
 [node name="Container13" parent="OneWing2" index="4" instance=ExtResource("4_u0vl4")]
 position = Vector2(-261.655, -166.423)
@@ -83,7 +78,6 @@ rotation = -1.65284
 [node name="Container14" parent="OneWing2" index="5" instance=ExtResource("4_u0vl4")]
 position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
-scale = Vector2(1, 1)
 
 [node name="GoalNode" type="Node2D" parent="." index="6"]
 
@@ -98,7 +92,6 @@ rotation = -0.135208
 [node name="Container4" parent="GoalNode" index="2" instance=ExtResource("5_3kctu")]
 position = Vector2(-275, -594)
 rotation = -1.58924
-scale = Vector2(1, 1)
 
 [node name="Goal" parent="GoalNode" index="3" instance=ExtResource("6_l5yv1")]
 position = Vector2(-348, -715)
@@ -111,7 +104,6 @@ rotation = -7.24191
 [node name="Container15" parent="OneWing3" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(-67.2077, -356.268)
 rotation = -2.27609
-scale = Vector2(1, 1)
 
 [node name="Container16" parent="OneWing3" index="1" instance=ExtResource("4_u0vl4")]
 position = Vector2(0.178528, -214.61)
@@ -124,7 +116,6 @@ rotation = -2.06905
 [node name="Container12" parent="OneWing3" index="3" instance=ExtResource("4_u0vl4")]
 position = Vector2(-270.534, -342.509)
 rotation = -1.34662
-scale = Vector2(1, 1)
 
 [node name="Container13" parent="OneWing3" index="4" instance=ExtResource("4_u0vl4")]
 position = Vector2(-261.655, -166.423)
@@ -133,7 +124,6 @@ rotation = -1.65284
 [node name="Container14" parent="OneWing3" index="5" instance=ExtResource("4_u0vl4")]
 position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
-scale = Vector2(1, 1)
 
 [node name="OneWing4" type="Node2D" parent="." index="8"]
 position = Vector2(93, -240)
@@ -142,7 +132,6 @@ rotation = 0.680557
 [node name="Container15" parent="OneWing4" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(-67.2077, -356.268)
 rotation = -2.27609
-scale = Vector2(1, 1)
 
 [node name="Container16" parent="OneWing4" index="1" instance=ExtResource("4_u0vl4")]
 position = Vector2(0.178528, -214.61)
@@ -155,7 +144,6 @@ rotation = -2.06905
 [node name="Container12" parent="OneWing4" index="3" instance=ExtResource("4_u0vl4")]
 position = Vector2(-270.534, -342.509)
 rotation = -1.34662
-scale = Vector2(1, 1)
 
 [node name="Container13" parent="OneWing4" index="4" instance=ExtResource("4_u0vl4")]
 position = Vector2(-261.655, -166.423)
@@ -164,7 +152,6 @@ rotation = -1.65284
 [node name="Container14" parent="OneWing4" index="5" instance=ExtResource("4_u0vl4")]
 position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
-scale = Vector2(1, 1)
 
 [node name="OneWing5" type="Node2D" parent="." index="9"]
 position = Vector2(353, 160)
@@ -173,7 +160,6 @@ rotation = 1.93832
 [node name="Container15" parent="OneWing5" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(-67.2077, -356.268)
 rotation = -2.27609
-scale = Vector2(1, 1)
 
 [node name="Container16" parent="OneWing5" index="1" instance=ExtResource("4_u0vl4")]
 position = Vector2(0.178528, -214.61)
@@ -186,7 +172,6 @@ rotation = -2.06905
 [node name="Container12" parent="OneWing5" index="3" instance=ExtResource("4_u0vl4")]
 position = Vector2(-270.534, -342.509)
 rotation = -1.34662
-scale = Vector2(1, 1)
 
 [node name="Container13" parent="OneWing5" index="4" instance=ExtResource("4_u0vl4")]
 position = Vector2(-261.655, -166.423)
@@ -195,7 +180,6 @@ rotation = -1.65284
 [node name="Container14" parent="OneWing5" index="5" instance=ExtResource("4_u0vl4")]
 position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
-scale = Vector2(1, 1)
 
 [node name="Wing" type="Node2D" parent="." index="10"]
 position = Vector2(195, 208)
