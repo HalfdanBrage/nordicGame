@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhc7af3c2kqxk"]
+
+[ext_resource type="PackedScene" uid="uid://roboues66463" path="res://Levels/base_level.tscn" id="1_nwvcb"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_qf8hj"]
+
+[node name="Test-level-1" instance=ExtResource("1_nwvcb")]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+texture_filter = 1
+
+[node name="DesertSimple" type="Sprite2D" parent="Background" index="0"]
+position = Vector2(-352, -608)
+texture = ExtResource("2_tnnrj")
+centered = false
+
+[node name="Camera2D" parent="." index="1"]
+max_mouse_offset_magnitude = 50.0
+
+[node name="Player" parent="." index="2"]
+position = Vector2(1, 1)
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_qf8hj")]
+position = Vector2(-91, 87)
+
+[node name="Container5" parent="." index="4" instance=ExtResource("3_qf8hj")]
+position = Vector2(-112, -224)
+rotation = 1.5708
+
+[node name="Container6" parent="." index="5" instance=ExtResource("3_qf8hj")]
+position = Vector2(-112, -252)
+
+[node name="Container7" parent="." index="6" instance=ExtResource("3_qf8hj")]
+position = Vector2(74, -250)
+
+[node name="Container2" parent="." index="7" instance=ExtResource("3_qf8hj")]
+position = Vector2(-152, -41)
+rotation = 1.22141
+
+[node name="Container3" parent="." index="8" instance=ExtResource("3_qf8hj")]
+position = Vector2(162, -84)
+rotation = 1.22141
+
+[node name="Container4" parent="." index="9" instance=ExtResource("3_qf8hj")]
+position = Vector2(201, 21)
+rotation = 1.22141

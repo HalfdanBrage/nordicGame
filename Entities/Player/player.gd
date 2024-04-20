@@ -31,6 +31,7 @@ func _input(event):
 		swap()
 		
 	if Input.is_action_just_pressed("shoot"):
+		$Shoot.play()
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:
@@ -61,11 +62,9 @@ func swap():
 			disable_bullet()
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
-	print("start")
 	var tmp = Vector2(node_1.global_position)
 	node_1.global_position = node_2.global_position
 	node_2.global_position = tmp
-	print("stop")
 
 func shoot():
 	if is_level_1:
@@ -111,7 +110,6 @@ func set_active_bullet_line():
 	if bullet != null:
 		line.show()
 		line.set_point_position(1, bullet.position - global_position)
-		print("Bullet pos : ", bullet.position)
 	else:
 		line.hide()
 

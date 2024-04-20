@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=10 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
 [ext_resource type="Texture2D" uid="uid://dlol5p1l0bgbv" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
 [ext_resource type="Texture2D" uid="uid://ds864k1kbls3h" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
 [ext_resource type="Texture2D" uid="uid://71hac1y88qnw" path="res://Assets/Player/player_aim.png" id="3_fulid"]
+[ext_resource type="AudioStream" uid="uid://buc64dra8npxk" path="res://SFX/pew.wav" id="5_5sbuj"]
+
+[sub_resource type="Gradient" id="Gradient_1xwgm"]
+offsets = PackedFloat32Array(0, 0.344086, 0.451613, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
 animations = [{
@@ -19,6 +24,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2rk2y"]
 radius = 15.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_13cpl"]
+random_pitch = 1.4
+streams_count = 1
+stream_0/stream = ExtResource("5_5sbuj")
+stream_0/weight = 1.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 texture_filter = 1
@@ -30,6 +41,7 @@ visible = false
 texture_repeat = 2
 points = PackedVector2Array(0, 0, 92, -13)
 width = 3.0
+gradient = SubResource("Gradient_1xwgm")
 texture = ExtResource("2_ggsop")
 texture_mode = 1
 
@@ -55,5 +67,8 @@ wait_time = 0.2
 one_shot = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Shoot" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = SubResource("AudioStreamRandomizer_13cpl")
 
 [connection signal="timeout" from="Swap cooldown" to="." method="_on_shoot_cooldown_timeout"]

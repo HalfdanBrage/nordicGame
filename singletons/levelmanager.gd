@@ -1,5 +1,7 @@
 extends Node
 
+const WIN_SCREEN_RES = preload("res://Menus/win_screen.tscn")
+
 var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
@@ -14,7 +16,7 @@ func get_player() -> Player:
 	return _player
 
 func show_win_screen():
-	pass
+	get_tree().current_scene.add_child(WIN_SCREEN_RES.instantiate())
 	
 func select_level(index: int):
 	if (index > levels.size() - 1 || index < 0):
