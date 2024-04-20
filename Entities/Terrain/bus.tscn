@@ -1,18 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyqwpd4kticcl"]
+[gd_scene load_steps=3 format=3 uid="uid://bd5mwm2t8inhm"]
 
-[ext_resource type="Texture2D" uid="uid://ber30lpp65w3n" path="res://Assets/Terrain/container_gre.png" id="1_lgkw4"]
+[ext_resource type="Texture2D" uid="uid://cwxyrmlw45kc1" path="res://Assets/Terrain/bus.png" id="1_wdm61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
-size = Vector2(178, 70)
+size = Vector2(164, 53)
 
 [node name="Container" type="StaticBody2D" groups=["metal"]]
 
 [node name="ContainerYel" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_lgkw4")
+texture = ExtResource("1_wdm61")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(93, 40)
+position = Vector2(94, 67.5)
 shape = SubResource("RectangleShape2D_3u15y")

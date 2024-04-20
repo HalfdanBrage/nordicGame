@@ -13,6 +13,7 @@ var is_controller = false
 var bulletPos = null
 
 var can_swap = true
+var can_shoot = true
 
 var angle
 
@@ -65,11 +66,13 @@ func swap_positions(node_1: Node2D, node_2: Node2D):
 	node_2.global_position = tmp
 
 func shoot():
-	if is_level_1:
+	if is_level_1 or not can_shoot:
 		return
 	
+	$AnimatedSprite2D.animation = "shoot"
 	$Shoot.play()
 	can_swap = false
+	can_shoot = false
 	$"Swap cooldown".start()
 	
 	var aim_dir = get_aim_angle()
@@ -116,3 +119,6 @@ func set_active_bullet_line():
 
 func _on_shoot_cooldown_timeout():
 	can_swap = true
+	can_shoot = true
+	if $AnimatedSprite2D.animation == "shoot":
+		$AnimatedSprite2D.animation = "default"

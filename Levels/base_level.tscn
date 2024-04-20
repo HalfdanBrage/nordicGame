@@ -10,3 +10,4 @@ script = ExtResource("1_seoey")
 [node name="Camera2D" parent="." instance=ExtResource("2_836xk")]
 
 [node name="Player" parent="." instance=ExtResource("3_bs6iq")]
+is_level_1 = false
