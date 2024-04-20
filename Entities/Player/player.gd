@@ -17,6 +17,8 @@ var can_swap = true
 var angle
 
 func _ready():
+	$AnimatedSprite2D.visible = true
+	$AnimatedSprite2D2.visible = false
 	Levelmanager.set_player(self)
 	
 func _physics_process(delta):
@@ -34,11 +36,6 @@ func _input(event):
 		
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
-	# TODO: refine joypad aiming later
-	if event is InputEventJoypadButton:
-		is_controller = false
-	elif event is InputEventMouse:
-		is_controller = false
 
 func get_aim_angle():
 	if is_controller:
