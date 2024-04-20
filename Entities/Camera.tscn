@@ -5,6 +5,8 @@
 [node name="Camera2D" type="Camera2D"]
 position = Vector2(0, -445)
 script = ExtResource("1_pt642")
+lerp_speed = 2.0
+zoom_lerp_speed = 4.0
 max_breathing_y_offset = 7.0
 breathing_speed = 4.75
 max_mouse_offset_magnitude = 0.0
