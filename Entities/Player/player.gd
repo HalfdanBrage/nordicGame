@@ -4,15 +4,17 @@ class_name Player
 
 const BULLET_RES = preload("res://Entities/Bullet/bullet.tscn")
 
-var bullet = null
+var bullet: Bullet = null
 
 var is_controller = false
+
+var can_swap = true
 
 func _ready():
 	Levelmanager.set_player(self)
 
 func _physics_process(delta):
-	pass	
+	pass
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
@@ -36,16 +38,27 @@ func get_aim_angle():
 		return global_position.direction_to(get_global_mouse_position())
 
 func swap():
+	if not can_swap:
+		return
+	#can_swap = false
+	#$"Swap cooldown".start()
+	
 	if bullet != null:
 		swap_positions(self, bullet)
-		disable_bullet()
+		bullet.set_just_swapped()
+		#disable_bullet()
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
+	print("start")
 	var tmp = Vector2(node_1.global_position)
 	node_1.global_position = node_2.global_position
 	node_2.global_position = tmp
+	print("stop")
 
 func shoot():
+	can_swap = false
+	$"Swap cooldown".start()
+	
 	var aim_dir = get_aim_angle()
 	if aim_dir:
 		disable_bullet()
@@ -62,4 +75,9 @@ func disable_bullet():
 		bullet = null
 
 func damage():
+	Levelmanager.respawn()
 	print("OWWW")
+
+
+func _on_shoot_cooldown_timeout():
+	can_swap = true

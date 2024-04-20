@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbpvb8lcwdvof"]
+[gd_scene load_steps=6 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_6n4pr"]
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
@@ -35,5 +35,10 @@ shape = SubResource("RectangleShape2D_nw248")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletEnter"]
 shape = SubResource("RectangleShape2D_rf6l3")
 
+[node name="Swap cooldown" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="body_entered" from="BulletEnter" to="." method="_on_bullet_enter_body_entered"]
 [connection signal="body_exited" from="BulletEnter" to="." method="_on_bullet_enter_body_exited"]
+[connection signal="timeout" from="Swap cooldown" to="." method="_on_shoot_cooldown_timeout"]
