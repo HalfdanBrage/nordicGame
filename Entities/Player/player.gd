@@ -31,6 +31,7 @@ func _input(event):
 		swap()
 		
 	if Input.is_action_just_pressed("shoot"):
+		$Shoot.play()
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:

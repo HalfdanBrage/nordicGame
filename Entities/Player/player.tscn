@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=9 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
 [ext_resource type="Texture2D" uid="uid://n1ewako8a01q" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
 [ext_resource type="Texture2D" uid="uid://dm24o6fn7v3v5" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
 [ext_resource type="Texture2D" uid="uid://bm88b8iry4itf" path="res://Assets/Player/player_aim.png" id="3_fulid"]
+[ext_resource type="AudioStream" uid="uid://huf35tkqq2ft" path="res://SFX/pew.wav" id="5_5sbuj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
 animations = [{
@@ -18,6 +19,12 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2rk2y"]
 radius = 15.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_13cpl"]
+random_pitch = 1.4
+streams_count = 1
+stream_0/stream = ExtResource("5_5sbuj")
+stream_0/weight = 1.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
@@ -55,5 +62,8 @@ wait_time = 0.2
 one_shot = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_13cpl")
 
 [connection signal="timeout" from="Swap cooldown" to="." method="_on_shoot_cooldown_timeout"]
