@@ -7,9 +7,12 @@ func _ready():
 	Levelmanager.add_exception_body(self)
 
 func _input(event):
-	if Input.is_action_just_pressed("shoot"):
-		#position = Levelmanager._bullet.position
+	if Input.is_action_just_pressed("swap"):
 		swap_positions(self, Levelmanager.get_newest_bullet())
+		Levelmanager.just_swapped = true
+		
+	if Input.is_action_just_pressed("shoot"):
+		Levelmanager.get_newest_bullet().position = position
 		Levelmanager.just_swapped = true
 
 func swap_positions(node_1: Node2D, node_2: Node2D):
