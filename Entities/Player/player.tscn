@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbpvb8lcwdvof"]
+[gd_scene load_steps=7 format=3 uid="uid://dbpvb8lcwdvof"]
 
 [ext_resource type="Texture2D" uid="uid://bnfcc2ttwo4yc" path="res://icon.svg" id="1_6n4pr"]
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
+[ext_resource type="Texture2D" uid="uid://ds864k1kbls3h" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
 animations = [{
@@ -22,6 +23,14 @@ animations = [{
 collision_layer = 4
 script = ExtResource("1_iue56")
 
+[node name="AimLine" type="Line2D" parent="."]
+texture_repeat = 2
+points = PackedVector2Array(1, 0, 50, -74)
+width = 3.0
+default_color = Color(0.768627, 0, 0, 1)
+texture = ExtResource("2_j3pj5")
+texture_mode = 1
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.38419e-07, 4.76837e-07)
 scale = Vector2(0.15625, 0.15625)
@@ -34,6 +43,8 @@ shape = SubResource("RectangleShape2D_nw248")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletEnter"]
 shape = SubResource("RectangleShape2D_rf6l3")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
 
 [connection signal="body_entered" from="BulletEnter" to="." method="_on_bullet_enter_body_entered"]
 [connection signal="body_exited" from="BulletEnter" to="." method="_on_bullet_enter_body_exited"]

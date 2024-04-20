@@ -7,12 +7,13 @@ const BULLET_RES = preload("res://Entities/Bullet/bullet.tscn")
 var bullet = null
 
 var is_controller = false
+var bulletPos = null;
 
 func _ready():
 	Levelmanager.set_player(self)
-
+	
 func _physics_process(delta):
-	pass	
+	set_ray_cast()
 
 func _input(event):
 	if Input.is_action_just_pressed("swap"):
@@ -22,7 +23,7 @@ func _input(event):
 		shoot()
 	# TODO: refine joypad aiming later
 	if event is InputEventJoypadButton:
-		is_controller = true
+		is_controller = false
 	elif event is InputEventMouse:
 		is_controller = false
 
@@ -37,6 +38,7 @@ func get_aim_angle():
 
 func swap():
 	if bullet != null:
+		bulletPos = bullet.global_position 
 		swap_positions(self, bullet)
 		disable_bullet()
 
@@ -63,3 +65,18 @@ func disable_bullet():
 
 func damage():
 	print("OWWW")
+	
+func set_ray_cast():
+	var rayNode: RayCast2D = get_node("RayCast2D")
+	var target_position = (1000 * get_aim_angle())
+	rayNode.target_position = target_position
+	
+	var line: Line2D = get_node("AimLine")
+	var col_point = rayNode.get_collision_point()
+	if rayNode.is_colliding():
+		target_position = (get_aim_angle() * global_position.distance_to(col_point))
+	line.set_point_position(1, target_position)
+	#print("Player:", position, " player global: ", global_position)
+	#print("line start:" , line.get_point_position(0), " line end: ", line.get_point_position(1))
+	print("RayNode start:" , target_position)
+	

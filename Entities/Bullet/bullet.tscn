@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://chg348md75ben"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/bullet.gd" id="1_sgqyk"]
-[ext_resource type="Texture2D" uid="uid://c01bf6ta4sxhg" path="res://inactive.png" id="2_j785w"]
-[ext_resource type="Texture2D" uid="uid://etuynmey2wwf" path="res://active.png" id="3_vguso"]
-[ext_resource type="Texture2D" uid="uid://0t6l8awovx7v" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
-[ext_resource type="Texture2D" uid="uid://u2kdrdsd6vdv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
+[ext_resource type="Texture2D" uid="uid://cxlb0f0h51cgm" path="res://inactive.png" id="2_j785w"]
+[ext_resource type="Texture2D" uid="uid://yv0llgj5bmo4" path="res://active.png" id="3_vguso"]
+[ext_resource type="Texture2D" uid="uid://b5odplffu4or" path="res://Assets/Bullets/bullet.png" id="4_jjgt6"]
+[ext_resource type="Texture2D" uid="uid://8e4hkbt34ahv" path="res://Assets/Bullets/bullet (4).png" id="4_o5sfj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ajlkv"]
 animations = [{
