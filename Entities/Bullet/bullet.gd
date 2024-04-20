@@ -2,17 +2,33 @@ extends CharacterBody2D
 
 class_name Bullet
 
-var directionSpeed: Vector2 = Vector2(-5, 5)
+const SPEED = 5
 
-func _ready():
-	Levelmanager.add_bullet(self)
+var dir: Vector2 = Vector2.RIGHT
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	var collision = move_and_collide(directionSpeed)
-
+	velocity = SPEED * dir
+	
+	var collision = move_and_collide(velocity)
+	
 	if collision != null:
-		directionSpeed = get_vector_reflection(directionSpeed, collision.get_normal())
+		dir = get_vector_reflection(velocity, collision.get_normal()).normalized()
+
+func deactivate():
+	$AnimatedSprite2D.play("inactive")
+	
+func activate():
+	$AnimatedSprite2D.play("active")
 
 func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 	return vector - 2 * vector.dot(normal) * normal
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("damage"):
+		body.damage()
+	Area2D
+
+
+func _on_timer_timeout():
+	$Area2D.monitoring = true
