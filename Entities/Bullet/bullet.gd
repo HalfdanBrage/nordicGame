@@ -33,11 +33,6 @@ func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 func _on_area_2d_body_entered(body):
 	if body.has_method("damage") and frames_since_swap > 1:
 		body.damage()
-	Area2D
-
-
-func _on_timer_timeout():
-	$Area2D.monitoring = true
 
 
 func _on_collisionsparkarea_body_entered(body):

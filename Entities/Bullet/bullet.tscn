@@ -117,7 +117,6 @@ shape = SubResource("CircleShape2D_atinb")
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
-monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_5oakf")
@@ -128,11 +127,6 @@ collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/collisionsparkarea"]
 shape = SubResource("CircleShape2D_t6gkc")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-autostart = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 modulate = Color(0.992157, 0.819608, 0.368627, 1)
@@ -169,4 +163,3 @@ max_distance = 600.0
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="area_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_area_entered"]
 [connection signal="body_entered" from="Area2D/collisionsparkarea" to="." method="_on_collisionsparkarea_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
