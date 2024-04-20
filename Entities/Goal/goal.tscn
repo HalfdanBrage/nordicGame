@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://1piu0qomd32m"]
 
 [ext_resource type="Script" path="res://Entities/Goal/goal.gd" id="1_pllt4"]
-[ext_resource type="Texture2D" uid="uid://cgiua7kl6iq02" path="res://Assets/Flags/black.png" id="2_ye44p"]
-[ext_resource type="Texture2D" uid="uid://d3c4hpqp0yi2x" path="res://Assets/Flags/blue.png" id="3_2qkqh"]
-[ext_resource type="Texture2D" uid="uid://bmatgxxgor3ul" path="res://Assets/Flags/green.png" id="4_wfqso"]
-[ext_resource type="Texture2D" uid="uid://hhcqk3r1laug" path="res://Assets/Flags/purple.png" id="5_wmtri"]
-[ext_resource type="Texture2D" uid="uid://dygxgrlqhv6rc" path="res://Assets/Flags/red.png" id="6_7b5cs"]
+[ext_resource type="Texture2D" uid="uid://bxd44w563q6kn" path="res://Assets/Flags/black.png" id="2_ye44p"]
+[ext_resource type="Texture2D" uid="uid://vb7jn0sp1kaw" path="res://Assets/Flags/blue.png" id="3_2qkqh"]
+[ext_resource type="Texture2D" uid="uid://bepm3kbjbqrjg" path="res://Assets/Flags/green.png" id="4_wfqso"]
+[ext_resource type="Texture2D" uid="uid://infsugykwf5h" path="res://Assets/Flags/purple.png" id="5_wmtri"]
+[ext_resource type="Texture2D" uid="uid://byxqivwerak5i" path="res://Assets/Flags/red.png" id="6_7b5cs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21iib"]
 animations = [{
