@@ -6,6 +6,9 @@ const SPEED = 5
 
 var dir: Vector2 = Vector2.RIGHT
 
+func _ready():
+	$Sprite2D.visible = true
+
 var frames_since_swap = 0
 func set_just_swapped():
 	frames_since_swap = 0
@@ -22,10 +25,10 @@ func _physics_process(delta):
 		dir = get_vector_reflection(velocity, collision.get_normal()).normalized()
 
 func deactivate():
-	$AnimatedSprite2D.play("inactive")
+	pass
 	
 func activate():
-	$AnimatedSprite2D.play("active")
+	pass
 
 func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 	return vector - 2 * vector.dot(normal) * normal
@@ -33,6 +36,7 @@ func get_vector_reflection(vector: Vector2, normal: Vector2) -> Vector2:
 func _on_area_2d_body_entered(body):
 	if body.has_method("damage") and frames_since_swap > 1:
 		body.damage()
+		$AnimationPlayer.play("kill_player")
 
 
 func _on_collisionsparkarea_body_entered(body):

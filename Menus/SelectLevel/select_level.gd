@@ -11,3 +11,5 @@ func _ready():
 		var k1: TextureButton = LEVEL_BORDER.instantiate()
 		k1.set_level(n+1, n)
 		$LevelGrid.add_child(k1)
+	$LevelGrid.get_child(1).grab_focus()
+	

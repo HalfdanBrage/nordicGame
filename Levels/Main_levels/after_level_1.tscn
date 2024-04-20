@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b36lwwu4a8a56"]
+[gd_scene load_steps=5 format=3 uid="uid://c3iv5b5fopich"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_nwvcb"]
-[ext_resource type="Texture2D" uid="uid://doow6e3fhxs7o" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_qf8hj"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_430bl"]
 
 [node name="Test-level-1" instance=ExtResource("1_nwvcb")]
 
@@ -44,3 +45,6 @@ rotation = 1.22141
 [node name="Container4" parent="." index="9" instance=ExtResource("3_qf8hj")]
 position = Vector2(201, 21)
 rotation = 1.22141
+
+[node name="Bullet" parent="." index="10" instance=ExtResource("4_430bl")]
+position = Vector2(0, -400)

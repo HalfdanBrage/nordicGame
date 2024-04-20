@@ -1,18 +1,21 @@
-[gd_scene load_steps=21 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=25 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
-[ext_resource type="Texture2D" uid="uid://dlol5p1l0bgbv" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
-[ext_resource type="Texture2D" uid="uid://ds864k1kbls3h" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
-[ext_resource type="Texture2D" uid="uid://71hac1y88qnw" path="res://Assets/Player/player_aim.png" id="3_fulid"]
-[ext_resource type="AudioStream" uid="uid://buc64dra8npxk" path="res://SFX/pew.wav" id="5_5sbuj"]
-[ext_resource type="Texture2D" uid="uid://ykp0p3m2qiyd" path="res://Assets/Player/teleport_7.png" id="6_lgmjw"]
-[ext_resource type="Texture2D" uid="uid://b1l44a266g4ck" path="res://Assets/Player/teleport_6.png" id="7_5m1v0"]
-[ext_resource type="Texture2D" uid="uid://qokto4vm331k" path="res://Assets/Player/teleport_5.png" id="8_r0b37"]
-[ext_resource type="Texture2D" uid="uid://6bldpy5t3fe2" path="res://Assets/Player/teleport_4.png" id="9_el8ls"]
-[ext_resource type="Texture2D" uid="uid://cwdw6a6slbox6" path="res://Assets/Player/teleport_3.png" id="10_rn88m"]
-[ext_resource type="Texture2D" uid="uid://bafr4vvbytds6" path="res://Assets/Player/teleport_2.png" id="11_pl6ep"]
-[ext_resource type="Texture2D" uid="uid://dxfw6i3nrwnen" path="res://Assets/Player/teleport_1.png" id="12_7i2bm"]
-[ext_resource type="Texture2D" uid="uid://bdkwba6rpty3b" path="res://Assets/Player/teleport_0.png" id="13_wdprl"]
+[ext_resource type="Texture2D" uid="uid://n1ewako8a01q" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
+[ext_resource type="Texture2D" uid="uid://dm24o6fn7v3v5" path="res://Assets/Texture/dashed_texture.png" id="2_j3pj5"]
+[ext_resource type="Texture2D" uid="uid://bm88b8iry4itf" path="res://Assets/Player/player_aim.png" id="3_fulid"]
+[ext_resource type="Texture2D" uid="uid://b0uvkljk34g1" path="res://Assets/Player/player_dead.png" id="4_vt0m5"]
+[ext_resource type="AudioStream" uid="uid://huf35tkqq2ft" path="res://SFX/pew.wav" id="5_5sbuj"]
+[ext_resource type="Texture2D" uid="uid://c0nywdpyytfm2" path="res://Assets/Player/teleport_7.png" id="6_lgmjw"]
+[ext_resource type="Texture2D" uid="uid://bwqdsdc2jvssv" path="res://Assets/Player/teleport_6.png" id="7_5m1v0"]
+[ext_resource type="Texture2D" uid="uid://b2uag8iup05sc" path="res://Assets/Player/teleport_5.png" id="8_r0b37"]
+[ext_resource type="Texture2D" uid="uid://b58hebb6un47m" path="res://Assets/Player/teleport_4.png" id="9_el8ls"]
+[ext_resource type="Texture2D" uid="uid://cvols2rhipout" path="res://Assets/Player/teleport_3.png" id="10_rn88m"]
+[ext_resource type="Texture2D" uid="uid://eshtuy37dot5" path="res://Assets/Player/teleport_2.png" id="11_pl6ep"]
+[ext_resource type="Texture2D" uid="uid://4ix38bartxpq" path="res://Assets/Player/teleport_1.png" id="12_7i2bm"]
+[ext_resource type="Texture2D" uid="uid://dtyxw4i6jsw27" path="res://Assets/Player/teleport_0.png" id="13_wdprl"]
+[ext_resource type="AudioStream" uid="uid://b3yi3ul2055wl" path="res://SFX/Swap-sound.wav" id="14_nrwam"]
+[ext_resource type="AudioStream" uid="uid://5h5vnxn003m4" path="res://SFX/Swap-sound-reverse.wav" id="15_slpmx"]
 
 [sub_resource type="Gradient" id="Gradient_1xwgm"]
 offsets = PackedFloat32Array(0, 0.344086, 0.451613, 1)
@@ -20,6 +23,14 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pe4d0"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vt0m5")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_fulid")
@@ -37,6 +48,35 @@ random_pitch = 1.4
 streams_count = 1
 stream_0/stream = ExtResource("5_5sbuj")
 stream_0/weight = 1.0
+
+[sub_resource type="Animation" id="Animation_t5pyw"]
+resource_name = "die"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"dead"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"respawn"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_h4t1q"]
 resource_name = "teleport"
@@ -97,9 +137,38 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Dissapear")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Appear")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_adrc6"]
 _data = {
+"die": SubResource("Animation_t5pyw"),
 "teleport": SubResource("Animation_h4t1q")
 }
 
@@ -197,6 +266,8 @@ texture_mode = 1
 position = Vector2(-2.38419e-07, 4.76837e-07)
 rotation = 1.91986
 sprite_frames = SubResource("SpriteFrames_pe4d0")
+animation = &"dead"
+autoplay = "default"
 offset = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -221,5 +292,13 @@ visible = false
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_wnsxl")
 animation = &"disappear"
+
+[node name="Dissapear" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("14_nrwam")
+volume_db = -10.0
+
+[node name="Appear" type="AudioStreamPlayer" parent="." groups=["sfx"]]
+stream = ExtResource("15_slpmx")
+volume_db = -10.0
 
 [connection signal="timeout" from="Swap cooldown" to="." method="_on_shoot_cooldown_timeout"]

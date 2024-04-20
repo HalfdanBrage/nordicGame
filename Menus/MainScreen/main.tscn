@@ -43,21 +43,30 @@ alignment = 1
 
 [node name="Play" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../LevelSelect")
 texture_normal = ExtResource("3_luwif")
 texture_pressed = ExtResource("4_5664y")
 texture_hover = ExtResource("5_3djwx")
+texture_focused = ExtResource("5_3djwx")
 
 [node name="LevelSelect" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
 texture_normal = ExtResource("7_thoid")
 texture_pressed = ExtResource("8_0qpem")
 texture_hover = ExtResource("9_245g6")
+texture_focused = ExtResource("9_245g6")
 
 [node name="Quit" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../LevelSelect")
+focus_neighbor_bottom = NodePath("../Play")
 texture_normal = ExtResource("10_xtsv1")
 texture_pressed = ExtResource("11_mptdb")
 texture_hover = ExtResource("12_gn527")
+texture_focused = ExtResource("12_gn527")
 
 [connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
