@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj53botb6lioj"]
+
+[ext_resource type="Texture2D" uid="uid://b74bu74svxoc7" path="res://Assets/Terrain/train.png" id="1_eb30w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
+size = Vector2(455, 49)
+
+[node name="Container" type="StaticBody2D" groups=["metal"]]
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_eb30w")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(260.5, 67.5)
+shape = SubResource("RectangleShape2D_3u15y")
