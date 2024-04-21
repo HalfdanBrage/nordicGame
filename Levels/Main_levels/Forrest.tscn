@@ -1,22 +1,26 @@
 [gd_scene load_steps=15 format=3 uid="uid://dxnkbyijvli54"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_qtbtd"]
-[ext_resource type="Texture2D" uid="uid://bmxul18ypkbpv" path="res://Assets/Backgrounds/desert_simple.png" id="2_vgw83"]
-[ext_resource type="PackedScene" uid="uid://b18eq31h0hs45" path="res://Entities/Terrain/tree_purple3.tscn" id="3_jqyu0"]
-[ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="4_aecrt"]
-[ext_resource type="PackedScene" uid="uid://onf1nb47secp" path="res://Entities/Terrain/tree_yellow3.tscn" id="5_00g8o"]
-[ext_resource type="PackedScene" uid="uid://cseux313ox337" path="res://Entities/Terrain/tree_yellow2.tscn" id="6_3jwcf"]
-[ext_resource type="PackedScene" uid="uid://butqnptbn3bm3" path="res://Entities/Terrain/tree_white.tscn" id="7_db2qk"]
-[ext_resource type="PackedScene" uid="uid://d22p1hgaqprjc" path="res://Entities/Terrain/tree_yellow.tscn" id="8_couxb"]
-[ext_resource type="PackedScene" uid="uid://dj4x5i2u1xrm4" path="res://Entities/Terrain/hedge_1.tscn" id="9_p7hxj"]
-[ext_resource type="PackedScene" uid="uid://hk05nb21x0gs" path="res://Entities/Terrain/hedge_2.tscn" id="10_f2xpr"]
-[ext_resource type="PackedScene" uid="uid://4gu8ofabyfn7" path="res://Entities/Terrain/tree_white2.tscn" id="11_kn2ec"]
-[ext_resource type="PackedScene" uid="uid://dft1bfpojjd2x" path="res://Entities/Terrain/tree_white3.tscn" id="12_xv2gg"]
-[ext_resource type="PackedScene" uid="uid://yasm32jrwm4b" path="res://Entities/Terrain/tree_purple.tscn" id="13_5j5a1"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_vgw83"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple3.tscn" id="3_jqyu0"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple2.tscn" id="4_aecrt"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow3.tscn" id="5_00g8o"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow2.tscn" id="6_3jwcf"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white.tscn" id="7_db2qk"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow.tscn" id="8_couxb"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_1.tscn" id="9_p7hxj"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_2.tscn" id="10_f2xpr"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white2.tscn" id="11_kn2ec"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white3.tscn" id="12_xv2gg"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple.tscn" id="13_5j5a1"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="14_n7j2i"]
 
 [node name="Forrest" instance=ExtResource("1_qtbtd")]
 level_name = "Forrest"
+bounds_min = Vector2(-1250, -1450)
+bounds_max = Vector2(1250, 260)
+metadata/_edit_horizontal_guides_ = [260.0]
+metadata/_edit_vertical_guides_ = [-1249.0, 1258.0]
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
@@ -32,6 +36,38 @@ texture_filter = 1
 position = Vector2(440, -623)
 rotation = 1.5708
 scale = Vector2(-1, 1)
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="DesertSimple3" type="Sprite2D" parent="Background" index="2"]
+texture_filter = 1
+position = Vector2(440, -679)
+rotation = 1.5708
+scale = Vector2(1, -1)
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="DesertSimple4" type="Sprite2D" parent="Background" index="3"]
+texture_filter = 1
+position = Vector2(440, -623)
+rotation = 1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="DesertSimple5" type="Sprite2D" parent="Background" index="4"]
+texture_filter = 1
+position = Vector2(-1270.99, -565)
+rotation = 1.5708
+scale = Vector2(1, -1)
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="DesertSimple6" type="Sprite2D" parent="Background" index="5"]
+texture_filter = 1
+position = Vector2(-1270.99, -509)
+rotation = 1.5708
+scale = Vector2(-1, -1)
 texture = ExtResource("2_vgw83")
 centered = false
 

@@ -1,21 +1,25 @@
 [gd_scene load_steps=14 format=3 uid="uid://cgp8ox4hnu5fq"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_buonb"]
-[ext_resource type="Texture2D" uid="uid://cg01fjftegdrx" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_66r63"]
-[ext_resource type="Texture2D" uid="uid://duwqrd4byg1n2" path="res://Assets/Backgrounds/roads.png" id="4_4b7pi"]
+[ext_resource type="Texture2D" uid="uid://j4pkf7ixdvyj" path="res://Assets/Backgrounds/roads.png" id="4_4b7pi"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_sgvlu"]
-[ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="8_rk7p7"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/wall_0.tscn" id="9_ptuou"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/wall_2.tscn" id="10_iym8l"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/bus.tscn" id="8_rk7p7"]
+[ext_resource type="PackedScene" uid="uid://cn53gxylqeo52" path="res://Entities/Terrain/wall_0.tscn" id="9_ptuou"]
+[ext_resource type="PackedScene" uid="uid://cki642f0x5nx" path="res://Entities/Terrain/wall_2.tscn" id="10_iym8l"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="11_sglko"]
-[ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="12_po5k8"]
-[ext_resource type="PackedScene" uid="uid://bb20eem1c23a3" path="res://Entities/Terrain/car_whi1.tscn" id="13_oh2kv"]
-[ext_resource type="PackedScene" uid="uid://caoe3680s2ga6" path="res://Entities/Terrain/concrete_double.tscn" id="14_l8a5p"]
-[ext_resource type="PackedScene" uid="uid://dcn6lf56it6qr" path="res://Entities/Terrain/car_whi2.tscn" id="15_5v1so"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_pur.tscn" id="12_po5k8"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi1.tscn" id="13_oh2kv"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_double.tscn" id="14_l8a5p"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi2.tscn" id="15_5v1so"]
 
 [node name="The road" instance=ExtResource("1_buonb")]
 level_name = "The road"
+bounds_min = Vector2(-380, -400)
+bounds_max = Vector2(1400, 800)
+metadata/_edit_horizontal_guides_ = [789.0]
+metadata/_edit_vertical_guides_ = [1401.0]
 
 [node name="Background" type="Node2D" parent="." index="0"]
 texture_filter = 1
@@ -86,88 +90,84 @@ modulate = Color(0.811765, 0.721569, 0.772549, 1)
 position = Vector2(1188, -255)
 rotation = 1.5708
 
-[node name="small wall3" parent="." index="10" instance=ExtResource("10_iym8l")]
-position = Vector2(1731.91, 470.318)
-rotation = -0.0704489
-
-[node name="small wall" parent="." index="11" instance=ExtResource("10_iym8l")]
+[node name="small wall" parent="." index="10" instance=ExtResource("10_iym8l")]
 position = Vector2(680, 330)
 rotation = -0.0704489
 
-[node name="small wall5" parent="." index="12" instance=ExtResource("10_iym8l")]
+[node name="small wall5" parent="." index="11" instance=ExtResource("10_iym8l")]
 position = Vector2(680, 330)
 rotation = -0.0704489
 
-[node name="small wall6" parent="." index="13" instance=ExtResource("10_iym8l")]
+[node name="small wall6" parent="." index="12" instance=ExtResource("10_iym8l")]
 position = Vector2(646, 605)
 rotation = -1.64877
 
-[node name="small wall7" parent="." index="14" instance=ExtResource("10_iym8l")]
+[node name="small wall7" parent="." index="13" instance=ExtResource("10_iym8l")]
 position = Vector2(701, 615)
 rotation = -1.64877
 
-[node name="small wall4" parent="." index="15" instance=ExtResource("10_iym8l")]
+[node name="small wall4" parent="." index="14" instance=ExtResource("10_iym8l")]
 position = Vector2(1036, 282)
 rotation = -0.0704489
 
-[node name="small wall2" parent="." index="16" instance=ExtResource("10_iym8l")]
+[node name="small wall2" parent="." index="15" instance=ExtResource("10_iym8l")]
 position = Vector2(64, -133)
 
-[node name="Goal" parent="." index="17" instance=ExtResource("11_sglko")]
+[node name="Goal" parent="." index="16" instance=ExtResource("11_sglko")]
 position = Vector2(729, 448)
 
-[node name="car" parent="." index="18" instance=ExtResource("12_po5k8")]
+[node name="car" parent="." index="17" instance=ExtResource("12_po5k8")]
 position = Vector2(838, 200)
 rotation = 0.465298
 
-[node name="truck" parent="." index="19" instance=ExtResource("13_oh2kv")]
+[node name="truck" parent="." index="18" instance=ExtResource("13_oh2kv")]
 position = Vector2(813, 254)
 rotation = 0.815051
 
-[node name="truck2" parent="." index="20" instance=ExtResource("13_oh2kv")]
+[node name="truck2" parent="." index="19" instance=ExtResource("13_oh2kv")]
 modulate = Color(0.811765, 0.721569, 0.772549, 1)
 position = Vector2(532, 414)
 rotation = -0.18249
 
-[node name="car2" parent="." index="21" instance=ExtResource("12_po5k8")]
+[node name="car2" parent="." index="20" instance=ExtResource("12_po5k8")]
 position = Vector2(711, 509)
 rotation = -0.52313
 
-[node name="bus2" parent="." index="22" instance=ExtResource("8_rk7p7")]
+[node name="bus2" parent="." index="21" instance=ExtResource("8_rk7p7")]
 position = Vector2(1029, 632)
 rotation = 3.1765
 
-[node name="concreate" parent="." index="23" instance=ExtResource("14_l8a5p")]
+[node name="concreate" parent="." index="22" instance=ExtResource("14_l8a5p")]
 position = Vector2(930, 469)
 
-[node name="concreate2" parent="." index="24" instance=ExtResource("14_l8a5p")]
+[node name="concreate2" parent="." index="23" instance=ExtResource("14_l8a5p")]
 position = Vector2(857, 391)
 rotation = 1.77282
 
-[node name="wall5" parent="." index="25" instance=ExtResource("9_ptuou")]
+[node name="wall5" parent="." index="24" instance=ExtResource("9_ptuou")]
 modulate = Color(0.992157, 0.819608, 0.388235, 1)
 position = Vector2(1180, 374)
 rotation = 2.03756
 
-[node name="car3" parent="." index="26" instance=ExtResource("12_po5k8")]
+[node name="car3" parent="." index="25" instance=ExtResource("12_po5k8")]
 position = Vector2(-26, -107)
 rotation = 1.88562
 
-[node name="car4" parent="." index="27" instance=ExtResource("12_po5k8")]
+[node name="car4" parent="." index="26" instance=ExtResource("12_po5k8")]
 position = Vector2(47, 197)
 rotation = -1.5708
 
-[node name="Container4" parent="." index="28" instance=ExtResource("13_oh2kv")]
+[node name="Container4" parent="." index="27" instance=ExtResource("13_oh2kv")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
 position = Vector2(-69, 197)
 rotation = -1.5708
 
-[node name="Container5" parent="." index="29" instance=ExtResource("15_5v1so")]
+[node name="Container5" parent="." index="28" instance=ExtResource("15_5v1so")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
 position = Vector2(-183, 163)
 rotation = -1.5708
 
-[node name="Container6" parent="." index="30" instance=ExtResource("15_5v1so")]
+[node name="Container6" parent="." index="29" instance=ExtResource("15_5v1so")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
 position = Vector2(-170, -179)
 rotation = 1.5708

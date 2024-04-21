@@ -14,8 +14,10 @@ var levels: Array = [
 	"res://Levels/Main_levels/level_2.tscn",
 	"res://Levels/Main_levels/level_3.tscn",
 	"res://Levels/Main_levels/after_level_1.tscn",
+	"res://Levels/Main_levels/clustered_area.tscn",
 	"res://Levels/Main_levels/All_over_the_place.tscn",
 	"res://Levels/Main_levels/far_away.tscn",
+	"res://Levels/Main_levels/the_wall.tscn",
 	"res://Levels/Main_levels/Forrest.tscn",
 	"res://Levels/Main_levels/cling_on.tscn"
 ]

@@ -30,6 +30,10 @@
 
 [node name="Clustered area" instance=ExtResource("1_jlgfy")]
 level_name = "Apocalypse"
+bounds_min = Vector2(-300, -632)
+bounds_max = Vector2(840, 1000)
+metadata/_edit_vertical_guides_ = [998.0]
+metadata/_edit_horizontal_guides_ = [840.0]
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
