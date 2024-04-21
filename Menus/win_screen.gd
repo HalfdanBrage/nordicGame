@@ -16,6 +16,8 @@ func _process(delta):
 func start_next_level():
 	if Levelmanager.has_next_level():
 		Levelmanager.play_next_level()
+	else:
+		get_tree().change_scene_to_file("res://Menus/YouWon/you_won.tscn")
 		
 func pause():
 	Levelmanager._pause()
