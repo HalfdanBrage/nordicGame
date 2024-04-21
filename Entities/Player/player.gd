@@ -102,6 +102,7 @@ func disable_bullet():
 
 func damage():
 	if not involnurable:
+		$Die.play()
 		$AnimationPlayer.play("die")
 
 func respawn():
