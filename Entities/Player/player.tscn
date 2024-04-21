@@ -376,11 +376,11 @@ animation = &"disappear"
 
 [node name="Dissapear" type="AudioStreamPlayer" parent="." groups=["sfx"]]
 stream = ExtResource("14_nrwam")
-volume_db = -10.0
+volume_db = -14.0
 
 [node name="Appear" type="AudioStreamPlayer" parent="." groups=["sfx"]]
 stream = ExtResource("15_slpmx")
-volume_db = -10.0
+volume_db = -14.0
 
 [node name="Die" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_0ifhe")
