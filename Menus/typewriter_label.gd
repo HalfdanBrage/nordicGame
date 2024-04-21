@@ -2,7 +2,7 @@ extends Label
 
 func _ready():
 	visible_characters = 0
-	display()
+	#display()
 
 func display():
 	$Timer.start()
