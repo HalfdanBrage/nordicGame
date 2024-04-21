@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://cngb0qwr8fh25"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_kcbgq"]
-[ext_resource type="Texture2D" uid="uid://c3417reudqpei" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
-[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
-[ext_resource type="PackedScene" uid="uid://bmynwre70yqxv" path="res://Entities/Terrain/containerWhite.tscn" id="4_u0vl4"]
+[ext_resource type="Texture2D" uid="uid://16ymudhbxqrc" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
+[ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
+[ext_resource type="PackedScene" uid="uid://ba06bk4s4jtfq" path="res://Entities/Terrain/containerWhite.tscn" id="4_u0vl4"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="5_3kctu"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="6_l5yv1"]
-[ext_resource type="Texture2D" uid="uid://cmty83vmn08vf" path="res://Assets/Terrain/chinalite.png" id="7_4tenv"]
+[ext_resource type="Texture2D" uid="uid://bmnaqpu8gy3h6" path="res://Assets/Terrain/chinalite.png" id="7_4tenv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mr5bc"]
 radius = 219.45
