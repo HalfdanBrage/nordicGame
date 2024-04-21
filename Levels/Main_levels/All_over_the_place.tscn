@@ -24,7 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="22_xwkfe"]
 [ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="23_il545"]
 
-[node name="BaseLevel" instance=ExtResource("1_heao5")]
+[node name="All_Over_The_Place" instance=ExtResource("1_heao5")]
+level_name = "The mess"
 
 [node name="SquareSimple" type="Sprite2D" parent="." index="2"]
 position = Vector2(-178, -216)

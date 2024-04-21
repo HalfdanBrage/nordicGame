@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="4_f7gd2"]
 
 [node name="BaseLevel" instance=ExtResource("1_mdp16")]
+level_name = "Minigolf"
 
 [node name="Player" parent="." index="1"]
 position = Vector2(627, 214)
