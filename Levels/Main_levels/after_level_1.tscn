@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3iv5b5fopich"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_nwvcb"]
-[ext_resource type="Texture2D" uid="uid://nblbpnlbsft4" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
+[ext_resource type="Texture2D" uid="uid://bmxul18ypkbpv" path="res://Assets/Backgrounds/desert_simple.png" id="2_tnnrj"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_qf8hj"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_430bl"]
 
