@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_sgvlu"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/bus.tscn" id="8_rk7p7"]
 [ext_resource type="PackedScene" uid="uid://cn53gxylqeo52" path="res://Entities/Terrain/wall_0.tscn" id="9_ptuou"]
-[ext_resource type="PackedScene" uid="uid://cki642f0x5nx" path="res://Entities/Terrain/wall_2.tscn" id="10_iym8l"]
+[ext_resource type="PackedScene" uid="uid://c75stxcwm4uyv" path="res://Entities/Terrain/wall_2.tscn" id="10_iym8l"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="11_sglko"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/car_pur.tscn" id="12_po5k8"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi1.tscn" id="13_oh2kv"]
@@ -38,20 +38,40 @@ position = Vector2(-391, -598)
 texture = ExtResource("3_5okor")
 centered = false
 
-[node name="Roads3" type="Sprite2D" parent="Background" index="2"]
+[node name="EarthSimple3" type="Sprite2D" parent="Background" index="2"]
+texture_filter = 1
+position = Vector2(-391, 1050)
+scale = Vector2(-1, -1)
+texture = ExtResource("3_5okor")
+centered = false
+
+[node name="EarthSimple4" type="Sprite2D" parent="Background" index="3"]
+texture_filter = 1
+position = Vector2(-391, -598)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_5okor")
+centered = false
+
+[node name="Roads4" type="Sprite2D" parent="Background" index="4"]
+texture_filter = 1
+position = Vector2(-1371, -235)
+texture = ExtResource("4_4b7pi")
+centered = false
+
+[node name="Roads3" type="Sprite2D" parent="Background" index="5"]
 texture_filter = 1
 position = Vector2(1187, 23)
 rotation = 1.5708
 texture = ExtResource("4_4b7pi")
 centered = false
 
-[node name="Roads2" type="Sprite2D" parent="Background" index="3"]
+[node name="Roads2" type="Sprite2D" parent="Background" index="6"]
 texture_filter = 1
 position = Vector2(460, -285)
 texture = ExtResource("4_4b7pi")
 centered = false
 
-[node name="Roads" type="Sprite2D" parent="Background" index="4"]
+[node name="Roads" type="Sprite2D" parent="Background" index="7"]
 texture_filter = 1
 position = Vector2(-391, -263)
 texture = ExtResource("4_4b7pi")
