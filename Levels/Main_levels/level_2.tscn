@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnrd2c5mbt4x5"]
+[gd_scene load_steps=5 format=3 uid="uid://pubuga6lueqe"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_mdp16"]
-[ext_resource type="Texture2D" uid="uid://bx0fskdlamcoe" path="res://Assets/Backgrounds/desert.png" id="2_hyjyv"]
+[ext_resource type="Texture2D" uid="uid://bj8r0vmdei7ow" path="res://Assets/Backgrounds/desert.png" id="2_hyjyv"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_ra0hn"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="4_f7gd2"]
 
@@ -11,6 +11,7 @@
 position = Vector2(627, 214)
 
 [node name="Desert" type="Sprite2D" parent="." index="2"]
+texture_filter = 1
 position = Vector2(-14, -91)
 texture = ExtResource("2_hyjyv")
 
