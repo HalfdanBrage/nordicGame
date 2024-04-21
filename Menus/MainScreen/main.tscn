@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://30fixe5cw2tm" path="res://Assets/UI/title.png" id="14_234d7"]
 
 [node name="MarginContainer" type="MarginContainer"]
+texture_filter = 1
 offset_right = 642.0
 offset_bottom = 322.0
 theme_override_constants/margin_right = 67
