@@ -1,7 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://bqf2a6hilq1de"]
+[gd_scene load_steps=26 format=3 uid="uid://dk34yoncxaf4b"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_ybs6i"]
-[ext_resource type="Texture2D" uid="uid://d6fs4wjy5hlx" path="res://Assets/Backgrounds/earth.png" id="2_i66nr"]
+[ext_resource type="Texture2D" uid="uid://butg0oawhj2mm" path="res://Assets/Backgrounds/earth.png" id="2_i66nr"]
 [ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="3_24wlf"]
 [ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="4_sxprp"]
 [ext_resource type="PackedScene" uid="uid://b18eq31h0hs45" path="res://Entities/Terrain/tree_purple3.tscn" id="5_f77go"]
@@ -17,18 +17,21 @@
 [ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="10_vr4y6"]
 [ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="11_002e8"]
 [ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="12_x738a"]
-[ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="13_yo0ir"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="13_yo0ir"]
 [ext_resource type="PackedScene" uid="uid://4gu8ofabyfn7" path="res://Entities/Terrain/tree_white2.tscn" id="19_anikw"]
 [ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="20_irqn3"]
 [ext_resource type="PackedScene" uid="uid://onf1nb47secp" path="res://Entities/Terrain/tree_yellow3.tscn" id="21_2otk6"]
 [ext_resource type="PackedScene" uid="uid://butqnptbn3bm3" path="res://Entities/Terrain/tree_white.tscn" id="22_4dh6p"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="23_upagj"]
-[ext_resource type="Texture2D" uid="uid://0etuox3p4mkw" path="res://Assets/Terrain/crane_1.png" id="24_nccwy"]
-[ext_resource type="Texture2D" uid="uid://c1dd8q6xe4a53" path="res://Assets/Backgrounds/roads.png" id="25_qk3mn"]
+[ext_resource type="Texture2D" uid="uid://xbvya8yjv0px" path="res://Assets/Terrain/crane_1.png" id="24_nccwy"]
+[ext_resource type="Texture2D" uid="uid://duwqrd4byg1n2" path="res://Assets/Backgrounds/roads.png" id="25_qk3mn"]
 
 [node name="BaseLevel" instance=ExtResource("1_ybs6i")]
-metadata/_edit_vertical_guides_ = [-900.0, -2119.0, 595.0, 161.0, 544.0, -527.0]
-metadata/_edit_horizontal_guides_ = [-922.0, 158.0, -643.0, -963.0, 1095.0]
+level_name = "Almost there"
+bounds_min = Vector2(-2673, -1320)
+bounds_max = Vector2(1071, 1232)
+metadata/_edit_vertical_guides_ = [-900.0, -2119.0, 595.0, 161.0, 544.0, -527.0, -2673.0, 1071.0]
+metadata/_edit_horizontal_guides_ = [-922.0, 158.0, -643.0, -963.0, 1095.0, -1319.0, 1232.0, 1237.0]
 
 [node name="Player" parent="." index="1"]
 position = Vector2(-900, -8)
