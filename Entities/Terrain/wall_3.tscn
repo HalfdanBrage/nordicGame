@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cet8w32b6seon"]
+[gd_scene load_steps=3 format=3 uid="uid://bhfug5s11rtdw"]
 
-[ext_resource type="Texture2D" uid="uid://v5dup7lrik2n" path="res://Assets/Terrain/wall_3.png" id="1_utfx7"]
+[ext_resource type="Texture2D" uid="uid://coue4bsm5fxy5" path="res://Assets/Terrain/wall_3.png" id="1_utfx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
 size = Vector2(254, 19)
 
-[node name="Container" type="StaticBody2D" groups=["metal"]]
+[node name="Container" type="StaticBody2D"]
 
 [node name="ContainerYel" type="Sprite2D" parent="."]
 texture_filter = 1

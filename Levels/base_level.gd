@@ -3,6 +3,8 @@ extends Node2D
 const LEVEL_NAME_RES = preload("res://Menus/level_name.tscn")
 
 @export var level_name = "Placeholder level name"
+@export var bounds_min = Vector2.ZERO
+@export var bounds_max = Vector2.ZERO
 
 func _ready():
 	Musicplayer.play_chill()

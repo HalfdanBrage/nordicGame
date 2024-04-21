@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="3_24wlf"]
 [ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="4_sxprp"]
 [ext_resource type="PackedScene" uid="uid://b18eq31h0hs45" path="res://Entities/Terrain/tree_purple3.tscn" id="5_f77go"]
-[ext_resource type="PackedScene" uid="uid://cki642f0x5nx" path="res://Entities/Terrain/wall_2.tscn" id="5_i8cch"]
+[ext_resource type="PackedScene" uid="uid://c75stxcwm4uyv" path="res://Entities/Terrain/wall_2.tscn" id="5_i8cch"]
 [ext_resource type="PackedScene" uid="uid://yasm32jrwm4b" path="res://Entities/Terrain/tree_purple.tscn" id="6_h3au3"]
 [ext_resource type="PackedScene" uid="uid://bb21v3lhqej4i" path="res://Entities/Terrain/factory_1.tscn" id="6_ikode"]
 [ext_resource type="PackedScene" uid="uid://ct07815tu6lmx" path="res://Entities/Terrain/factory_2.tscn" id="7_rvib3"]
@@ -14,8 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cseux313ox337" path="res://Entities/Terrain/tree_yellow2.tscn" id="8_nvu67"]
 [ext_resource type="PackedScene" uid="uid://d22p1hgaqprjc" path="res://Entities/Terrain/tree_yellow.tscn" id="9_ewh35"]
 [ext_resource type="PackedScene" uid="uid://dcn6lf56it6qr" path="res://Entities/Terrain/car_whi2.tscn" id="10_assff"]
-[ext_resource type="PackedScene" uid="uid://82km8ihk5ycn" path="res://Entities/Terrain/wall_1.tscn" id="10_vr4y6"]
-[ext_resource type="PackedScene" uid="uid://cet8w32b6seon" path="res://Entities/Terrain/wall_3.tscn" id="11_002e8"]
+[ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="10_vr4y6"]
+[ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="11_002e8"]
 [ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="12_x738a"]
 [ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="13_yo0ir"]
 [ext_resource type="PackedScene" uid="uid://4gu8ofabyfn7" path="res://Entities/Terrain/tree_white2.tscn" id="19_anikw"]
@@ -461,12 +461,10 @@ rotation = -0.193768
 [node name="Container42" parent="Walls" index="41" instance=ExtResource("11_002e8")]
 position = Vector2(-1473, -1357)
 rotation = 0.171445
-scale = Vector2(1, 1)
 
 [node name="Container43" parent="Walls" index="42" instance=ExtResource("11_002e8")]
 position = Vector2(-1473, -1357)
 rotation = 0.171445
-scale = Vector2(1, 1)
 
 [node name="Container44" parent="Walls" index="43" instance=ExtResource("5_i8cch")]
 position = Vector2(-1186, -1153)
@@ -517,7 +515,6 @@ rotation = -1.05965
 [node name="Container56" parent="Walls" index="55" instance=ExtResource("11_002e8")]
 position = Vector2(-493, -1029)
 rotation = -0.685537
-scale = Vector2(1, 1)
 
 [node name="Container57" parent="Walls" index="56" instance=ExtResource("11_002e8")]
 position = Vector2(-294, -1273)
@@ -530,7 +527,6 @@ rotation = -0.110746
 [node name="Container59" parent="Walls" index="58" instance=ExtResource("11_002e8")]
 position = Vector2(256, -1378)
 rotation = 0.228273
-scale = Vector2(1, 1)
 
 [node name="Container60" parent="Walls" index="59" instance=ExtResource("11_002e8")]
 position = Vector2(-2694, 109)
@@ -543,7 +539,6 @@ rotation = 0.563333
 [node name="Container62" parent="Walls" index="61" instance=ExtResource("11_002e8")]
 position = Vector2(-2403, 476)
 rotation = 0.0882521
-scale = Vector2(1, 1)
 
 [node name="Container63" parent="Walls" index="62" instance=ExtResource("11_002e8")]
 position = Vector2(-1916, 829)
@@ -588,7 +583,6 @@ rotation = 1.60346
 [node name="Container73" parent="Walls" index="72" instance=ExtResource("10_vr4y6")]
 position = Vector2(-2530, -568)
 rotation = 1.77291
-scale = Vector2(1, 1)
 
 [node name="Container74" parent="Walls" index="73" instance=ExtResource("10_vr4y6")]
 position = Vector2(-2431, -632)
@@ -605,7 +599,6 @@ rotation = 2.63107
 [node name="Container77" parent="Walls" index="76" instance=ExtResource("11_002e8")]
 position = Vector2(-972, 1070)
 rotation = 0.000260338
-scale = Vector2(1, 1)
 
 [node name="Container78" parent="Walls" index="77" instance=ExtResource("10_vr4y6")]
 position = Vector2(-647, 1101)
@@ -622,12 +615,10 @@ rotation = 0.554418
 [node name="Container81" parent="Walls" index="80" instance=ExtResource("11_002e8")]
 position = Vector2(-7.99997, 903)
 rotation = 0.320913
-scale = Vector2(1, 1)
 
 [node name="Container82" parent="Walls" index="81" instance=ExtResource("11_002e8")]
 position = Vector2(186, 1028)
 rotation = -0.0962966
-scale = Vector2(1, 1)
 
 [node name="Container83" parent="Walls" index="82" instance=ExtResource("11_002e8")]
 position = Vector2(423, 1061)

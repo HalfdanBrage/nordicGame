@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cr488l14pa043"]
+[gd_scene load_steps=9 format=3 uid="uid://cngb0qwr8fh25"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_kcbgq"]
 [ext_resource type="Texture2D" uid="uid://16ymudhbxqrc" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
@@ -12,6 +12,7 @@
 radius = 219.45
 
 [node name="BaseLevel" instance=ExtResource("1_kcbgq")]
+level_name = "Chinese intelligence"
 
 [node name="Player" parent="." index="1"]
 position = Vector2(277, 543)

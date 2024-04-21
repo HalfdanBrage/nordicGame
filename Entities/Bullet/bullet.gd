@@ -15,6 +15,10 @@ func set_just_swapped():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	var current_level = get_tree().current_scene
+	if global_position.x < current_level.bounds_min.x or global_position.x > current_level.bounds_max.x or global_position.y < current_level.bounds_min.y or global_position.y > current_level.bounds_max.y:
+		queue_free()
+	
 	frames_since_swap += 1
 	
 	velocity = SPEED * dir
