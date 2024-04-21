@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://u5wgx5ksmdiv" path="res://Assets/UI/UI_batch2/back_hover.png" id="4_k453e"]
 
 [node name="SelectLevel" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 644.0

@@ -69,6 +69,78 @@ position = Vector2(130, 821)
 texture = ExtResource("2_i66nr")
 metadata/_edit_lock_ = true
 
+[node name="Earth7" type="Sprite2D" parent="Map" index="6"]
+position = Vector2(-3597, -37)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth8" type="Sprite2D" parent="Map" index="7"]
+position = Vector2(-5473, -37)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth9" type="Sprite2D" parent="Map" index="8"]
+position = Vector2(-5474, -895)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth10" type="Sprite2D" parent="Map" index="9"]
+position = Vector2(-3597, -895)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth11" type="Sprite2D" parent="Map" index="10"]
+position = Vector2(-5473, 821)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth12" type="Sprite2D" parent="Map" index="11"]
+position = Vector2(-3597, 821)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth13" type="Sprite2D" parent="Map" index="12"]
+position = Vector2(-3597, -2589)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth14" type="Sprite2D" parent="Map" index="13"]
+position = Vector2(-5473, -2589)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth15" type="Sprite2D" parent="Map" index="14"]
+position = Vector2(-5474, -3447)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth16" type="Sprite2D" parent="Map" index="15"]
+position = Vector2(-3597, -3447)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth17" type="Sprite2D" parent="Map" index="16"]
+position = Vector2(-5473, -1731)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth18" type="Sprite2D" parent="Map" index="17"]
+position = Vector2(-3597, -1731)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth19" type="Sprite2D" parent="Map" index="18"]
+position = Vector2(141, -2589)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth20" type="Sprite2D" parent="Map" index="19"]
+position = Vector2(-1735, -2589)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth21" type="Sprite2D" parent="Map" index="20"]
+position = Vector2(-1736, -3447)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth22" type="Sprite2D" parent="Map" index="21"]
+position = Vector2(141, -3447)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth23" type="Sprite2D" parent="Map" index="22"]
+position = Vector2(-1735, -1731)
+texture = ExtResource("2_i66nr")
+
+[node name="Earth24" type="Sprite2D" parent="Map" index="23"]
+position = Vector2(141, -1731)
+texture = ExtResource("2_i66nr")
+
 [node name="Roads3" type="Sprite2D" parent="." index="3"]
 position = Vector2(-928, -774)
 rotation = -1.55416
