@@ -112,3 +112,10 @@ position = Vector2(-6, -403)
 
 [node name="Container25" parent="." index="28" instance=ExtResource("8_s8s4o")]
 position = Vector2(76, -427)
+
+[node name="Container26" parent="." index="29" instance=ExtResource("14_y7ehm")]
+position = Vector2(678, -201)
+rotation = 1.57804
+
+[node name="Container27" parent="." index="30" instance=ExtResource("12_b4v0k")]
+position = Vector2(596, -48)
