@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckfdscl4dv8gi"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_fwgrh"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="2_br18v"]
+[ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="3_8ihqq"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="4_jqdaj"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="5_x5j32"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="6_nk8at"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_double.tscn" id="7_xfive"]
+[ext_resource type="PackedScene" path="res://Menus/typewriter_label.tscn" id="8_bfnng"]
+
+[node name="BaseLevel" instance=ExtResource("1_fwgrh")]
+level_name = "Cargo"
+bounds_min = Vector2(-370, -190)
+bounds_max = Vector2(500, 375)
+metadata/_edit_horizontal_guides_ = [-190.0, 375.0]
+metadata/_edit_vertical_guides_ = [505.0, -879.0, -301.0]
+
+[node name="Background2" type="Node2D" parent="." index="2"]
+position = Vector2(1, -9)
+
+[node name="EarthSimple" type="Sprite2D" parent="Background2" index="0"]
+texture_filter = 1
+position = Vector2(-946, -659)
+texture = ExtResource("2_br18v")
+centered = false
+
+[node name="EarthSimple2" type="Sprite2D" parent="Background2" index="1"]
+texture_filter = 1
+position = Vector2(-948, 177)
+texture = ExtResource("2_br18v")
+centered = false
+
+[node name="Container" parent="." index="3" instance=ExtResource("3_8ihqq")]
+position = Vector2(-184, -134)
+
+[node name="Container13" parent="." index="4" instance=ExtResource("3_8ihqq")]
+position = Vector2(265, 201)
+
+[node name="Container16" parent="." index="5" instance=ExtResource("3_8ihqq")]
+position = Vector2(9, 332)
+
+[node name="Container3" parent="." index="6" instance=ExtResource("3_8ihqq")]
+position = Vector2(-181, -89)
+rotation = 1.5708
+
+[node name="Container4" parent="." index="7" instance=ExtResource("3_8ihqq")]
+position = Vector2(187, -88)
+rotation = 1.5708
+
+[node name="Container5" parent="." index="8" instance=ExtResource("3_8ihqq")]
+position = Vector2(-181, 91)
+rotation = 1.5708
+
+[node name="Container17" parent="." index="9" instance=ExtResource("3_8ihqq")]
+position = Vector2(12, 312)
+rotation = 1.5708
+
+[node name="Container2" parent="." index="10" instance=ExtResource("4_jqdaj")]
+position = Vector2(0, -164)
+
+[node name="Container11" parent="." index="11" instance=ExtResource("4_jqdaj")]
+position = Vector2(445, -165)
+rotation = 1.5708
+
+[node name="Container12" parent="." index="12" instance=ExtResource("4_jqdaj")]
+position = Vector2(443, 19)
+rotation = 1.5708
+
+[node name="Container6" parent="." index="13" instance=ExtResource("4_jqdaj")]
+position = Vector2(-4, 225)
+rotation = -0.150964
+
+[node name="Container7" parent="." index="14" instance=ExtResource("4_jqdaj")]
+position = Vector2(-185, 253)
+rotation = -0.150964
+
+[node name="Goal" parent="." index="15" instance=ExtResource("5_x5j32")]
+position = Vector2(265, -38)
+
+[node name="Container8" parent="." index="16" instance=ExtResource("6_nk8at")]
+position = Vector2(-367, 274)
+
+[node name="Container19" parent="." index="17" instance=ExtResource("6_nk8at")]
+position = Vector2(443, 295)
+rotation = 1.5708
+
+[node name="Container10" parent="." index="18" instance=ExtResource("6_nk8at")]
+position = Vector2(183, -209)
+
+[node name="Container9" parent="." index="19" instance=ExtResource("6_nk8at")]
+position = Vector2(270, 235)
+rotation = 1.5708
+
+[node name="Container14" parent="." index="20" instance=ExtResource("7_xfive")]
+position = Vector2(267, -20)
+rotation = 1.5708
+
+[node name="Container15" parent="." index="21" instance=ExtResource("7_xfive")]
+position = Vector2(156, 28)
+
+[node name="Container18" parent="." index="22" instance=ExtResource("7_xfive")]
+position = Vector2(-7, -120)
+
+[node name="TypewriterLabel" parent="." index="23" instance=ExtResource("8_bfnng")]
+offset_left = -164.0
+offset_top = -25.0
+offset_right = -124.0
+offset_bottom = 4.0
+scale = Vector2(0.5, 0.5)
+text = "SHOOT
+- Left mouse button
+- Space
+- A (Controller)
+
+PAUSE
+- Escape"
+
+[connection signal="ready" from="TypewriterLabel" to="TypewriterLabel" method="display"]

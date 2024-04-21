@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://gmkmtd2ictec"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_c27l5"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_m14t6"]
+[ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="4_cy88k"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="5_bojo7"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="5_s1wv0"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="6_ojuo1"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_double.tscn" id="7_sut68"]
+
+[node name="BaseLevel" instance=ExtResource("1_c27l5")]
+level_name = "Cargo"
+bounds_min = Vector2(-370, -190)
+bounds_max = Vector2(450, 620)
+metadata/_edit_horizontal_guides_ = [-190.0, 520.0]
+metadata/_edit_vertical_guides_ = [450.0, -879.0]
+
+[node name="Background2" type="Node2D" parent="." index="2"]
+
+[node name="EarthSimple" type="Sprite2D" parent="Background2" index="0"]
+texture_filter = 1
+position = Vector2(-946, -659)
+texture = ExtResource("3_m14t6")
+centered = false
+
+[node name="EarthSimple2" type="Sprite2D" parent="Background2" index="1"]
+texture_filter = 1
+position = Vector2(-948, 177)
+texture = ExtResource("3_m14t6")
+centered = false
+
+[node name="Container" parent="." index="3" instance=ExtResource("4_cy88k")]
+position = Vector2(-185, -155)
+
+[node name="Container13" parent="." index="4" instance=ExtResource("4_cy88k")]
+position = Vector2(266, 210)
+
+[node name="Container16" parent="." index="5" instance=ExtResource("4_cy88k")]
+position = Vector2(6, 407)
+
+[node name="Container3" parent="." index="6" instance=ExtResource("4_cy88k")]
+position = Vector2(-182, -80)
+rotation = 1.5708
+
+[node name="Container4" parent="." index="7" instance=ExtResource("4_cy88k")]
+position = Vector2(186, -79)
+rotation = 1.5708
+
+[node name="Container5" parent="." index="8" instance=ExtResource("4_cy88k")]
+position = Vector2(-182, 103)
+rotation = 1.5708
+
+[node name="Container17" parent="." index="9" instance=ExtResource("4_cy88k")]
+position = Vector2(9, 385)
+rotation = 1.5708
+
+[node name="Container2" parent="." index="10" instance=ExtResource("5_bojo7")]
+position = Vector2(-1, -155)
+
+[node name="Container11" parent="." index="11" instance=ExtResource("5_bojo7")]
+position = Vector2(442, -155)
+rotation = 1.5708
+
+[node name="Container12" parent="." index="12" instance=ExtResource("5_bojo7")]
+position = Vector2(442, 28)
+rotation = 1.5708
+
+[node name="Container6" parent="." index="13" instance=ExtResource("5_bojo7")]
+position = Vector2(-6.99998, 300)
+rotation = -0.216052
+
+[node name="Container7" parent="." index="14" instance=ExtResource("5_bojo7")]
+position = Vector2(-185, 340)
+rotation = -0.216052
+
+[node name="Goal" parent="." index="15" instance=ExtResource("5_s1wv0")]
+position = Vector2(264, -29)
+
+[node name="Container8" parent="." index="16" instance=ExtResource("6_ojuo1")]
+position = Vector2(-368, 286)
+
+[node name="Container10" parent="." index="17" instance=ExtResource("6_ojuo1")]
+position = Vector2(180, -231)
+
+[node name="Container9" parent="." index="18" instance=ExtResource("6_ojuo1")]
+position = Vector2(269, 244)
+rotation = 1.5708
+
+[node name="Container14" parent="." index="19" instance=ExtResource("7_sut68")]
+position = Vector2(266, -11)
+rotation = 1.5708
+
+[node name="Container15" parent="." index="20" instance=ExtResource("7_sut68")]
+position = Vector2(155, 37)
+
+[node name="Container18" parent="." index="21" instance=ExtResource("7_sut68")]
+position = Vector2(-262, -124)
