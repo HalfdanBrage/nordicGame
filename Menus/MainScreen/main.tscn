@@ -86,3 +86,4 @@ texture = ExtResource("14_234d7")
 
 [connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
