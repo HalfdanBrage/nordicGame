@@ -25,6 +25,18 @@ var levels: Array = [
 	"res://Levels/Main_levels/level_4.tscn",
 ]
 
+var splashes = {
+	0: "Apocalypse.png",
+	1: "AroundTheCorner.png",
+	2: "ClingingOn.png",
+	3: "Forest.png",
+	4: "minigolf.png",
+	5: "TheMess.png",
+	6: "TheStation.png",
+	7: "TheWall.png",
+	8: "tutorial.png",
+}
+
 func set_player(player: Player):
 	_player = player
 func get_player() -> Player:
