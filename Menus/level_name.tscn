@@ -51,8 +51,6 @@ grow_horizontal = 2
 [node name="TypewriterLabel" parent="MarginContainer" instance=ExtResource("1_alqqy")]
 layout_mode = 2
 horizontal_alignment = 1
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

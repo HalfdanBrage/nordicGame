@@ -12,15 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://cvpowwgk8i4of" path="res://Assets/UI/UI_batch2/keyboard.png" id="9_q8ufg"]
 [ext_resource type="Texture2D" uid="uid://dh87ddirbodnw" path="res://Assets/UI/UI_batch2/controller.png" id="10_48lfd"]
 
-[sub_resource type="Gradient" id="Gradient_kljck"]
+[sub_resource type="Gradient" id="Gradient_2ai8l"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.776471)
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_6lxcx"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r2d7r"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_013s2"]
 width = 1000
-color_ramp = SubResource("Gradient_kljck")
-noise = SubResource("FastNoiseLite_6lxcx")
+color_ramp = SubResource("Gradient_2ai8l")
+noise = SubResource("FastNoiseLite_r2d7r")
 
 [node name="PauseScreen" type="CanvasLayer"]
 process_mode = 3

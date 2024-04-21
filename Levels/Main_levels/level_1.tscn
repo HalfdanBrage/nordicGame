@@ -1,16 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://ca5t82w3slikp"]
+[gd_scene load_steps=9 format=3 uid="uid://ca5t82w3slikp"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_d8im6"]
-[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="2_wm38g"]
+[ext_resource type="Texture2D" uid="uid://bvvpx72odpw3d" path="res://Assets/Backgrounds/square.png" id="2_wm38g"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_5el4r"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_8mvcu"]
+[ext_resource type="Script" path="res://Levels/Main_levels/tutorial_restarter.gd" id="5_8awx2"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="5_ik5cs"]
+[ext_resource type="PackedScene" uid="uid://fw5h8le457pv" path="res://Menus/typewriter_label.tscn" id="7_7tm4y"]
+[ext_resource type="Script" path="res://Levels/Main_levels/goal display starter.gd" id="8_vemmd"]
 
 [node name="Level-1" instance=ExtResource("1_d8im6")]
-level_name = "Switch switch"
-bounds_min = Vector2(-350, -628)
+level_name = ""
+bounds_min = Vector2(-350, -430)
 bounds_max = Vector2(522, 160)
-metadata/_edit_horizontal_guides_ = [160.0, -628.0]
+metadata/_edit_horizontal_guides_ = [160.0, -628.0, -432.0]
 metadata/_edit_vertical_guides_ = [-350.0, 522.0]
 
 [node name="Background" type="Node2D" parent="." index="0"]
@@ -45,7 +48,39 @@ position = Vector2(-235, -104)
 rotation = -0.785398
 
 [node name="Bullet" parent="." index="8" instance=ExtResource("4_8mvcu")]
+z_index = 2
 position = Vector2(221, -1)
 
+[node name="tutorial_restarter" type="Node2D" parent="Bullet" index="10"]
+script = ExtResource("5_8awx2")
+
 [node name="Goal" parent="." index="9" instance=ExtResource("5_ik5cs")]
-position = Vector2(94, -107)
+position = Vector2(94, -127)
+
+[node name="TypewriterLabel" parent="." index="10" instance=ExtResource("7_7tm4y")]
+z_index = 10
+offset_left = 142.0
+offset_top = 18.0
+offset_right = 470.0
+offset_bottom = 186.0
+scale = Vector2(0.5, 0.5)
+text = "SWAP POSITION
+- Right mouse button
+- X
+- B (Controller)
+"
+autowrap_mode = 2
+
+[node name="TypewriterLabel2" parent="." index="11" instance=ExtResource("7_7tm4y")]
+offset_left = 64.0
+offset_top = -328.0
+offset_right = 104.0
+offset_bottom = -171.0
+text = "GOAL
+ \\/"
+vertical_alignment = 2
+
+[node name="goal display starter" type="Node2D" parent="TypewriterLabel2" index="2"]
+script = ExtResource("8_vemmd")
+
+[connection signal="ready" from="TypewriterLabel" to="TypewriterLabel" method="display"]

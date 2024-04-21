@@ -58,7 +58,8 @@ func play_prev_level():
 		currentLevelIndex -= 1
 
 func respawn():
-	get_tree().reload_current_scene()
+	if get_tree() != null:
+		get_tree().reload_current_scene()
 
 func pause():
 	if not get_tree().paused:

@@ -32,7 +32,7 @@ one_shot = true
 
 [node name="Click" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_c5vv0")
-volume_db = -13.812
+volume_db = -20.0
 pitch_scale = 1.4
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
