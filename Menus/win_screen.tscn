@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://sff7u7unl340"]
+[gd_scene load_steps=22 format=3 uid="uid://sff7u7unl340"]
 
 [ext_resource type="Script" path="res://Menus/win_screen.gd" id="1_3n6u5"]
 [ext_resource type="PackedScene" uid="uid://fw5h8le457pv" path="res://Menus/typewriter_label.tscn" id="2_m0vhx"]
@@ -14,9 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://cbcfh460n7lmg" path="res://Assets/UI/stamp_animation/vertical/9.png" id="12_elrya"]
 [ext_resource type="Texture2D" uid="uid://8jbfhutfhlq0" path="res://Assets/UI/stamp_animation/vertical/10.png" id="13_k5y03"]
 [ext_resource type="Texture2D" uid="uid://b56tbbxakc1nj" path="res://Assets/UI/stamp_animation/vertical/11.png" id="14_wdtsi"]
+[ext_resource type="AudioStream" uid="uid://3scl8ux7u2x4" path="res://SFX/thunk.wav" id="15_hdime"]
 
 [sub_resource type="Gradient" id="Gradient_1fbc4"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.745098)
+colors = PackedColorArray(0.151276, 0.151276, 0.151276, 1, 0.241156, 0.241156, 0.241156, 0.745098)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_5sqbm"]
 seed = 1
@@ -75,11 +76,14 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(9),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(6.6, 9),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
-"method": &"start_next_level"
+"method": &"pause"
+}, {
+"args": [],
+"method": &"unpause"
 }]
 }
 tracks/4/type = "method"
@@ -110,6 +114,34 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Stamp")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_next_level"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_42x66"]
@@ -178,6 +210,7 @@ animations = [{
 }]
 
 [node name="Win Screen" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_3n6u5")
 enable_dither = true
 
@@ -213,8 +246,13 @@ autoplay = "appear"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
+texture_filter = 1
 position = Vector2(229, 68)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_84ng5")
 animation = &"stamp"
 autoplay = "linger"
+
+[node name="Stamp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_hdime")
+volume_db = -14.0

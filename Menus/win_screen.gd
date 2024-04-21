@@ -16,3 +16,9 @@ func _process(delta):
 func start_next_level():
 	if Levelmanager.has_next_level():
 		Levelmanager.play_next_level()
+		
+func pause():
+	Levelmanager._pause()
+
+func unpause():
+	Levelmanager._unpause()

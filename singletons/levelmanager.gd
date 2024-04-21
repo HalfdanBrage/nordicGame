@@ -66,7 +66,15 @@ func pause():
 		pause_screen = PAUSE_SCREEN_RES.instantiate()
 		add_child(pause_screen)
 
+func _pause():
+	if not get_tree().paused:
+		get_tree().paused = true
+
 func unpause():
 	if get_tree().paused:
 		get_tree().paused = false
 		pause_screen.queue_free()
+
+func _unpause():
+	if get_tree().paused:
+		get_tree().paused = false
