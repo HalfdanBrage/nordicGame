@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://4g48g1d71pyi" path="res://music/splash.wav" id="1_3bs4l"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
 stream = ExtResource("1_3bs4l")
 
 [connection signal="finished" from="." to="." method="play"]

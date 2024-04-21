@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://coa0j7di6iryb" path="res://Assets/UI/splash_background.png" id="1_cdr4s"]
 [ext_resource type="Script" path="res://Menus/SelectLevel/select_level.gd" id="1_cxafi"]
+[ext_resource type="Texture2D" uid="uid://ckmttc0nd4jrd" path="res://Assets/UI/UI_batch2/back_default.png" id="2_ghw0f"]
 [ext_resource type="Texture2D" uid="uid://bqp2wmjvjqpp2" path="res://Assets/UI/selectlevel_hover.png" id="2_s1ykv"]
-[ext_resource type="Texture2D" uid="uid://cm74wlax4o6ef" path="res://Assets/UI/quit_default.png" id="4_f5mhh"]
-[ext_resource type="Texture2D" uid="uid://bp23lu347bux8" path="res://Assets/UI/quit_press.png" id="5_6iqt3"]
-[ext_resource type="Texture2D" uid="uid://drxxxykx6bng8" path="res://Assets/UI/quit_hover.png" id="6_i2gf7"]
+[ext_resource type="Texture2D" uid="uid://ncgxynmdohdr" path="res://Assets/UI/UI_batch2/back_press.png" id="3_1b3ps"]
+[ext_resource type="Texture2D" uid="uid://u5wgx5ksmdiv" path="res://Assets/UI/UI_batch2/back_hover.png" id="4_k453e"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -16,15 +16,14 @@ script = ExtResource("1_cxafi")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 2
-offset_left = 27.0
-offset_top = 5.0
-offset_right = 167.0
-offset_bottom = 85.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("4_f5mhh")
-texture_pressed = ExtResource("5_6iqt3")
-texture_hover = ExtResource("6_i2gf7")
-texture_focused = ExtResource("6_i2gf7")
+offset_left = 41.0
+offset_top = -10.0
+offset_right = 181.0
+offset_bottom = 70.0
+texture_normal = ExtResource("2_ghw0f")
+texture_pressed = ExtResource("3_1b3ps")
+texture_hover = ExtResource("4_k453e")
+texture_focused = ExtResource("4_k453e")
 ignore_texture_size = true
 stretch_mode = 3
 

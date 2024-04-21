@@ -1,7 +1,9 @@
 extends Node
 
 const WIN_SCREEN_RES = preload("res://Menus/win_screen.tscn")
+const PAUSE_SCREEN_RES = preload("res://Menus/pause_screen.tscn")
 
+var pause_screen = null
 var level_finished = false
 var show_level_title = false
 var _player: Player = null
@@ -48,3 +50,14 @@ func play_prev_level():
 
 func respawn():
 	get_tree().reload_current_scene()
+
+func pause():
+	if not get_tree().paused:
+		get_tree().paused = true
+		pause_screen = PAUSE_SCREEN_RES.instantiate()
+		add_child(pause_screen)
+
+func unpause():
+	if get_tree().paused:
+		get_tree().paused = false
+		pause_screen.queue_free()
