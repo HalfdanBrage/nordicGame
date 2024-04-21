@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple2.tscn" id="15_m8hy0"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/factory_2.tscn" id="16_lolq0"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="17_pjkv4"]
-[ext_resource type="PackedScene" uid="uid://c353enbekaoj" path="res://Entities/Terrain/factory_1.tscn" id="18_sf6n8"]
+[ext_resource type="PackedScene" uid="uid://bb21v3lhqej4i" path="res://Entities/Terrain/factory_1.tscn" id="18_sf6n8"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white3.tscn" id="19_kxhta"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow3.tscn" id="21_1qgcn"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow2.tscn" id="22_atuop"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white.tscn" id="27_f1gra"]
 
 [node name="Clustered area" instance=ExtResource("1_jlgfy")]
+level_name = "Apocalypse"
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
