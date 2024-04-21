@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cr488l14pa043"]
 
-[ext_resource type="PackedScene" path="res://Levels/base_level.tscn" id="1_kcbgq"]
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_kcbgq"]
 [ext_resource type="Texture2D" uid="uid://16ymudhbxqrc" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
 [ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
 [ext_resource type="PackedScene" uid="uid://ba06bk4s4jtfq" path="res://Entities/Terrain/containerWhite.tscn" id="4_u0vl4"]
