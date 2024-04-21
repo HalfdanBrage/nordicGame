@@ -10,17 +10,17 @@ var show_level_title = false
 var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
-	"res://Levels/Main_levels/level_1.tscn",
-	"res://Levels/Main_levels/Empty_maze_v2.tscn",
-	"res://Levels/Main_levels/level_2.tscn",
-	"res://Levels/Main_levels/level_3.tscn",
-	"res://Levels/Main_levels/after_level_1.tscn",
-	"res://Levels/Main_levels/clustered_area.tscn",
-	"res://Levels/Main_levels/All_over_the_place.tscn",
+	"res://Levels/Main_levels/level_1.tscn", # Swap swap
+	"res://Levels/Main_levels/Empty_maze_v2.tscn", # Cargo
+	"res://Levels/Main_levels/level_2.tscn", # Minigolf
+	"res://Levels/Main_levels/after_level_1.tscn", # ...
+	"res://Levels/Main_levels/clustered_area.tscn", # Apocalypse
+	"res://Levels/Main_levels/level_3.tscn", # Chinese intelligence
+	"res://Levels/Main_levels/All_over_the_place.tscn", # 
 	"res://Levels/Main_levels/far_away.tscn",
 	"res://Levels/Main_levels/the_wall.tscn",
-	"res://Levels/Main_levels/Forrest.tscn",
 	"res://Levels/Main_levels/cling_on.tscn",
+	"res://Levels/Main_levels/Forrest.tscn",
 	"res://Levels/Main_levels/where.tscn",
 	"res://Levels/Main_levels/level_4.tscn",
 ]
