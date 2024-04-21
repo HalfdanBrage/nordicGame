@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://yasm32jrwm4b" path="res://Entities/Terrain/tree_purple.tscn" id="9_fy8va"]
 [ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="10_6sc3u"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="11_p6a6u"]
-[ext_resource type="PackedScene" uid="uid://c3wxf4eiv0pm7" path="res://Entities/Terrain/box-2.tscn" id="12_b4v0k"]
+[ext_resource type="PackedScene" uid="uid://c3wxf4eiv0pm7" path="res://Entities/box-2.tscn" id="12_b4v0k"]
 [ext_resource type="PackedScene" uid="uid://bb20eem1c23a3" path="res://Entities/Terrain/car_whi1.tscn" id="13_1m0fb"]
 [ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="14_y7ehm"]
 [ext_resource type="PackedScene" uid="uid://bpob5kccmbflh" path="res://Entities/Terrain/crane_real.tscn" id="15_67sff"]

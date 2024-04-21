@@ -17,7 +17,8 @@ var levels: Array = [
 	"res://Levels/Main_levels/All_over_the_place.tscn",
 	"res://Levels/Main_levels/far_away.tscn",
 	"res://Levels/Main_levels/Forrest.tscn",
-	"res://Levels/Main_levels/cling_on.tscn"
+	"res://Levels/Main_levels/cling_on.tscn",
+	"res://Levels/Main_levels/where.tscn"
 ]
 
 func set_player(player: Player):
