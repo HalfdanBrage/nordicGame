@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cljtdtvskl0kb"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_jlgfy"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="2_mtcld"]
+
+[node name="Clustered area" instance=ExtResource("1_jlgfy")]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+
+[node name="EarthSimple2" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(-672, 150)
+texture = ExtResource("2_mtcld")
+centered = false
+
+[node name="EarthSimple" type="Sprite2D" parent="Background" index="1"]
+texture_filter = 1
+position = Vector2(-672, -669)
+texture = ExtResource("2_mtcld")
+centered = false

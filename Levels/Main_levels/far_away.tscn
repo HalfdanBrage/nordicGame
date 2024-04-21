@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgp8ox4hnu5fq"]
+[gd_scene load_steps=14 format=3 uid="uid://cgp8ox4hnu5fq"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_buonb"]
-[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_r1pje"]
 [ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_66r63"]
 [ext_resource type="Texture2D" uid="uid://j4pkf7ixdvyj" path="res://Assets/Backgrounds/roads.png" id="4_4b7pi"]
@@ -15,16 +14,18 @@
 [ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_double.tscn" id="14_l8a5p"]
 [ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi2.tscn" id="15_5v1so"]
 
-[node name="Test-level-1" instance=ExtResource("1_buonb")]
+[node name="The road" instance=ExtResource("1_buonb")]
+level_name = "The road"
 
 [node name="Background" type="Node2D" parent="." index="0"]
 texture_filter = 1
-position = Vector2(-4, 50)
+position = Vector2(-2, 50)
 
-[node name="DesertSimple" type="Sprite2D" parent="Background" index="0"]
-visible = false
-position = Vector2(-352, -608)
-texture = ExtResource("2_r1pje")
+[node name="EarthSimple2" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(-391, 1050)
+scale = Vector2(1, -1)
+texture = ExtResource("3_5okor")
 centered = false
 
 [node name="EarthSimple" type="Sprite2D" parent="Background" index="1"]
@@ -33,13 +34,20 @@ position = Vector2(-391, -598)
 texture = ExtResource("3_5okor")
 centered = false
 
-[node name="Roads2" type="Sprite2D" parent="Background" index="2"]
+[node name="Roads3" type="Sprite2D" parent="Background" index="2"]
+texture_filter = 1
+position = Vector2(1187, 23)
+rotation = 1.5708
+texture = ExtResource("4_4b7pi")
+centered = false
+
+[node name="Roads2" type="Sprite2D" parent="Background" index="3"]
 texture_filter = 1
 position = Vector2(460, -285)
 texture = ExtResource("4_4b7pi")
 centered = false
 
-[node name="Roads" type="Sprite2D" parent="Background" index="3"]
+[node name="Roads" type="Sprite2D" parent="Background" index="4"]
 texture_filter = 1
 position = Vector2(-391, -263)
 texture = ExtResource("4_4b7pi")
@@ -49,117 +57,117 @@ centered = false
 position = Vector2(1, 1)
 
 [node name="Container" parent="." index="3" instance=ExtResource("3_66r63")]
-position = Vector2(580, 329)
+position = Vector2(582, 329)
 rotation = -0.0647058
 
 [node name="Bullet" parent="." index="4" instance=ExtResource("4_sgvlu")]
-position = Vector2(-4, -350)
+position = Vector2(-2, -350)
 
 [node name="bus" parent="." index="5" instance=ExtResource("8_rk7p7")]
-position = Vector2(-71, -150)
+position = Vector2(-69, -150)
 
 [node name="wall" parent="." index="6" instance=ExtResource("9_ptuou")]
 modulate = Color(0.992157, 0.819608, 0.388235, 1)
-position = Vector2(987, 73)
+position = Vector2(989, 73)
 rotation = 1.5708
 
 [node name="wall2" parent="." index="7" instance=ExtResource("9_ptuou")]
 modulate = Color(0.992157, 0.819608, 0.388235, 1)
-position = Vector2(983, -237)
+position = Vector2(985, -237)
 rotation = 1.5708
 
 [node name="wall3" parent="." index="8" instance=ExtResource("9_ptuou")]
 modulate = Color(0.811765, 0.721569, 0.772549, 1)
-position = Vector2(1192, 97)
+position = Vector2(1194, 97)
 rotation = 1.5708
 
 [node name="wall4" parent="." index="9" instance=ExtResource("9_ptuou")]
 modulate = Color(0.811765, 0.721569, 0.772549, 1)
-position = Vector2(1186, -255)
+position = Vector2(1188, -255)
 rotation = 1.5708
 
 [node name="small wall3" parent="." index="10" instance=ExtResource("10_iym8l")]
-position = Vector2(1729.91, 470.318)
+position = Vector2(1731.91, 470.318)
 rotation = -0.0704489
 
 [node name="small wall" parent="." index="11" instance=ExtResource("10_iym8l")]
-position = Vector2(678, 330)
+position = Vector2(680, 330)
 rotation = -0.0704489
 
 [node name="small wall5" parent="." index="12" instance=ExtResource("10_iym8l")]
-position = Vector2(678, 330)
+position = Vector2(680, 330)
 rotation = -0.0704489
 
 [node name="small wall6" parent="." index="13" instance=ExtResource("10_iym8l")]
-position = Vector2(638, 598)
+position = Vector2(646, 605)
 rotation = -1.64877
 
 [node name="small wall7" parent="." index="14" instance=ExtResource("10_iym8l")]
-position = Vector2(704, 607)
+position = Vector2(701, 615)
 rotation = -1.64877
 
 [node name="small wall4" parent="." index="15" instance=ExtResource("10_iym8l")]
-position = Vector2(1034, 282)
+position = Vector2(1036, 282)
 rotation = -0.0704489
 
 [node name="small wall2" parent="." index="16" instance=ExtResource("10_iym8l")]
-position = Vector2(62, -133)
+position = Vector2(64, -133)
 
 [node name="Goal" parent="." index="17" instance=ExtResource("11_sglko")]
-position = Vector2(727, 448)
+position = Vector2(729, 448)
 
 [node name="car" parent="." index="18" instance=ExtResource("12_po5k8")]
-position = Vector2(836, 200)
+position = Vector2(838, 200)
 rotation = 0.465298
 
 [node name="truck" parent="." index="19" instance=ExtResource("13_oh2kv")]
-position = Vector2(811, 254)
+position = Vector2(813, 254)
 rotation = 0.815051
 
 [node name="truck2" parent="." index="20" instance=ExtResource("13_oh2kv")]
 modulate = Color(0.811765, 0.721569, 0.772549, 1)
-position = Vector2(529, 412)
+position = Vector2(532, 414)
 rotation = -0.18249
 
 [node name="car2" parent="." index="21" instance=ExtResource("12_po5k8")]
-position = Vector2(709, 509)
+position = Vector2(711, 509)
 rotation = -0.52313
 
 [node name="bus2" parent="." index="22" instance=ExtResource("8_rk7p7")]
-position = Vector2(1027, 632)
+position = Vector2(1029, 632)
 rotation = 3.1765
 
 [node name="concreate" parent="." index="23" instance=ExtResource("14_l8a5p")]
-position = Vector2(928, 469)
+position = Vector2(930, 469)
 
 [node name="concreate2" parent="." index="24" instance=ExtResource("14_l8a5p")]
-position = Vector2(855, 391)
+position = Vector2(857, 391)
 rotation = 1.77282
 
 [node name="wall5" parent="." index="25" instance=ExtResource("9_ptuou")]
 modulate = Color(0.992157, 0.819608, 0.388235, 1)
-position = Vector2(1178, 374)
+position = Vector2(1180, 374)
 rotation = 2.03756
 
 [node name="car3" parent="." index="26" instance=ExtResource("12_po5k8")]
-position = Vector2(-28, -107)
+position = Vector2(-26, -107)
 rotation = 1.88562
 
 [node name="car4" parent="." index="27" instance=ExtResource("12_po5k8")]
-position = Vector2(45, 197)
+position = Vector2(47, 197)
 rotation = -1.5708
 
 [node name="Container4" parent="." index="28" instance=ExtResource("13_oh2kv")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
-position = Vector2(-71, 197)
+position = Vector2(-69, 197)
 rotation = -1.5708
 
 [node name="Container5" parent="." index="29" instance=ExtResource("15_5v1so")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
-position = Vector2(-185, 163)
+position = Vector2(-183, 163)
 rotation = -1.5708
 
 [node name="Container6" parent="." index="30" instance=ExtResource("15_5v1so")]
 modulate = Color(0.756863, 0.729412, 0.682353, 1)
-position = Vector2(-172, -179)
+position = Vector2(-170, -179)
 rotation = 1.5708

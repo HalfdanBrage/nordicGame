@@ -15,7 +15,8 @@
 [ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple.tscn" id="13_5j5a1"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="14_n7j2i"]
 
-[node name="BaseLevel" instance=ExtResource("1_qtbtd")]
+[node name="Forrest" instance=ExtResource("1_qtbtd")]
+level_name = "Forrest"
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
