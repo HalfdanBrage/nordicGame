@@ -43,6 +43,11 @@ offset_bottom = 448.0
 scale = Vector2(0.6, 0.6)
 alignment = 1
 
+[node name="Focus" type="TextureButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../LevelSelect")
+
 [node name="Play" type="TextureButton" parent="Control/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Quit")
