@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_78q25"]
 [ext_resource type="Texture2D" uid="uid://cnvrp2yamawrm" path="res://Assets/Backgrounds/gravel_simple.png" id="2_gfyf5"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/wall_1.tscn" id="3_go1ik"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/wall_2.tscn" id="4_pce13"]
-[ext_resource type="PackedScene" path="res://Entities/Terrain/wall_3.tscn" id="5_ubes5"]
+[ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="3_go1ik"]
+[ext_resource type="PackedScene" uid="uid://c75stxcwm4uyv" path="res://Entities/Terrain/wall_2.tscn" id="4_pce13"]
+[ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="5_ubes5"]
 [ext_resource type="PackedScene" uid="uid://cseux313ox337" path="res://Entities/Terrain/tree_yellow2.tscn" id="6_th2k3"]
 [ext_resource type="PackedScene" uid="uid://dft1bfpojjd2x" path="res://Entities/Terrain/tree_white3.tscn" id="7_p5rdc"]
 [ext_resource type="PackedScene" uid="uid://b18eq31h0hs45" path="res://Entities/Terrain/tree_purple3.tscn" id="8_s8s4o"]
