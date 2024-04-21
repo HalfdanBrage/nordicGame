@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://cgp8ox4hnu5fq"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_buonb"]
-[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
+[ext_resource type="Texture2D" uid="uid://cg01fjftegdrx" path="res://Assets/Backgrounds/earth_simple.png" id="3_5okor"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_66r63"]
 [ext_resource type="Texture2D" uid="uid://duwqrd4byg1n2" path="res://Assets/Backgrounds/roads.png" id="4_4b7pi"]
 [ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_sgvlu"]
