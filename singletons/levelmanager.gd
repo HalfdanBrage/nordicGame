@@ -21,7 +21,7 @@ var levels: Array = [
 	"res://Levels/Main_levels/Forrest.tscn",
 	"res://Levels/Main_levels/cling_on.tscn",
 	"res://Levels/Main_levels/where.tscn",
-	"res://Levels/Main_levels/level_4.tscn",	
+	"res://Levels/Main_levels/level_4.tscn",
 ]
 
 func set_player(player: Player):
@@ -39,6 +39,7 @@ func select_level(index: int):
 	
 	show_level_title = true
 	level_finished = false
+	currentLevelIndex = index
 	get_tree().change_scene_to_file(levels[index])
 
 func has_next_level() -> bool:
