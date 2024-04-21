@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1ux8d5ub6w5g"]
+[gd_scene load_steps=16 format=3 uid="uid://c1ux8d5ub6w5g"]
 
 [ext_resource type="Script" path="res://Menus/Credits/credits.gd" id="1_3cbpe"]
 [ext_resource type="Texture2D" uid="uid://cub2ovsl3slui" path="res://Assets/UI/UI_batch2/credit_ball.png" id="1_4x4ei"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://02jx12oy3l4p" path="res://Assets/UI/UI_batch2/mainmenu_default.png" id="9_12rfw"]
 [ext_resource type="Texture2D" uid="uid://b5dnfxkaxs5kq" path="res://Assets/UI/UI_batch2/mainmenu_press.png" id="10_oqn21"]
 [ext_resource type="Texture2D" uid="uid://n46bt3nbfnsr" path="res://Assets/UI/UI_batch2/mainmenu_hover.png" id="11_djyab"]
+[ext_resource type="Texture2D" uid="uid://bv0jlaupxgfp" path="res://Assets/UI/UI_batch2/nordic_logo.png" id="12_br55g"]
 
 [sub_resource type="Gradient" id="Gradient_kljck"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -97,5 +98,10 @@ texture_normal = ExtResource("9_12rfw")
 texture_pressed = ExtResource("10_oqn21")
 texture_hover = ExtResource("11_djyab")
 stretch_mode = 4
+
+[node name="NordicLogo" type="Sprite2D" parent="."]
+position = Vector2(56, 289)
+scale = Vector2(0.545238, 0.545238)
+texture = ExtResource("12_br55g")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
