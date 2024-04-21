@@ -1,31 +1,35 @@
 [gd_scene load_steps=9 format=3 uid="uid://cngb0qwr8fh25"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_kcbgq"]
-[ext_resource type="Texture2D" uid="uid://16ymudhbxqrc" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
-[ext_resource type="PackedScene" uid="uid://cewoqj8mr2hhk" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
+[ext_resource type="Texture2D" uid="uid://p58k8repf67" path="res://Assets/Backgrounds/gravel.png" id="2_lo7mk"]
+[ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="3_jmhc2"]
 [ext_resource type="PackedScene" uid="uid://ba06bk4s4jtfq" path="res://Entities/Terrain/containerWhite.tscn" id="4_u0vl4"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="5_3kctu"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="6_l5yv1"]
-[ext_resource type="Texture2D" uid="uid://bmnaqpu8gy3h6" path="res://Assets/Terrain/chinalite.png" id="7_4tenv"]
+[ext_resource type="Texture2D" uid="uid://ttfd06pmqoqa" path="res://Assets/Terrain/chinalite.png" id="7_4tenv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mr5bc"]
 radius = 219.45
 
 [node name="BaseLevel" instance=ExtResource("1_kcbgq")]
 level_name = "Chinese intelligence"
+bounds_min = Vector2(-1046, -1305)
+bounds_max = Vector2(610, 279)
+metadata/_edit_horizontal_guides_ = [279.0]
+metadata/_edit_vertical_guides_ = [-1046.0, 610.0]
 
 [node name="Player" parent="." index="1"]
-position = Vector2(277, 543)
+position = Vector2(2.5, -0.5)
 
 [node name="Gravel" type="Sprite2D" parent="." index="2"]
-position = Vector2(229, 51)
+position = Vector2(-45.5, -492.5)
 texture = ExtResource("2_lo7mk")
 
 [node name="Container" parent="." index="3" instance=ExtResource("3_jmhc2")]
-position = Vector2(-51, 506)
+position = Vector2(-325.5, -37.5)
 
 [node name="OneWing" type="Node2D" parent="." index="4"]
-position = Vector2(-199, 326)
+position = Vector2(-473.5, -217.5)
 rotation = -2.25365
 
 [node name="Container15" parent="OneWing" index="0" instance=ExtResource("4_u0vl4")]
@@ -53,7 +57,7 @@ position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
 
 [node name="OneWing2" type="Node2D" parent="." index="5"]
-position = Vector2(-277, 55)
+position = Vector2(-551.5, -488.5)
 rotation = -1.42051
 
 [node name="Container15" parent="OneWing2" index="0" instance=ExtResource("4_u0vl4")]
@@ -81,6 +85,7 @@ position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
 
 [node name="GoalNode" type="Node2D" parent="." index="6"]
+position = Vector2(-274.5, -543.5)
 
 [node name="Container2" parent="GoalNode" index="0" instance=ExtResource("5_3kctu")]
 position = Vector2(-426, -560)
@@ -99,7 +104,7 @@ position = Vector2(-348, -715)
 rotation = 3.00825
 
 [node name="OneWing3" type="Node2D" parent="." index="7"]
-position = Vector2(-228, -288)
+position = Vector2(-502.5, -831.5)
 rotation = -7.24191
 
 [node name="Container15" parent="OneWing3" index="0" instance=ExtResource("4_u0vl4")]
@@ -127,7 +132,7 @@ position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
 
 [node name="OneWing4" type="Node2D" parent="." index="8"]
-position = Vector2(93, -240)
+position = Vector2(-181.5, -783.5)
 rotation = 0.680557
 
 [node name="Container15" parent="OneWing4" index="0" instance=ExtResource("4_u0vl4")]
@@ -155,7 +160,7 @@ position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
 
 [node name="OneWing5" type="Node2D" parent="." index="9"]
-position = Vector2(353, 160)
+position = Vector2(78.5, -383.5)
 rotation = 1.93832
 
 [node name="Container15" parent="OneWing5" index="0" instance=ExtResource("4_u0vl4")]
@@ -183,7 +188,7 @@ position = Vector2(-243.218, 5.83538)
 rotation = -1.6864
 
 [node name="Wing" type="Node2D" parent="." index="10"]
-position = Vector2(195, 208)
+position = Vector2(-79.5, -335.5)
 rotation = -0.51353
 
 [node name="Container2" parent="Wing" index="0" instance=ExtResource("4_u0vl4")]
@@ -203,6 +208,7 @@ position = Vector2(344, -140)
 rotation = -0.233275
 
 [node name="Node2D" type="Node2D" parent="." index="11"]
+position = Vector2(-274.5, -543.5)
 
 [node name="Container2" parent="Node2D" index="0" instance=ExtResource("4_u0vl4")]
 position = Vector2(246, -255)
@@ -221,35 +227,35 @@ position = Vector2(673, -570)
 rotation = -0.380359
 
 [node name="Container2" parent="." index="12" instance=ExtResource("4_u0vl4")]
-position = Vector2(-239, -434)
+position = Vector2(-513.5, -977.5)
 rotation = -2.59044
 
 [node name="Container3" parent="." index="13" instance=ExtResource("4_u0vl4")]
-position = Vector2(-219, -489)
+position = Vector2(-493.5, -1032.5)
 rotation = -0.791349
 
 [node name="Container4" parent="." index="14" instance=ExtResource("4_u0vl4")]
-position = Vector2(-100, -737)
+position = Vector2(-374.5, -1280.5)
 rotation = 0.225919
 
 [node name="Container5" parent="." index="15" instance=ExtResource("4_u0vl4")]
-position = Vector2(-246, -654)
+position = Vector2(-520.5, -1197.5)
 rotation = -0.707659
 
 [node name="Container6" parent="." index="16" instance=ExtResource("3_jmhc2")]
-position = Vector2(121, 539)
+position = Vector2(-153.5, -4.5)
 rotation = 0.378836
 
 [node name="Container7" parent="." index="17" instance=ExtResource("3_jmhc2")]
-position = Vector2(263, 613)
+position = Vector2(-11.5, 69.5)
 rotation = -0.770504
 
 [node name="Container8" parent="." index="18" instance=ExtResource("3_jmhc2")]
-position = Vector2(404, 507)
+position = Vector2(129.5, -36.5)
 rotation = -1.68235
 
 [node name="China" type="StaticBody2D" parent="." index="19"]
-position = Vector2(77, 9)
+position = Vector2(-197.5, -534.5)
 
 [node name="Chinalite" type="Sprite2D" parent="China" index="0"]
 position = Vector2(-22, 44)

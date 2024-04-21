@@ -14,8 +14,10 @@ var levels: Array = [
 	"res://Levels/Main_levels/level_2.tscn",
 	"res://Levels/Main_levels/level_3.tscn",
 	"res://Levels/Main_levels/after_level_1.tscn",
+	"res://Levels/Main_levels/clustered_area.tscn",
 	"res://Levels/Main_levels/All_over_the_place.tscn",
 	"res://Levels/Main_levels/far_away.tscn",
+	"res://Levels/Main_levels/the_wall.tscn",
 	"res://Levels/Main_levels/Forrest.tscn",
 	"res://Levels/Main_levels/cling_on.tscn",
 	"res://Levels/Main_levels/where.tscn",
@@ -64,7 +66,15 @@ func pause():
 		pause_screen = PAUSE_SCREEN_RES.instantiate()
 		add_child(pause_screen)
 
+func _pause():
+	if not get_tree().paused:
+		get_tree().paused = true
+
 func unpause():
 	if get_tree().paused:
 		get_tree().paused = false
 		pause_screen.queue_free()
+
+func _unpause():
+	if get_tree().paused:
+		get_tree().paused = false

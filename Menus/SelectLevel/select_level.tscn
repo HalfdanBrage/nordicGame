@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://b7jjxgbt4wd6n"]
 
-[ext_resource type="Texture2D" uid="uid://cssqehac4sydm" path="res://Assets/UI/splash_background.png" id="1_cdr4s"]
+[ext_resource type="Texture2D" uid="uid://coa0j7di6iryb" path="res://Assets/UI/splash_background.png" id="1_cdr4s"]
 [ext_resource type="Script" path="res://Menus/SelectLevel/select_level.gd" id="1_cxafi"]
-[ext_resource type="Texture2D" uid="uid://csco5wynev50p" path="res://Assets/UI/UI_batch2/back_default.png" id="2_ghw0f"]
-[ext_resource type="Texture2D" uid="uid://l852hluj3dxf" path="res://Assets/UI/selectlevel_hover.png" id="2_s1ykv"]
-[ext_resource type="Texture2D" uid="uid://bkncy26jyy0v1" path="res://Assets/UI/UI_batch2/back_press.png" id="3_1b3ps"]
-[ext_resource type="Texture2D" uid="uid://bqr616lliedj5" path="res://Assets/UI/UI_batch2/back_hover.png" id="4_k453e"]
+[ext_resource type="Texture2D" uid="uid://ckmttc0nd4jrd" path="res://Assets/UI/UI_batch2/back_default.png" id="2_ghw0f"]
+[ext_resource type="Texture2D" uid="uid://bqp2wmjvjqpp2" path="res://Assets/UI/selectlevel_hover.png" id="2_s1ykv"]
+[ext_resource type="Texture2D" uid="uid://ncgxynmdohdr" path="res://Assets/UI/UI_batch2/back_press.png" id="3_1b3ps"]
+[ext_resource type="Texture2D" uid="uid://u5wgx5ksmdiv" path="res://Assets/UI/UI_batch2/back_hover.png" id="4_k453e"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3

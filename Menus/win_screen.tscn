@@ -1,10 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://sff7u7unl340"]
+[gd_scene load_steps=22 format=3 uid="uid://sff7u7unl340"]
 
 [ext_resource type="Script" path="res://Menus/win_screen.gd" id="1_3n6u5"]
 [ext_resource type="PackedScene" uid="uid://fw5h8le457pv" path="res://Menus/typewriter_label.tscn" id="2_m0vhx"]
+[ext_resource type="Texture2D" uid="uid://bweeplmh5ok0w" path="res://Assets/UI/stamp_animation/vertical/0.png" id="3_eqqo2"]
+[ext_resource type="Texture2D" uid="uid://dgiwjeau3t4gt" path="res://Assets/UI/stamp_animation/vertical/1.png" id="4_oe2fi"]
+[ext_resource type="Texture2D" uid="uid://dqmtvj1415y38" path="res://Assets/UI/stamp_animation/vertical/2.png" id="5_3sr2e"]
+[ext_resource type="Texture2D" uid="uid://bdqkc23ljkr4g" path="res://Assets/UI/stamp_animation/vertical/3.png" id="6_lxrxq"]
+[ext_resource type="Texture2D" uid="uid://c4bt5enyl7atg" path="res://Assets/UI/stamp_animation/vertical/4.png" id="7_ekasa"]
+[ext_resource type="Texture2D" uid="uid://b5uvog86o1arf" path="res://Assets/UI/stamp_animation/vertical/5.png" id="8_1ieo3"]
+[ext_resource type="Texture2D" uid="uid://bernsx3eco0u2" path="res://Assets/UI/stamp_animation/vertical/6.png" id="9_sbxao"]
+[ext_resource type="Texture2D" uid="uid://s7sawjleg8cf" path="res://Assets/UI/stamp_animation/vertical/7.png" id="10_0cms2"]
+[ext_resource type="Texture2D" uid="uid://ddwqloqv6l1lo" path="res://Assets/UI/stamp_animation/vertical/8.png" id="11_8ijkv"]
+[ext_resource type="Texture2D" uid="uid://cbcfh460n7lmg" path="res://Assets/UI/stamp_animation/vertical/9.png" id="12_elrya"]
+[ext_resource type="Texture2D" uid="uid://8jbfhutfhlq0" path="res://Assets/UI/stamp_animation/vertical/10.png" id="13_k5y03"]
+[ext_resource type="Texture2D" uid="uid://b56tbbxakc1nj" path="res://Assets/UI/stamp_animation/vertical/11.png" id="14_wdtsi"]
+[ext_resource type="AudioStream" uid="uid://3scl8ux7u2x4" path="res://SFX/thunk.wav" id="15_hdime"]
 
 [sub_resource type="Gradient" id="Gradient_1fbc4"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0.745098)
+colors = PackedColorArray(0.151276, 0.151276, 0.151276, 1, 0.241156, 0.241156, 0.241156, 0.745098)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_5sqbm"]
 seed = 1
@@ -17,7 +30,7 @@ noise = SubResource("FastNoiseLite_5sqbm")
 
 [sub_resource type="Animation" id="Animation_q6uc0"]
 resource_name = "appear"
-length = 6.0
+length = 9.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -63,7 +76,67 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(4.6),
+"times": PackedFloat32Array(6.6, 9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"unpause"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6.6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"wait", 1.0, false],
+"method": &"play"
+}, {
+"args": [&"stamp", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6.5, 6.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Stamp")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(9),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -76,7 +149,68 @@ _data = {
 "appear": SubResource("Animation_q6uc0")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_84ng5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_wdtsi")
+}],
+"loop": true,
+"name": &"linger",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eqqo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oe2fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3sr2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lxrxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ekasa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1ieo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sbxao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0cms2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ijkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_elrya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k5y03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wdtsi")
+}],
+"loop": false,
+"name": &"stamp",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eqqo2")
+}],
+"loop": true,
+"name": &"wait",
+"speed": 5.0
+}]
+
 [node name="Win Screen" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_3n6u5")
 enable_dither = true
 
@@ -103,11 +237,22 @@ layout_mode = 2
 [node name="TypewriterLabel" parent="CenterContainer/FlowContainer" instance=ExtResource("2_m0vhx")]
 layout_mode = 2
 text = "Level Complete"
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_42x66")
 }
 autoplay = "appear"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(229, 68)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_84ng5")
+animation = &"stamp"
+autoplay = "linger"
+
+[node name="Stamp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_hdime")
+volume_db = -14.0
