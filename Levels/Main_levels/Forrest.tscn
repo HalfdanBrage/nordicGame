@@ -1,0 +1,476 @@
+[gd_scene load_steps=15 format=3 uid="uid://kgervi2c84ap"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_qtbtd"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_vgw83"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple3.tscn" id="3_jqyu0"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple2.tscn" id="4_aecrt"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow3.tscn" id="5_00g8o"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow2.tscn" id="6_3jwcf"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white.tscn" id="7_db2qk"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow.tscn" id="8_couxb"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_1.tscn" id="9_p7hxj"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_2.tscn" id="10_f2xpr"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white2.tscn" id="11_kn2ec"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white3.tscn" id="12_xv2gg"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple.tscn" id="13_5j5a1"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="14_n7j2i"]
+
+[node name="BaseLevel" instance=ExtResource("1_qtbtd")]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+
+[node name="DesertSimple" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(440, -679)
+rotation = 1.5708
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="DesertSimple2" type="Sprite2D" parent="Background" index="1"]
+texture_filter = 1
+position = Vector2(440, -623)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+texture = ExtResource("2_vgw83")
+centered = false
+
+[node name="Giant hedge7" type="Node2D" parent="." index="3"]
+position = Vector2(212, -716)
+
+[node name="hedge 1" parent="Giant hedge7" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Giant hedge7" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Giant hedge7" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge6" parent="Giant hedge7" index="3" instance=ExtResource("10_f2xpr")]
+position = Vector2(-639, 173)
+
+[node name="hedge 2" parent="Giant hedge7" index="4" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Giant hedge7" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Giant hedge7" index="6" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Giant hedge7" index="7" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Giant hedge7" index="8" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="Giant hedge8" type="Node2D" parent="." index="4"]
+position = Vector2(14, -1134)
+
+[node name="hedge 1" parent="Giant hedge8" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Giant hedge8" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Giant hedge8" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge 2" parent="Giant hedge8" index="3" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Giant hedge8" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Giant hedge8" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Giant hedge8" index="6" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Giant hedge8" index="7" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge6" parent="Giant hedge8" index="8" instance=ExtResource("10_f2xpr")]
+position = Vector2(270, 71)
+rotation = 1.5708
+
+[node name="Hedges" type="Node2D" parent="." index="5"]
+
+[node name="Giant hedge" type="Node2D" parent="Hedges" index="0"]
+
+[node name="hedge 1" parent="Hedges/Giant hedge" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Hedges/Giant hedge" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge 2" parent="Hedges/Giant hedge" index="3" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge" index="6" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge" index="7" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge" index="8" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge" index="10" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="Giant hedge2" type="Node2D" parent="Hedges" index="1"]
+position = Vector2(-166, -194)
+rotation = 1.5708
+
+[node name="hedge 1" parent="Hedges/Giant hedge2" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge2" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Hedges/Giant hedge2" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge 2" parent="Hedges/Giant hedge2" index="3" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge2" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge2" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge2" index="6" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge2" index="7" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge2" index="8" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge2" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge2" index="10" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="Giant hedge3" type="Node2D" parent="Hedges" index="2"]
+position = Vector2(-157, -1007)
+rotation = 1.5708
+
+[node name="hedge 1" parent="Hedges/Giant hedge3" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge3" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Hedges/Giant hedge3" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge 2" parent="Hedges/Giant hedge3" index="3" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge3" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge3" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge3" index="6" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge3" index="7" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge3" index="8" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge3" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge3" index="10" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="Giant hedge4" type="Node2D" parent="Hedges" index="3"]
+position = Vector2(28, -1178)
+rotation = -3.14159
+
+[node name="hedge 1" parent="Hedges/Giant hedge4" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge4" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge 2" parent="Hedges/Giant hedge4" index="2" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge4" index="3" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge4" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge4" index="5" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge4" index="6" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge4" index="7" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge4" index="8" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge4" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="Giant hedge5" type="Node2D" parent="Hedges" index="4"]
+position = Vector2(176, -970)
+rotation = -1.5708
+
+[node name="hedge 1" parent="Hedges/Giant hedge5" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge5" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge2" parent="Hedges/Giant hedge5" index="2" instance=ExtResource("10_f2xpr")]
+position = Vector2(-449, 194)
+
+[node name="hedge 2" parent="Hedges/Giant hedge5" index="3" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge5" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge5" index="5" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge5" index="6" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge5" index="7" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge5" index="8" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge5" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge5" index="10" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="Giant hedge6" type="Node2D" parent="Hedges" index="5"]
+position = Vector2(199, -126)
+rotation = -1.5708
+
+[node name="hedge 1" parent="Hedges/Giant hedge6" index="0" instance=ExtResource("9_p7hxj")]
+position = Vector2(-425, 173)
+
+[node name="hedge" parent="Hedges/Giant hedge6" index="1" instance=ExtResource("10_f2xpr")]
+position = Vector2(-320, 180)
+
+[node name="hedge 2" parent="Hedges/Giant hedge6" index="2" instance=ExtResource("9_p7hxj")]
+position = Vector2(-212, 172)
+
+[node name="hedge3" parent="Hedges/Giant hedge6" index="3" instance=ExtResource("10_f2xpr")]
+position = Vector2(-107, 179)
+
+[node name="hedge4" parent="Hedges/Giant hedge6" index="4" instance=ExtResource("10_f2xpr")]
+position = Vector2(-236, 193)
+
+[node name="hedge 3" parent="Hedges/Giant hedge6" index="5" instance=ExtResource("9_p7hxj")]
+position = Vector2(-36, 167)
+
+[node name="hedge5" parent="Hedges/Giant hedge6" index="6" instance=ExtResource("10_f2xpr")]
+position = Vector2(69, 174)
+
+[node name="hedge 4" parent="Hedges/Giant hedge6" index="7" instance=ExtResource("9_p7hxj")]
+position = Vector2(177, 166)
+
+[node name="hedge6" parent="Hedges/Giant hedge6" index="8" instance=ExtResource("10_f2xpr")]
+position = Vector2(282, 173)
+
+[node name="hedge7" parent="Hedges/Giant hedge6" index="9" instance=ExtResource("10_f2xpr")]
+position = Vector2(153, 187)
+
+[node name="tree purp 3" parent="." index="6" instance=ExtResource("3_jqyu0")]
+position = Vector2(-233, -258)
+
+[node name="tree purp 2" parent="." index="7" instance=ExtResource("4_aecrt")]
+position = Vector2(101, -352)
+
+[node name="tree yel 3" parent="." index="8" instance=ExtResource("5_00g8o")]
+position = Vector2(24, -218)
+
+[node name="tree purp 4" parent="." index="9" instance=ExtResource("4_aecrt")]
+position = Vector2(397, -140)
+rotation = 1.5708
+
+[node name="tree yel 4" parent="." index="10" instance=ExtResource("5_00g8o")]
+position = Vector2(320, -6)
+rotation = 1.5708
+
+[node name="Container" parent="." index="11" instance=ExtResource("6_3jwcf")]
+position = Vector2(106, -322)
+rotation = 1.5708
+
+[node name="tree wit 1" parent="." index="12" instance=ExtResource("7_db2qk")]
+position = Vector2(-246, -437)
+
+[node name="Container2" parent="." index="13" instance=ExtResource("8_couxb")]
+position = Vector2(-40, -507)
+
+[node name="Container3" parent="." index="14" instance=ExtResource("7_db2qk")]
+position = Vector2(283, -254)
+
+[node name="Container4" parent="." index="15" instance=ExtResource("11_kn2ec")]
+position = Vector2(269, -323)
+
+[node name="Container5" parent="." index="16" instance=ExtResource("3_jqyu0")]
+position = Vector2(184, -405)
+
+[node name="Container6" parent="." index="17" instance=ExtResource("6_3jwcf")]
+position = Vector2(271, -518)
+
+[node name="Container7" parent="." index="18" instance=ExtResource("6_3jwcf")]
+position = Vector2(-409, -111)
+
+[node name="Container8" parent="." index="19" instance=ExtResource("6_3jwcf")]
+position = Vector2(-126, -10)
+rotation = 1.5708
+
+[node name="Container9" parent="." index="20" instance=ExtResource("11_kn2ec")]
+position = Vector2(-304, -151)
+
+[node name="Container10" parent="." index="21" instance=ExtResource("5_00g8o")]
+position = Vector2(-474, -359)
+
+[node name="Container11" parent="." index="22" instance=ExtResource("8_couxb")]
+position = Vector2(-458, -267)
+
+[node name="Container12" parent="." index="23" instance=ExtResource("4_aecrt")]
+position = Vector2(-421, 74)
+
+[node name="Container13" parent="." index="24" instance=ExtResource("4_aecrt")]
+position = Vector2(-205, -270)
+rotation = 3.14159
+
+[node name="Container14" parent="." index="25" instance=ExtResource("7_db2qk")]
+position = Vector2(-461, -658)
+
+[node name="Container15" parent="." index="26" instance=ExtResource("8_couxb")]
+position = Vector2(-323, -651)
+
+[node name="Container16" parent="." index="27" instance=ExtResource("5_00g8o")]
+position = Vector2(-124, -670)
+
+[node name="Container30" parent="." index="28" instance=ExtResource("5_00g8o")]
+position = Vector2(244, -664)
+
+[node name="Container31" parent="." index="29" instance=ExtResource("5_00g8o")]
+position = Vector2(155, -1031)
+
+[node name="Container17" parent="." index="30" instance=ExtResource("7_db2qk")]
+position = Vector2(99, -611)
+
+[node name="Container18" parent="." index="31" instance=ExtResource("7_db2qk")]
+position = Vector2(314, -548)
+rotation = 1.5708
+
+[node name="Container19" parent="." index="32" instance=ExtResource("8_couxb")]
+position = Vector2(-411, -893)
+
+[node name="Container20" parent="." index="33" instance=ExtResource("7_db2qk")]
+position = Vector2(-52, -585)
+scale = Vector2(-1, -1)
+
+[node name="Container21" parent="." index="34" instance=ExtResource("3_jqyu0")]
+position = Vector2(-263, -937)
+
+[node name="Container22" parent="." index="35" instance=ExtResource("4_aecrt")]
+position = Vector2(9, -615)
+
+[node name="Container23" parent="." index="36" instance=ExtResource("4_aecrt")]
+position = Vector2(205, -678)
+rotation = 1.5708
+
+[node name="Container24" parent="." index="37" instance=ExtResource("4_aecrt")]
+position = Vector2(193, -573)
+rotation = 3.14159
+
+[node name="Container25" parent="." index="38" instance=ExtResource("4_aecrt")]
+position = Vector2(16, -858)
+
+[node name="Container26" parent="." index="39" instance=ExtResource("4_aecrt")]
+position = Vector2(212, -921)
+rotation = 1.5708
+
+[node name="Container27" parent="." index="40" instance=ExtResource("4_aecrt")]
+position = Vector2(200, -816)
+rotation = 3.14159
+
+[node name="Container28" parent="." index="41" instance=ExtResource("6_3jwcf")]
+position = Vector2(-113, -970)
+
+[node name="Container44" parent="." index="42" instance=ExtResource("6_3jwcf")]
+position = Vector2(-277, -1049)
+
+[node name="Container29" parent="." index="43" instance=ExtResource("6_3jwcf")]
+position = Vector2(130, -759)
+
+[node name="Container32" parent="." index="44" instance=ExtResource("12_xv2gg")]
+position = Vector2(263, -1001)
+
+[node name="Container33" parent="." index="45" instance=ExtResource("3_jqyu0")]
+position = Vector2(222, -1136)
+
+[node name="Container34" parent="." index="46" instance=ExtResource("4_aecrt")]
+position = Vector2(217, -855)
+
+[node name="Container35" parent="." index="47" instance=ExtResource("13_5j5a1")]
+position = Vector2(-407, -1089)
+
+[node name="Container36" parent="." index="48" instance=ExtResource("6_3jwcf")]
+position = Vector2(-401, -1243)
+
+[node name="Container37" parent="." index="49" instance=ExtResource("5_00g8o")]
+position = Vector2(-365, -1355)
+
+[node name="Container38" parent="." index="50" instance=ExtResource("7_db2qk")]
+position = Vector2(-457, -1479)
+
+[node name="Container39" parent="." index="51" instance=ExtResource("12_xv2gg")]
+position = Vector2(-252, -1439)
+
+[node name="Container40" parent="." index="52" instance=ExtResource("4_aecrt")]
+position = Vector2(-119, -1450)
+
+[node name="Container41" parent="." index="53" instance=ExtResource("3_jqyu0")]
+position = Vector2(43, -1427)
+
+[node name="Container42" parent="." index="54" instance=ExtResource("12_xv2gg")]
+position = Vector2(219, -1434)
+
+[node name="Container43" parent="." index="55" instance=ExtResource("5_00g8o")]
+position = Vector2(232, -1280)
+
+[node name="Goal" parent="." index="56" instance=ExtResource("14_n7j2i")]
+position = Vector2(-1, -1119)

@@ -3,4 +3,5 @@
 [ext_resource type="AudioStream" uid="uid://y7lv2hxal53f" path="res://music/out.wav" id="1_gbh3e"]
 
 [node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
 stream = ExtResource("1_gbh3e")

@@ -13,5 +13,10 @@ func _ready():
 func show_name():
 	var ln = LEVEL_NAME_RES.instantiate()
 	ln.text = level_name
-	get_tree().get_root().add_child(ln)
+	add_child(ln)
 	ln.display()
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+		Levelmanager.pause()
+
