@@ -1,64 +1,68 @@
 [gd_scene load_steps=5 format=3 uid="uid://pubuga6lueqe"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_mdp16"]
-[ext_resource type="Texture2D" uid="uid://c35a32asko7ig" path="res://Assets/Backgrounds/desert.png" id="2_hyjyv"]
+[ext_resource type="Texture2D" uid="uid://bj8r0vmdei7ow" path="res://Assets/Backgrounds/desert.png" id="2_hyjyv"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_ra0hn"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="4_f7gd2"]
 
 [node name="BaseLevel" instance=ExtResource("1_mdp16")]
 level_name = "Minigolf"
+bounds_min = Vector2(-500, -438)
+bounds_max = Vector2(381, 128)
+metadata/_edit_horizontal_guides_ = [-438.0, 128.0]
+metadata/_edit_vertical_guides_ = [381.0]
 
 [node name="Player" parent="." index="1"]
-position = Vector2(627, 214)
+position = Vector2(136, 6)
 
 [node name="Desert" type="Sprite2D" parent="." index="2"]
 texture_filter = 1
-position = Vector2(-14, -91)
+position = Vector2(-505, -299)
 texture = ExtResource("2_hyjyv")
 
 [node name="Container" parent="." index="3" instance=ExtResource("3_ra0hn")]
-position = Vector2(517, 245)
+position = Vector2(26, 37)
 
 [node name="Container2" parent="." index="4" instance=ExtResource("3_ra0hn")]
-position = Vector2(665, 274)
+position = Vector2(174, 66)
 rotation = -1.7747
 
 [node name="Container3" parent="." index="5" instance=ExtResource("3_ra0hn")]
-position = Vector2(496, 100)
+position = Vector2(5, -108)
 rotation = -0.100436
 
 [node name="Container4" parent="." index="6" instance=ExtResource("3_ra0hn")]
-position = Vector2(495, 326)
+position = Vector2(4, 118)
 rotation = -2.40407
 
 [node name="Container5" parent="." index="7" instance=ExtResource("3_ra0hn")]
-position = Vector2(329, 156)
+position = Vector2(-162, -52)
 rotation = -1.08566
 
 [node name="Container6" parent="." index="8" instance=ExtResource("3_ra0hn")]
-position = Vector2(644, 26)
+position = Vector2(153, -182)
 rotation = -3.17058
 
 [node name="Container7" parent="." index="9" instance=ExtResource("3_ra0hn")]
-position = Vector2(674, 107)
+position = Vector2(183, -101)
 rotation = -0.877436
 
 [node name="Container8" parent="." index="10" instance=ExtResource("3_ra0hn")]
-position = Vector2(775, -10)
+position = Vector2(284, -218)
 rotation = -2.23964
 
 [node name="Container9" parent="." index="11" instance=ExtResource("3_ra0hn")]
-position = Vector2(685, -133)
+position = Vector2(194, -341)
 rotation = -3.18329
 
 [node name="Container10" parent="." index="12" instance=ExtResource("3_ra0hn")]
-position = Vector2(506, -136)
+position = Vector2(15, -344)
 rotation = -3.18329
 
 [node name="Goal" parent="." index="13" instance=ExtResource("4_f7gd2")]
-position = Vector2(355, -88)
+position = Vector2(-136, -296)
 rotation = 1.5708
 
 [node name="Container11" parent="." index="14" instance=ExtResource("3_ra0hn")]
-position = Vector2(500, 30)
+position = Vector2(9, -178)
 rotation = -3.18329
