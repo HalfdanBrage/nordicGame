@@ -3,6 +3,7 @@ extends Node
 const WIN_SCREEN_RES = preload("res://Menus/win_screen.tscn")
 const PAUSE_SCREEN_RES = preload("res://Menus/pause_screen.tscn")
 
+var is_controller = false
 var pause_screen = null
 var level_finished = false
 var show_level_title = false

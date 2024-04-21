@@ -9,7 +9,6 @@ const BULLET_SPAWN_OFFSET = Vector2(50, 0)
 
 @export var bullet: Bullet = null
 
-var is_controller = false
 var bulletPos = null
 
 var can_swap = true
@@ -43,7 +42,7 @@ func _input(event):
 		shoot()
 
 func get_aim_angle():
-	if is_controller:
+	if Levelmanager.is_controller:
 		return Vector2(
 			Input.get_action_strength("aim right") - Input.get_action_strength("aim left"),
 			Input.get_action_strength("aim down") - Input.get_action_strength("aim up")

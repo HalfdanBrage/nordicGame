@@ -3,8 +3,8 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(Levelmanager._player.is_controller)
-	if Levelmanager._player.is_controller:
+	print(Levelmanager.is_controller)
+	if Levelmanager.is_controller:
 		$CenterContainer/VBoxContainer/HBoxContainer/TextureButton.button_pressed = true
 
 
@@ -35,7 +35,7 @@ func _input(event):
 
 
 func _on_texture_button_pressed():
-	Levelmanager._player.is_controller = not Levelmanager._player.is_controller
+	Levelmanager.is_controller = not Levelmanager.is_controller
 
 
 func _on_resume_button_pressed():
