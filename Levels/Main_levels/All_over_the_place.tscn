@@ -1,205 +1,217 @@
-[gd_scene load_steps=24 format=3 uid="uid://buuisvp7ydxqa"]
+[gd_scene load_steps=24 format=3 uid="uid://dxirfg3f8xxch"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_heao5"]
-[ext_resource type="Texture2D" uid="uid://dtj7dhfdtm4j1" path="res://Assets/Backgrounds/square_simple.png" id="2_a0gn0"]
+[ext_resource type="Texture2D" uid="uid://bmqbv5qnghv85" path="res://Assets/Backgrounds/square_simple.png" id="2_a0gn0"]
 [ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="3_tpcy8"]
 [ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="4_kltsc"]
-[ext_resource type="PackedScene" uid="uid://bmynwre70yqxv" path="res://Entities/Terrain/containerWhite.tscn" id="5_pxrnd"]
+[ext_resource type="PackedScene" uid="uid://ba06bk4s4jtfq" path="res://Entities/Terrain/containerWhite.tscn" id="5_pxrnd"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="6_e1hbr"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="7_w03kc"]
-[ext_resource type="PackedScene" uid="uid://dcn6lf56it6qr" path="res://Entities/Terrain/car_whi2.tscn" id="8_3ysxe"]
-[ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="9_tob1d"]
-[ext_resource type="PackedScene" uid="uid://hk05nb21x0gs" path="res://Entities/Terrain/hedge_2.tscn" id="10_j5jho"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi2.tscn" id="8_3ysxe"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/bus.tscn" id="9_tob1d"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_2.tscn" id="10_j5jho"]
 [ext_resource type="PackedScene" uid="uid://bb21v3lhqej4i" path="res://Entities/Terrain/factory_1.tscn" id="11_hgqqe"]
-[ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="12_oo5uy"]
-[ext_resource type="PackedScene" uid="uid://dj4x5i2u1xrm4" path="res://Entities/Terrain/hedge_1.tscn" id="13_bijlc"]
-[ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="14_telwb"]
-[ext_resource type="PackedScene" uid="uid://bb20eem1c23a3" path="res://Entities/Terrain/car_whi1.tscn" id="15_plpmf"]
-[ext_resource type="PackedScene" uid="uid://c3wxf4eiv0pm7" path="res://Entities/box-2.tscn" id="16_n8pfn"]
-[ext_resource type="PackedScene" uid="uid://dw1pcn2u8m6sw" path="res://Entities/Terrain/concrete_single.tscn" id="17_oowkt"]
-[ext_resource type="PackedScene" uid="uid://4gu8ofabyfn7" path="res://Entities/Terrain/tree_white2.tscn" id="18_lpi88"]
-[ext_resource type="PackedScene" uid="uid://butqnptbn3bm3" path="res://Entities/Terrain/tree_white.tscn" id="19_4ugsi"]
-[ext_resource type="PackedScene" uid="uid://b18eq31h0hs45" path="res://Entities/Terrain/tree_purple3.tscn" id="20_u7gx5"]
-[ext_resource type="PackedScene" uid="uid://d22p1hgaqprjc" path="res://Entities/Terrain/tree_yellow.tscn" id="21_e0i53"]
-[ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="22_xwkfe"]
-[ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="23_il545"]
+[ext_resource type="PackedScene" uid="uid://82km8ihk5ycn" path="res://Entities/Terrain/wall_1.tscn" id="12_oo5uy"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/hedge_1.tscn" id="13_bijlc"]
+[ext_resource type="PackedScene" uid="uid://cet8w32b6seon" path="res://Entities/Terrain/wall_3.tscn" id="14_telwb"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi1.tscn" id="15_plpmf"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/box-2.tscn" id="16_n8pfn"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/concrete_single.tscn" id="17_oowkt"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white2.tscn" id="18_lpi88"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_white.tscn" id="19_4ugsi"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple3.tscn" id="20_u7gx5"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_yellow.tscn" id="21_e0i53"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/tree_purple2.tscn" id="22_xwkfe"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_pur.tscn" id="23_il545"]
 
 [node name="All_Over_The_Place" instance=ExtResource("1_heao5")]
 level_name = "The mess"
+bounds_min = Vector2(-210, -100)
+bounds_max = Vector2(1625, 530)
+metadata/_edit_vertical_guides_ = [1655.0]
+metadata/_edit_horizontal_guides_ = [533.0]
 
 [node name="SquareSimple" type="Sprite2D" parent="." index="2"]
+texture_filter = 1
 position = Vector2(-178, -216)
 texture = ExtResource("2_a0gn0")
 centered = false
 
-[node name="Container" parent="." index="3" instance=ExtResource("3_tpcy8")]
+[node name="SquareSimple2" type="Sprite2D" parent="." index="3"]
+texture_filter = 1
+position = Vector2(-178, -216)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_a0gn0")
+centered = false
+
+[node name="Container" parent="." index="4" instance=ExtResource("3_tpcy8")]
 position = Vector2(-59, -137)
 
-[node name="Container2" parent="." index="4" instance=ExtResource("4_kltsc")]
+[node name="Container2" parent="." index="5" instance=ExtResource("4_kltsc")]
 position = Vector2(-23, -62)
 rotation = 1.5708
 
-[node name="Container3" parent="." index="5" instance=ExtResource("5_pxrnd")]
+[node name="Container3" parent="." index="6" instance=ExtResource("5_pxrnd")]
 position = Vector2(-29, 125)
 rotation = -0.0831441
 
-[node name="Container4" parent="." index="6" instance=ExtResource("6_e1hbr")]
+[node name="Container4" parent="." index="7" instance=ExtResource("6_e1hbr")]
 position = Vector2(147, -135)
 rotation = 0.319167
 
-[node name="Container5" parent="." index="7" instance=ExtResource("3_tpcy8")]
+[node name="Container5" parent="." index="8" instance=ExtResource("3_tpcy8")]
 position = Vector2(155, 173)
 rotation = 0.772331
 
-[node name="Container6" parent="." index="8" instance=ExtResource("5_pxrnd")]
+[node name="Container6" parent="." index="9" instance=ExtResource("5_pxrnd")]
 position = Vector2(241, 9)
 rotation = -0.322236
 
-[node name="Container7" parent="." index="9" instance=ExtResource("6_e1hbr")]
+[node name="Container7" parent="." index="10" instance=ExtResource("6_e1hbr")]
 position = Vector2(350, 116)
 rotation = 0.889592
 
-[node name="Container8" parent="." index="10" instance=ExtResource("3_tpcy8")]
+[node name="Container8" parent="." index="11" instance=ExtResource("3_tpcy8")]
 position = Vector2(245, 415)
 rotation = -0.325758
 
-[node name="Container9" parent="." index="11" instance=ExtResource("4_kltsc")]
+[node name="Container9" parent="." index="12" instance=ExtResource("4_kltsc")]
 position = Vector2(39, 243)
 rotation = 1.49347
 
-[node name="Container10" parent="." index="12" instance=ExtResource("5_pxrnd")]
+[node name="Container10" parent="." index="13" instance=ExtResource("5_pxrnd")]
 position = Vector2(476, -43)
 rotation = 0.502322
 
-[node name="Goal" parent="." index="13" instance=ExtResource("7_w03kc")]
+[node name="Goal" parent="." index="14" instance=ExtResource("7_w03kc")]
 position = Vector2(1433, 33)
 
-[node name="Container11" parent="." index="14" instance=ExtResource("8_3ysxe")]
+[node name="Container11" parent="." index="15" instance=ExtResource("8_3ysxe")]
 position = Vector2(507, 263)
 rotation = 1.89983
 
-[node name="Container12" parent="." index="15" instance=ExtResource("9_tob1d")]
+[node name="Container12" parent="." index="16" instance=ExtResource("9_tob1d")]
 position = Vector2(59, 381)
 rotation = 0.476615
 
-[node name="Container13" parent="." index="16" instance=ExtResource("10_j5jho")]
+[node name="Container13" parent="." index="17" instance=ExtResource("10_j5jho")]
 position = Vector2(35, 138)
 rotation = 1.7211
 
-[node name="Container14" parent="." index="17" instance=ExtResource("11_hgqqe")]
+[node name="Container14" parent="." index="18" instance=ExtResource("11_hgqqe")]
 position = Vector2(828, 323)
 rotation = 1.52555
 
-[node name="Container15" parent="." index="18" instance=ExtResource("12_oo5uy")]
+[node name="Container15" parent="." index="19" instance=ExtResource("12_oo5uy")]
 position = Vector2(145, 426)
 rotation = 0.00494617
 
-[node name="Container16" parent="." index="19" instance=ExtResource("13_bijlc")]
+[node name="Container16" parent="." index="20" instance=ExtResource("13_bijlc")]
 position = Vector2(480, 91)
 rotation = 0.743132
 
-[node name="Container17" parent="." index="20" instance=ExtResource("14_telwb")]
+[node name="Container17" parent="." index="21" instance=ExtResource("14_telwb")]
 position = Vector2(638, 274)
 rotation = 0.22482
 
-[node name="Container18" parent="." index="21" instance=ExtResource("15_plpmf")]
+[node name="Container18" parent="." index="22" instance=ExtResource("15_plpmf")]
 position = Vector2(723, 156)
 rotation = 1.20759
 
-[node name="Container19" parent="." index="22" instance=ExtResource("16_n8pfn")]
+[node name="Container19" parent="." index="23" instance=ExtResource("16_n8pfn")]
 position = Vector2(665, 50)
 rotation = 0.940178
 
-[node name="Container20" parent="." index="23" instance=ExtResource("17_oowkt")]
+[node name="Container20" parent="." index="24" instance=ExtResource("17_oowkt")]
 position = Vector2(824, 260)
 
-[node name="Container21" parent="." index="24" instance=ExtResource("3_tpcy8")]
+[node name="Container21" parent="." index="25" instance=ExtResource("3_tpcy8")]
 position = Vector2(626, 32)
 rotation = -0.351973
 
-[node name="Container22" parent="." index="25" instance=ExtResource("6_e1hbr")]
+[node name="Container22" parent="." index="26" instance=ExtResource("6_e1hbr")]
 position = Vector2(1048, 371)
 rotation = 0.904756
 
-[node name="Container23" parent="." index="26" instance=ExtResource("8_3ysxe")]
+[node name="Container23" parent="." index="27" instance=ExtResource("8_3ysxe")]
 position = Vector2(1053, 171)
 rotation = 0.778044
 
-[node name="Container24" parent="." index="27" instance=ExtResource("18_lpi88")]
+[node name="Container24" parent="." index="28" instance=ExtResource("18_lpi88")]
 position = Vector2(483, 223)
 
-[node name="Container25" parent="." index="28" instance=ExtResource("19_4ugsi")]
+[node name="Container25" parent="." index="29" instance=ExtResource("19_4ugsi")]
 position = Vector2(767, 18)
 
-[node name="Container26" parent="." index="29" instance=ExtResource("20_u7gx5")]
+[node name="Container26" parent="." index="30" instance=ExtResource("20_u7gx5")]
 position = Vector2(17, 266)
 
-[node name="Container27" parent="." index="30" instance=ExtResource("21_e0i53")]
+[node name="Container27" parent="." index="31" instance=ExtResource("21_e0i53")]
 position = Vector2(1118, 185)
 
-[node name="Container28" parent="." index="31" instance=ExtResource("22_xwkfe")]
+[node name="Container28" parent="." index="32" instance=ExtResource("22_xwkfe")]
 position = Vector2(975, 56)
 rotation = 0.67705
 
-[node name="Container29" parent="." index="32" instance=ExtResource("19_4ugsi")]
+[node name="Container29" parent="." index="33" instance=ExtResource("19_4ugsi")]
 position = Vector2(121, -121)
 rotation = 0.157246
 
-[node name="Container30" parent="." index="33" instance=ExtResource("3_tpcy8")]
+[node name="Container30" parent="." index="34" instance=ExtResource("3_tpcy8")]
 position = Vector2(1326, 430)
 rotation = 2.47139
 
-[node name="Container31" parent="." index="34" instance=ExtResource("23_il545")]
+[node name="Container31" parent="." index="35" instance=ExtResource("23_il545")]
 position = Vector2(1176, 20)
 rotation = 1.84417
 
-[node name="Container32" parent="." index="35" instance=ExtResource("6_e1hbr")]
+[node name="Container32" parent="." index="36" instance=ExtResource("6_e1hbr")]
 position = Vector2(815, -112)
 rotation = 0.458093
 
-[node name="Container33" parent="." index="36" instance=ExtResource("4_kltsc")]
+[node name="Container33" parent="." index="37" instance=ExtResource("4_kltsc")]
 position = Vector2(979, -43)
 rotation = 0.20121
 
-[node name="Container34" parent="." index="37" instance=ExtResource("17_oowkt")]
+[node name="Container34" parent="." index="38" instance=ExtResource("17_oowkt")]
 position = Vector2(1079, 308)
 rotation = 0.373435
 
-[node name="Container35" parent="." index="38" instance=ExtResource("10_j5jho")]
+[node name="Container35" parent="." index="39" instance=ExtResource("10_j5jho")]
 position = Vector2(709, 268)
 rotation = 0.0695538
 
-[node name="Container36" parent="." index="39" instance=ExtResource("16_n8pfn")]
+[node name="Container36" parent="." index="40" instance=ExtResource("16_n8pfn")]
 position = Vector2(337, 21)
 
-[node name="Container37" parent="." index="40" instance=ExtResource("5_pxrnd")]
+[node name="Container37" parent="." index="41" instance=ExtResource("5_pxrnd")]
 position = Vector2(1455, 358)
 rotation = 2.04948
 
-[node name="Container38" parent="." index="41" instance=ExtResource("15_plpmf")]
+[node name="Container38" parent="." index="42" instance=ExtResource("15_plpmf")]
 position = Vector2(1152, 155)
 rotation = -0.641362
 
-[node name="Container39" parent="." index="42" instance=ExtResource("9_tob1d")]
+[node name="Container39" parent="." index="43" instance=ExtResource("9_tob1d")]
 position = Vector2(1536, 70.9999)
 rotation = -2.24366
 
-[node name="Container40" parent="." index="43" instance=ExtResource("4_kltsc")]
+[node name="Container40" parent="." index="44" instance=ExtResource("4_kltsc")]
 position = Vector2(1465, 369)
 rotation = -2.6242
 
-[node name="Container41" parent="." index="44" instance=ExtResource("6_e1hbr")]
+[node name="Container41" parent="." index="45" instance=ExtResource("6_e1hbr")]
 position = Vector2(1432, 234)
 rotation = -0.77889
 
-[node name="Container42" parent="." index="45" instance=ExtResource("10_j5jho")]
+[node name="Container42" parent="." index="46" instance=ExtResource("10_j5jho")]
 position = Vector2(1533, 160)
 rotation = -1.49315
 
-[node name="Container43" parent="." index="46" instance=ExtResource("14_telwb")]
+[node name="Container43" parent="." index="47" instance=ExtResource("14_telwb")]
 position = Vector2(1011, -75)
 rotation = -0.139994
 
-[node name="Container44" parent="." index="47" instance=ExtResource("10_j5jho")]
+[node name="Container44" parent="." index="48" instance=ExtResource("10_j5jho")]
 position = Vector2(1311, -105)
 rotation = -0.453629

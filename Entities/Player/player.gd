@@ -86,7 +86,7 @@ func shoot():
 	$"Swap cooldown".start()
 	
 	var aim_dir = get_aim_angle()
-	if aim_dir:
+	if aim_dir && angle:
 		disable_bullet()
 		var new_bullet = BULLET_RES.instantiate()
 		new_bullet.dir = aim_dir
