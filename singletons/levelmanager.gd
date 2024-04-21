@@ -52,12 +52,10 @@ func has_prev_level() -> bool:
 func play_next_level():
 	if has_next_level():
 		select_level(currentLevelIndex + 1)
-		currentLevelIndex += 1
 		
 func play_prev_level():
 	if has_prev_level():
 		select_level(currentLevelIndex - 1)
-		currentLevelIndex -= 1
 
 func respawn():
 	if get_tree() != null:
