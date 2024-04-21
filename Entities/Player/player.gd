@@ -86,7 +86,7 @@ func shoot():
 	$"Swap cooldown".start()
 	
 	var aim_dir = get_aim_angle()
-	if aim_dir:
+	if aim_dir && angle:
 		disable_bullet()
 		var new_bullet = BULLET_RES.instantiate()
 		new_bullet.dir = aim_dir
@@ -102,6 +102,7 @@ func disable_bullet():
 
 func damage():
 	if not involnurable:
+		$Die.play()
 		$AnimationPlayer.play("die")
 
 func respawn():

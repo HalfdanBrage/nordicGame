@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_vb6br"]
 radius = 28.1603
 
-[node name="Container" type="StaticBody2D" groups=["metal"]]
+[node name="Container" type="StaticBody2D"]
 
 [node name="ContainerYel" type="Sprite2D" parent="."]
 z_index = 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://mgb64uhgo0cu"]
+[gd_scene load_steps=27 format=3 uid="uid://mgb64uhgo0cu"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_iue56"]
 [ext_resource type="Texture2D" uid="uid://n1ewako8a01q" path="res://Assets/Texture/dashed_active_texture2.png" id="2_ggsop"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dtyxw4i6jsw27" path="res://Assets/Player/teleport_0.png" id="13_wdprl"]
 [ext_resource type="AudioStream" uid="uid://b3yi3ul2055wl" path="res://SFX/Swap-sound.wav" id="14_nrwam"]
 [ext_resource type="AudioStream" uid="uid://5h5vnxn003m4" path="res://SFX/Swap-sound-reverse.wav" id="15_slpmx"]
+[ext_resource type="AudioStream" uid="uid://du2jpb31sgs7h" path="res://SFX/Player-death.wav" id="18_0ifhe"]
 
 [sub_resource type="Gradient" id="Gradient_1xwgm"]
 offsets = PackedFloat32Array(0, 0.344086, 0.451613, 1)
@@ -380,5 +381,9 @@ volume_db = -10.0
 [node name="Appear" type="AudioStreamPlayer" parent="." groups=["sfx"]]
 stream = ExtResource("15_slpmx")
 volume_db = -10.0
+
+[node name="Die" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_0ifhe")
+volume_db = -4.0
 
 [connection signal="timeout" from="Swap cooldown" to="." method="_on_shoot_cooldown_timeout"]

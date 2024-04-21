@@ -11,6 +11,8 @@ extends Camera2D
 var breating_offset: Vector2 = Vector2.ZERO
 var breathing_down = true
 
+var viewport_size = Vector2(640, 320)
+
 func _process(delta):
 	set_breathing(delta)
 	
@@ -35,11 +37,13 @@ func _process(delta):
 	position = position.lerp(final_target_position, delta * lerp_speed)
 	
 	zoom = zoom.lerp(zoom_target, delta * zoom_lerp_speed)
+	
+	var level = get_tree().get_current_scene()
+	position.x = clamp(position.x, level.bounds_min.x + (viewport_size.x / 2) / zoom.x, level.bounds_max.x - (viewport_size.x / 2) / zoom.x)
+	position.y = clamp(position.y, level.bounds_min.y + (viewport_size.y / 2) / zoom.y, level.bounds_max.y - (viewport_size.y / 2) / zoom.y)
 
 func get_zoom_target(player_to_bullet: Vector2) -> Vector2:
 	player_to_bullet = Vector2(abs(player_to_bullet.x), abs(player_to_bullet.y))
-	
-	var viewport_size = Vector2(640, 320)
 	
 	var zoom_target_x = viewport_size.x / max(1, player_to_bullet.x)
 	var zoom_target_y = viewport_size.y / max(1, player_to_bullet.y)
