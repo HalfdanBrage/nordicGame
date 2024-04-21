@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://mgb64uhgo0cu" path="res://Entities/Player/player.tscn" id="3_bs6iq"]
 
 [node name="BaseLevel" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_seoey")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_836xk")]
 
 [node name="Player" parent="." instance=ExtResource("3_bs6iq")]
-is_level_1 = false
