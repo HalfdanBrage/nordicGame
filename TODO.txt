@@ -15,3 +15,6 @@
 - lav camera clamping så vi ikke kan se udenfor banen
 - giv "level complete" en ansigtsløftning
 - fjern overflødige pixels i stamp animation
+- gør så man kan spille level 7 og 10
+- man kan teleportere let over væggen i the wall (er det meningen?)
+- fejl: jeg kan vinde efter lost at the train station og ikke almost there
