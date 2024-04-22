@@ -2,7 +2,7 @@ extends TextureButton
 
 var level_label: int = 0
 var level_number: int = 0
-
+var splash = ""
 
 
 func set_level(label: int, num: int):
@@ -13,9 +13,13 @@ func set_level(label: int, num: int):
 	$Texture_2_1.texture = load("res://Assets/UI/" + str(n1)+".png")
 	$Texture_2_2.texture = load("res://Assets/UI/" + str(n2)+".png")
 
+func set_splash(path: String): 
+	$Texture_1.texture = load(path)
+
 func _on_pressed():
 	Levelmanager.select_level(level_number)
-
+	
+	
 func _on_focus_entered():
 	for child in get_children():
 		scale.x = 1.2
