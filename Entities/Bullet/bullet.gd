@@ -4,7 +4,7 @@ class_name Bullet
 
 const SPEED = 5
 
-var dir: Vector2 = Vector2.RIGHT
+var dir: Vector2 = Vector2.DOWN
 
 func _ready():
 	$Sprite2D.visible = true

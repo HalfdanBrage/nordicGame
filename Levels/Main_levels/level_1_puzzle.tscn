@@ -1,0 +1,141 @@
+[gd_scene load_steps=12 format=3 uid="uid://dwe8igex4x5e2"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_iin8r"]
+[ext_resource type="Texture2D" uid="uid://bunsd0p3k4rkj" path="res://Assets/Backgrounds/square.png" id="2_fy6sc"]
+[ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="3_ahn05"]
+[ext_resource type="PackedScene" uid="uid://chg348md75ben" path="res://Entities/Bullet/bullet.tscn" id="4_o0doq"]
+[ext_resource type="PackedScene" uid="uid://cn53gxylqeo52" path="res://Entities/Terrain/wall_0.tscn" id="4_yvsot"]
+[ext_resource type="Script" path="res://Levels/Main_levels/tutorial_restarter.gd" id="5_8o481"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="6_411vc"]
+[ext_resource type="PackedScene" path="res://Menus/typewriter_label.tscn" id="7_747hd"]
+[ext_resource type="Script" path="res://Levels/Main_levels/goal display starter.gd" id="8_ahw1w"]
+[ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="10_yvx7g"]
+[ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="11_fokmp"]
+
+[node name="Level-1" instance=ExtResource("1_iin8r")]
+level_name = ""
+bounds_min = Vector2(-350, -430)
+bounds_max = Vector2(522, 160)
+metadata/_edit_horizontal_guides_ = [160.0, -628.0, -432.0]
+metadata/_edit_vertical_guides_ = [-350.0, 522.0]
+
+[node name="Background" type="Node2D" parent="." index="0"]
+
+[node name="Square" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(-1187, -646)
+texture = ExtResource("2_fy6sc")
+centered = false
+
+[node name="Camera2D2" type="Camera2D" parent="." index="1"]
+position = Vector2(50, -3)
+zoom = Vector2(0.6, 0.6)
+
+[node name="Camera2D" parent="." index="2"]
+position = Vector2(0, 0)
+enabled = false
+
+[node name="Player" parent="." index="3" node_paths=PackedStringArray("bullet")]
+position = Vector2(-267, -95)
+is_level_1 = true
+bullet = NodePath("../Bullet")
+
+[node name="Bullet" parent="." index="4" instance=ExtResource("4_o0doq")]
+z_index = 2
+position = Vector2(65, -95)
+
+[node name="tutorial_restarter" type="Node2D" parent="Bullet" index="10"]
+script = ExtResource("5_8o481")
+
+[node name="TypewriterLabel" parent="." index="5" instance=ExtResource("7_747hd")]
+z_index = 10
+offset_left = -236.0
+offset_top = -42.0
+offset_right = 92.0
+offset_bottom = 126.0
+scale = Vector2(0.5, 0.5)
+text = "SWAP POSITION
+- Right mouse button
+- X
+- B (Controller)
+"
+autowrap_mode = 2
+
+[node name="TypewriterLabel2" parent="." index="6" instance=ExtResource("7_747hd")]
+offset_left = 216.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = -99.0
+text = "GOAL
+ \\/"
+vertical_alignment = 2
+
+[node name="goal display starter" type="Node2D" parent="TypewriterLabel2" index="2"]
+script = ExtResource("8_ahw1w")
+
+[node name="Container" parent="." index="7" instance=ExtResource("3_ahn05")]
+position = Vector2(-290, -207)
+
+[node name="Container2" parent="." index="8" instance=ExtResource("3_ahn05")]
+position = Vector2(523, -18)
+
+[node name="Container3" parent="." index="9" instance=ExtResource("3_ahn05")]
+position = Vector2(583, -281)
+rotation = 1.5708
+
+[node name="Container4" parent="." index="10" instance=ExtResource("3_ahn05")]
+position = Vector2(-334, 5)
+rotation = 0.785398
+
+[node name="Container5" parent="." index="11" instance=ExtResource("3_ahn05")]
+position = Vector2(-261, 192)
+rotation = -0.785398
+
+[node name="wall3" parent="." index="12" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(26, -214)
+rotation = 1.5708
+
+[node name="wall4" parent="." index="13" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(27, -26)
+rotation = 1.5708
+
+[node name="wall5" parent="." index="14" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(374, -217)
+rotation = 1.5708
+
+[node name="wall6" parent="." index="15" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(375, -29)
+rotation = 1.5708
+
+[node name="wall7" parent="." index="16" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(114, 102)
+
+[node name="wall8" parent="." index="17" instance=ExtResource("4_yvsot")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(-39, -273)
+
+[node name="Goal" parent="." index="18" instance=ExtResource("6_411vc")]
+position = Vector2(234, -63)
+
+[node name="Container6" parent="." index="19" instance=ExtResource("10_yvx7g")]
+position = Vector2(138, -321)
+
+[node name="Container9" parent="." index="20" instance=ExtResource("10_yvx7g")]
+position = Vector2(-49, 98)
+
+[node name="Container7" parent="." index="21" instance=ExtResource("11_fokmp")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(688, -17)
+rotation = 1.5708
+
+[node name="Container8" parent="." index="22" instance=ExtResource("11_fokmp")]
+modulate = Color(0.811765, 0.721569, 0.772549, 1)
+position = Vector2(225, -327)
+rotation = 1.5708
+
+[connection signal="ready" from="TypewriterLabel" to="TypewriterLabel" method="display"]

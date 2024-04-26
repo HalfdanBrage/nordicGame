@@ -10,7 +10,7 @@ var show_level_title = false
 var _player: Player = null
 var currentLevelIndex = 0
 var levels: Array = [
-	"res://Levels/Main_levels/level_1.tscn", # 0 Swap swap
+	"res://Levels/Main_levels/level_1_puzzle.tscn", # 0 Swap swap
 	"res://Levels/Main_levels/Empty_maze_v2.tscn", # 1 Cargo
 	"res://Levels/Main_levels/level_2.tscn", # 2 Minigolf
 	"res://Levels/Main_levels/after_level_1.tscn", # 3 ...
