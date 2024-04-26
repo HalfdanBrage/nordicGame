@@ -15,10 +15,10 @@ var levels: Array = [
 	"res://Levels/Main_levels/level_2.tscn", # 2 Minigolf
 	"res://Levels/Main_levels/after_level_1.tscn", # 3 ...
 	"res://Levels/Main_levels/clustered_area.tscn", # 4 Apocalypse
-	"res://Levels/Main_levels/level_3.tscn", # 5 Chinese intelligence
-	"res://Levels/Main_levels/All_over_the_place.tscn", # 6
-	"res://Levels/Main_levels/far_away.tscn", # 7
-	"res://Levels/Main_levels/the_wall.tscn", # 8
+	"res://Levels/Main_levels/far_away.tscn", # 5
+	"res://Levels/Main_levels/the_wall.tscn", # 6
+	"res://Levels/Main_levels/All_over_the_place.tscn", # 7
+	"res://Levels/Main_levels/level_3.tscn", # 8 Chinese intelligence
 	"res://Levels/Main_levels/cling_on.tscn", # 9
 	"res://Levels/Main_levels/Forrest.tscn", # 10
 	"res://Levels/Main_levels/where.tscn", # 11
