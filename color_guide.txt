@@ -1,0 +1,26 @@
+::-- Project Colors --::
+_____________
+MINT WHITE
+
+R 238 G 242 B 236
+#EEF2EC
+______________
+PURPLE
+
+R 207 G 184 B 197
+#CFB8C5
+______________
+YELLOW
+
+R 253 G 209 B 94
+#FDD15E
+______________
+GREY
+
+R 193 G 186 B 174
+#C1BAAE
+_______________
+
+BLACK (obviously)
+R 0 G 0 B 0
+#000000

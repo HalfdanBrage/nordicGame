@@ -1,0 +1,20 @@
+- lav flottere credit screen
+- lav continue-knap til "you won"-screen
+- hurtigere typewriter i tutorial (folk venter for lang tid på at den skriver færdig)
+- hest-til-cowboy camera pan i starten af level, så man ved hvor man skal hen
+- animation til cowboy når den vinder (fx sætter sig op på hesten)
+- vis navn på level når man holder musen over dem i level select
+- lav settings-knap på forsiden
+- flere forskellige sange i levels
+- indsætte blade i forest
+- lave hest-spriten i forest om til den hest, der ikke har hø og så give dem blade i stedet
+- fix controller
+- escape skal ikke være pause pga. browserversion, måske p i stedet
+- gå alle levels igennem og lave unikke assets til dem. herefter indsæt assets
+- tilføje screenshots til level select efter at de nye assets er inde
+- lav camera clamping så vi ikke kan se udenfor banen
+- giv "level complete" en ansigtsløftning
+- fjern overflødige pixels i stamp animation
+- gør så man kan spille level 7 og 10
+- man kan teleportere let over væggen i the wall (er det meningen?)
+- fejl: jeg kan vinde efter lost at the train station og ikke almost there
