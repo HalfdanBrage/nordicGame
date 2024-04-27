@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://cp7qi30hqlkha"]
+
+[ext_resource type="Texture2D" uid="uid://cwuq2hoigp7dr" path="res://Assets/Terrain/terrain_3/hay_balls2.png" id="1_2ui77"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u15y"]
+size = Vector2(140, 46)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7viqt"]
+radius = 14.0357
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_535an"]
+radius = 13.1529
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utbcl"]
+radius = 15.1327
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1khbc"]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8gyw"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_px141"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_anek8"]
+radius = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ons81"]
+radius = 17.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmtmr"]
+size = Vector2(17, 20)
+
+[node name="Container" type="StaticBody2D" groups=["metal"]]
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_2ui77")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(179, 119)
+shape = SubResource("RectangleShape2D_3u15y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(121, 102)
+shape = SubResource("CircleShape2D_7viqt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(153, 97)
+shape = SubResource("CircleShape2D_535an")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(232, 94)
+shape = SubResource("CircleShape2D_utbcl")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(255, 121)
+shape = SubResource("CircleShape2D_1khbc")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(237, 148)
+shape = SubResource("CircleShape2D_c8gyw")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(126, 133)
+shape = SubResource("CircleShape2D_px141")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(155, 125)
+shape = SubResource("CircleShape2D_anek8")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2(205, 131)
+shape = SubResource("CircleShape2D_ons81")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(240.5, 89)
+shape = SubResource("RectangleShape2D_bmtmr")

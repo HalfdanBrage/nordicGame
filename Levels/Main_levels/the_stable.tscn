@@ -1,0 +1,188 @@
+[gd_scene load_steps=11 format=3 uid="uid://3w6qh8gvq3t"]
+
+[ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_y8tol"]
+[ext_resource type="Texture2D" uid="uid://dl1gsqtmxsoq1" path="res://Assets/Backgrounds/desert_simple.png" id="2_1hhux"]
+[ext_resource type="Texture2D" uid="uid://cnqjh7y2405op" path="res://Assets/Terrain/terrain_3/small_hay.png" id="3_fu1e2"]
+[ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="3_i1pb1"]
+[ext_resource type="PackedScene" uid="uid://cn53gxylqeo52" path="res://Entities/Terrain/wall_0.tscn" id="4_mqiyl"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/crane_1.tscn" id="5_hhii0"]
+[ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="6_s1q4f"]
+[ext_resource type="PackedScene" uid="uid://b7wwoqsyl4lng" path="res://Entities/Terrain/hay_balls0.tscn" id="6_twhx5"]
+[ext_resource type="PackedScene" uid="uid://b1l3uu7f472x8" path="res://Entities/Terrain/hay_balls1.tscn" id="7_bs471"]
+[ext_resource type="PackedScene" uid="uid://cp7qi30hqlkha" path="res://Entities/Terrain/hay_balls2.tscn" id="10_w7gnd"]
+
+[node name="BaseLevel" instance=ExtResource("1_y8tol")]
+bounds_min = Vector2(-343, -272)
+bounds_max = Vector2(600, 500)
+
+[node name="Background" type="Node2D" parent="." index="0"]
+
+[node name="DesertSimple" type="Sprite2D" parent="Background" index="0"]
+texture_filter = 1
+position = Vector2(548.997, -267.997)
+rotation = 1.5708
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="DesertSimple2" type="Sprite2D" parent="Background" index="1"]
+texture_filter = 1
+position = Vector2(548.997, -211.997)
+rotation = 1.5708
+scale = Vector2(-1, 1)
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="DesertSimple3" type="Sprite2D" parent="Background" index="2"]
+texture_filter = 1
+position = Vector2(548.997, -267.997)
+rotation = 1.5708
+scale = Vector2(1, -1)
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="DesertSimple4" type="Sprite2D" parent="Background" index="3"]
+texture_filter = 1
+position = Vector2(548.997, -211.997)
+rotation = 1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="DesertSimple5" type="Sprite2D" parent="Background" index="4"]
+texture_filter = 1
+position = Vector2(-1161.99, -153.997)
+rotation = 1.5708
+scale = Vector2(1, -1)
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="DesertSimple6" type="Sprite2D" parent="Background" index="5"]
+texture_filter = 1
+position = Vector2(-1161.99, -97.9971)
+rotation = 1.5708
+scale = Vector2(-1, -1)
+texture = ExtResource("2_1hhux")
+centered = false
+
+[node name="Background hay" type="Node2D" parent="." index="1"]
+
+[node name="SmallHay" type="Sprite2D" parent="Background hay" index="0"]
+position = Vector2(-76, 230)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay6" type="Sprite2D" parent="Background hay" index="1"]
+position = Vector2(-29, 274)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay2" type="Sprite2D" parent="Background hay" index="2"]
+position = Vector2(39, 189)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay7" type="Sprite2D" parent="Background hay" index="3"]
+position = Vector2(7, 139)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay8" type="Sprite2D" parent="Background hay" index="4"]
+position = Vector2(49, 57)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay3" type="Sprite2D" parent="Background hay" index="5"]
+position = Vector2(11, 251)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay4" type="Sprite2D" parent="Background hay" index="6"]
+position = Vector2(-84, 139)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="SmallHay5" type="Sprite2D" parent="Background hay" index="7"]
+position = Vector2(-66, 66)
+texture = ExtResource("3_fu1e2")
+centered = false
+
+[node name="Min" type="Node2D" parent="." index="4"]
+position = Vector2(-343, -264)
+
+[node name="Max" type="Node2D" parent="." index="5"]
+position = Vector2(600, 497)
+
+[node name="Goal" parent="." index="6" instance=ExtResource("6_s1q4f")]
+position = Vector2(17, 140)
+scale = Vector2(-1, 1)
+
+[node name="Stable hay-balls" type="Node2D" parent="." index="7"]
+
+[node name="Hay ball" parent="Stable hay-balls" index="0" instance=ExtResource("6_twhx5")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(-101, 97)
+
+[node name="Hay ball3" parent="Stable hay-balls" index="1" instance=ExtResource("6_twhx5")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(-85, 268)
+
+[node name="Hay ball4" parent="Stable hay-balls" index="2" instance=ExtResource("6_twhx5")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(39, 270)
+
+[node name="Hay ball2" parent="Stable hay-balls" index="3" instance=ExtResource("7_bs471")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(-41, 213)
+
+[node name="Stable" type="Node2D" parent="." index="8"]
+
+[node name="Container8" parent="Stable" index="0" instance=ExtResource("3_i1pb1")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(177, -64)
+rotation = 1.5708
+
+[node name="Container9" parent="Stable" index="1" instance=ExtResource("3_i1pb1")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-287, -7)
+
+[node name="wall8" parent="Stable" index="2" instance=ExtResource("4_mqiyl")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-364, 8)
+
+[node name="wall9" parent="Stable" index="3" instance=ExtResource("4_mqiyl")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-100, 275)
+
+[node name="wall10" parent="Stable" index="4" instance=ExtResource("4_mqiyl")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-119, 145)
+
+[node name="Small stable thing" parent="Stable" index="5" instance=ExtResource("5_hhii0")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-30, 2)
+rotation = 1.5708
+
+[node name="Small stable thing3" parent="Stable" index="6" instance=ExtResource("5_hhii0")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-30, 78)
+rotation = 1.5708
+
+[node name="Small stable thing2" parent="Stable" index="7" instance=ExtResource("5_hhii0")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-28, 131)
+rotation = 1.5708
+
+[node name="Small stable thing4" parent="Stable" index="8" instance=ExtResource("5_hhii0")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(-28, 207)
+rotation = 1.5708
+
+[node name="Small stable thing5" parent="Stable" index="9" instance=ExtResource("5_hhii0")]
+modulate = Color(0.756863, 0.729412, 0.682353, 1)
+position = Vector2(160, 224)
+rotation = 1.5708
+
+[node name="Hay ball" parent="." index="9" instance=ExtResource("10_w7gnd")]
+modulate = Color(0.992157, 0.819608, 0.388235, 1)
+position = Vector2(128, 490)
+rotation = 3.14159

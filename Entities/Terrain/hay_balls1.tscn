@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1l3uu7f472x8"]
+
+[ext_resource type="Texture2D" uid="uid://w326rrf80to0" path="res://Assets/Terrain/terrain_3/hay_balls1.png" id="1_60ubh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vb6br"]
+radius = 16.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1ni1"]
+radius = 17.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ab7y"]
+size = Vector2(41, 18)
+
+[node name="Hay ball" type="StaticBody2D"]
+
+[node name="ContainerYel" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+texture = ExtResource("1_60ubh")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41, 46)
+shape = SubResource("CircleShape2D_vb6br")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(44, 23)
+shape = SubResource("CircleShape2D_a1ni1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(25.5, 27)
+shape = SubResource("RectangleShape2D_3ab7y")

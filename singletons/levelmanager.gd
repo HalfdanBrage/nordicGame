@@ -14,6 +14,7 @@ var levels: Array = [
 	"res://Levels/Main_levels/Empty_maze_v2.tscn", # 1 Cargo
 	"res://Levels/Main_levels/level_2.tscn", # 2 Minigolf
 	"res://Levels/Main_levels/after_level_1.tscn", # 3 ...
+	"res://Levels/Main_levels/the_stable_v2.tscn", # 3 ...
 	"res://Levels/Main_levels/clustered_area.tscn", # 4 Apocalypse
 	"res://Levels/Main_levels/far_away.tscn", # 5
 	"res://Levels/Main_levels/the_wall.tscn", # 6
