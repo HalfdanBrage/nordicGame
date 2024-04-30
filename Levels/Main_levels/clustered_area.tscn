@@ -1,22 +1,22 @@
 [gd_scene load_steps=28 format=3 uid="uid://cljtdtvskl0kb"]
 
 [ext_resource type="PackedScene" uid="uid://cgyllykybfibm" path="res://Levels/base_level.tscn" id="1_jlgfy"]
-[ext_resource type="Texture2D" uid="uid://cg01fjftegdrx" path="res://Assets/Backgrounds/earth_simple.png" id="2_mtcld"]
+[ext_resource type="Texture2D" uid="uid://dphttgvlv7qvf" path="res://Assets/Backgrounds/earth_simple.png" id="2_mtcld"]
 [ext_resource type="PackedScene" uid="uid://dyrhxdx2qgy35" path="res://Entities/Terrain/wall_1.tscn" id="3_7vlu6"]
-[ext_resource type="PackedScene" uid="uid://c3wxf4eiv0pm7" path="res://Entities/box-2.tscn" id="3_jh7id"]
-[ext_resource type="Texture2D" uid="uid://duwqrd4byg1n2" path="res://Assets/Backgrounds/roads.png" id="3_k3teh"]
+[ext_resource type="PackedScene" path="res://Entities/box-2.tscn" id="3_jh7id"]
+[ext_resource type="Texture2D" uid="uid://j4pkf7ixdvyj" path="res://Assets/Backgrounds/roads.png" id="3_k3teh"]
 [ext_resource type="PackedScene" uid="uid://bhfug5s11rtdw" path="res://Entities/Terrain/wall_3.tscn" id="4_21d4u"]
-[ext_resource type="PackedScene" uid="uid://5yi84m30myhk" path="res://Entities/Terrain/car_pur.tscn" id="5_jlh1d"]
-[ext_resource type="PackedScene" uid="uid://bb20eem1c23a3" path="res://Entities/Terrain/car_whi1.tscn" id="6_o8brp"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_pur.tscn" id="5_jlh1d"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/car_whi1.tscn" id="6_o8brp"]
 [ext_resource type="PackedScene" uid="uid://btjcq63akrg2d" path="res://Entities/Terrain/containerYellow.tscn" id="7_xgwr1"]
 [ext_resource type="PackedScene" uid="uid://cg3r7ywh2ovpb" path="res://Entities/Terrain/containerPurple.tscn" id="8_gx754"]
 [ext_resource type="PackedScene" uid="uid://dj4x5i2u1xrm4" path="res://Entities/Terrain/hedge_1.tscn" id="9_qv3x5"]
-[ext_resource type="PackedScene" uid="uid://ftywiu1x367o" path="res://Entities/Terrain/crane_1.tscn" id="10_h1kxt"]
-[ext_resource type="PackedScene" uid="uid://bd5mwm2t8inhm" path="res://Entities/Terrain/bus.tscn" id="11_w7p7k"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/crane_1.tscn" id="10_h1kxt"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/bus.tscn" id="11_w7p7k"]
 [ext_resource type="PackedScene" uid="uid://dyqwpd4kticcl" path="res://Entities/Terrain/containerGray.tscn" id="12_7saxl"]
 [ext_resource type="PackedScene" uid="uid://c75stxcwm4uyv" path="res://Entities/Terrain/wall_2.tscn" id="14_pgujl"]
 [ext_resource type="PackedScene" uid="uid://cwg8sgbrvgqux" path="res://Entities/Terrain/tree_purple2.tscn" id="15_m8hy0"]
-[ext_resource type="PackedScene" uid="uid://ct07815tu6lmx" path="res://Entities/Terrain/factory_2.tscn" id="16_lolq0"]
+[ext_resource type="PackedScene" path="res://Entities/Terrain/factory_2.tscn" id="16_lolq0"]
 [ext_resource type="PackedScene" uid="uid://1piu0qomd32m" path="res://Entities/Goal/goal.tscn" id="17_pjkv4"]
 [ext_resource type="PackedScene" uid="uid://bb21v3lhqej4i" path="res://Entities/Terrain/factory_1.tscn" id="18_sf6n8"]
 [ext_resource type="PackedScene" uid="uid://dft1bfpojjd2x" path="res://Entities/Terrain/tree_white3.tscn" id="19_kxhta"]
@@ -30,8 +30,8 @@
 
 [node name="Clustered area" instance=ExtResource("1_jlgfy")]
 level_name = "Apocalypse"
-bounds_min = Vector2(-300, -632)
-bounds_max = Vector2(840, 1000)
+bounds_min = Vector2(-650, -250)
+bounds_max = Vector2(1200, 840)
 metadata/_edit_vertical_guides_ = [998.0]
 metadata/_edit_horizontal_guides_ = [840.0]
 
